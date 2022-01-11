@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "pro-table": "../../components/ProTable/index"
+  }
+}

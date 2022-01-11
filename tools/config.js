@@ -1,4 +1,5 @@
 const path = require('path')
+const fs = require('fs')
 
 const webpack = require('webpack')
 const nodeExternals = require('webpack-node-externals')
@@ -11,11 +12,10 @@ const src = path.resolve(__dirname, '../src')
 const dev = path.join(demoDist, 'components')
 const dist = path.resolve(__dirname, '../miniprogram_dist')
 
+const files = fs.readdirSync(src).map(dir => `${dir}/index`)
+
 module.exports = {
-  entry: [
-    'index',
-    'shared/tools'
-  ],
+  entry: files,
 
   isDev,
   isWatch,
@@ -95,5 +95,5 @@ module.exports = {
     }
   },
 
-  copy: ['./assets'], // 将会复制到目标目录
+  // copy: ['./assets']
 }

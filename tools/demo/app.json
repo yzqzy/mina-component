@@ -1,11 +1,12 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/index/index",
+    "pages/table/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "Mina-Components",
     "navigationBarTextStyle":"black"
   }
 }
