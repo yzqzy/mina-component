@@ -2,12 +2,6 @@
 
 微信小程序自定义组件。
 
-## 已支持组件
-
-### 表格组件（ProTable）
-
-...
-
 ## 目录结构
 
 ```
@@ -24,7 +18,13 @@
 |--gulpfile.js
 ```
 
-## 测试
+## 已支持组件
+
+### 表格组件（ProTable）
+
+...
+
+## 相关命令
 
 * 执行测试用例：
 
@@ -43,8 +43,6 @@ npm run test-debug
 ```
 npm run coverage
 ```
-
-## 其他命令
 
 * 清空 miniprogram_dist 目录：
 
