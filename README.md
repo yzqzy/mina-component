@@ -4,7 +4,7 @@
 
 ## 已支持组件
 
-### ProTable
+### 表格组件（ProTable）
 
 ...
 
