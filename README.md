@@ -2,6 +2,12 @@
 
 微信小程序自定义组件。
 
+## 已支持组件
+
+### ProTable
+
+...
+
 ## 目录结构
 
 ```
@@ -9,9 +15,6 @@
 |--miniprogram_dist // 生产环境构建目录
 |--src // 源码
 |   |--components // 通用自定义组件
-|   |--images // 图片资源
-|   |
-|   |--xxx.js/xxx.wxml/xxx.json/xxx.wxss // 暴露的 js 模块/自定义组件入口文件
 |
 |--test // 测试用例
 |--tools // 构建相关代码
