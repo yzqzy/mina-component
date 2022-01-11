@@ -14,7 +14,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.10.4",
 	"appid": "",
-	"projectname": "miniprogram-demo",
+	"projectname": "mina-components",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
