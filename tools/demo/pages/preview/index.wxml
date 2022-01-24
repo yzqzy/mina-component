@@ -1,0 +1,26 @@
+<view class="wrap">
+  <!-- 图片区域 start -->
+  <view class="imgs-wrap">
+    <view
+      class="imgs-board"
+      wx:for="{{ imgs }}"
+      wx:key="index"
+    >
+      <image
+        mode="aspectFill"
+        class="img"
+        src="{{ item.url }}"
+        data-index="{{ index }}"
+        catch:tap="handlePreviewSingle"
+      />
+    </view>
+  </view>
+  <!-- 图片区域 end -->
+
+  <!-- 图片预览组件 start -->
+  <picture-preview
+    catch:close="handleClosePreview"  
+    catch:change="handlePreviewChange"
+  />
+  <!-- 图片预览组件 end -->
+</view>

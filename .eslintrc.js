@@ -57,10 +57,8 @@ module.exports = {
     'node/no-deprecated-api': 'error',
     'node/process-exit-as-throw': 'error',
     'import/no-extraneous-dependencies': 'off',
-    'object-curly-spacing': [
-      'error',
-      'never'
-    ],
+    'object-curly-spacing': 'off',
+    'no-console': 'off',
     'operator-linebreak': [
       'error',
       'after',
@@ -83,7 +81,7 @@ module.exports = {
     ],
     'semi': [
       'error',
-      'never'
+      'always'
     ],
     'no-await-in-loop': 'off',
     'no-restricted-syntax': 'off',

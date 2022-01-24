@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "picture-preview": "../../components/PicturePreview/index"
+  }
+}
