@@ -40,7 +40,7 @@ Page({
   handlePreviewSingle(e) {
     const { index } = e.currentTarget.dataset;
     const urls = this.data.imgs.map(item => item.url);
-    
+
     this.previewRef.show({
       current: index,
       urls

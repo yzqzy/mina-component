@@ -70,8 +70,6 @@ Component({
      * @returns {void}
      */
     show({ current, urls }) {
-      console.log(current, urls);
-
       this.setData({
         current,
         urls,
