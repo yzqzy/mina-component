@@ -1,3 +1,9 @@
+/**
+ * @file 图片预览组件
+ * @module PicturePreview
+ * @author 月落 <yueluo.yang@qq.com>
+ */
+
 Component({
   /**
    * @property {number} scaleMin - 缩放倍数最小值
