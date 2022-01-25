@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/preview/index",
     "pages/index/index",
+    "pages/preview/index",
     "pages/table/index"
   ],
   "window":{

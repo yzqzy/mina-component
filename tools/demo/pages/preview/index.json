@@ -1,5 +1,7 @@
 {
+  "navigationBarTitleText": "PicturePreview",
   "usingComponents": {
-    "picture-preview": "../../components/PicturePreview/index"
+    "picture-preview": "../../components/PicturePreview/index",
+    "func-title": "../../components/FuncTitle/index"
   }
 }

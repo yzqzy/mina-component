@@ -1,4 +1,30 @@
 <view class="wrap">
+  <!-- 功能名称 start -->
+  <func-title title="基础用法" />
+  <!-- 功能名称 end -->
+
+  <!-- 图片区域 start -->
+  <view class="imgs-wrap">
+    <view
+      class="imgs-board"
+      wx:for="{{ imgs }}"
+      wx:key="index"
+    >
+      <image
+        mode="aspectFill"
+        class="img"
+        src="{{ item.url }}"
+        data-index="{{ index }}"
+        catch:tap="handlePreviewSingle"
+      />
+    </view>
+  </view>
+  <!-- 图片区域 end -->
+
+  <!-- 功能名称 start -->
+  <func-title title="插槽使用" />
+  <!-- 功能名称 end -->
+
   <!-- 图片区域 start -->
   <view class="imgs-wrap">
     <view

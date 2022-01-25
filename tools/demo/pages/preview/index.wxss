@@ -1,5 +1,5 @@
 .wrap {
-  padding: 40rpx 20rpx;
+  padding: 0 20rpx;
 }
 
 .imgs-wrap {

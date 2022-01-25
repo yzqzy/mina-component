@@ -1,3 +1,14 @@
-<view>
-    
+<view class="wrap">
+  <view
+    class="nav-board"
+    wx:for="{{ navbars }}"
+    wx:key="index"
+  >
+    <navigator
+      class="nav-item"
+      url="/{{ item.to }}"
+    >
+      {{ item.name }}
+    </navigator>
+  </view>
 </view>

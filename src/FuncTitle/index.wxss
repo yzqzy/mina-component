@@ -1,0 +1,10 @@
+.func-title-wrap {
+  padding: 64rpx 0 16rpx;
+}
+
+.func-title-wrap .title {
+  color: rgba(69, 90, 100, 0.6);
+  font-weight: normal;
+  font-size: 28rpx;
+  line-height: 16rpx;
+}

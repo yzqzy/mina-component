@@ -1,0 +1,21 @@
+.wrap {
+  padding: 46rpx 40rpx 40rpx;
+  background-color: #fff;
+}
+
+.wrap .nav-board {
+  display: flex;
+  margin: 0 0 24rpx;
+  color: #323233;
+  font-weight: 600;
+  font-size: 24rpx;
+  line-height: 80rpx;
+  background: #f7f8fa;
+  border-radius: 99rpx;
+  overflow: hidden;
+}
+
+.wrap .nav-board .nav-item {
+  flex: 1;
+  padding-left: 20rpx;
+}

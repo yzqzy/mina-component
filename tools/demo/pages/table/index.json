@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "ProTable",
   "usingComponents": {
     "pro-table": "../../components/ProTable/index"
   }
