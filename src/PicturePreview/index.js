@@ -46,6 +46,14 @@ Component({
     delayTimer: null,
   },
 
+  observers: {
+    currScaleVal(newVal) {
+      this.setData({
+        moveable: newVal === 1
+      });
+    }
+  },
+
   methods: {
     /**
      * @description 是否处于预览状态
@@ -68,6 +76,15 @@ Component({
         current,
         urls,
         showPreview: true
+      });
+    },
+    /**
+     * @description 结束预览
+     * @returns {void}
+     */
+    hide() {
+      this.setData({
+        showPreview: false
       });
     },
     /**
@@ -102,10 +119,10 @@ Component({
       const { current } = e.detail;
 
       this.setData({ current });
-      this.triggerEvent('onChange', { current });
+      this.triggerEvent('change', { current });
     },
     /**
-     * @description 结束预览
+     * @description 关闭预览弹窗
      * @returns {void}
      */
     onClose(e) {
@@ -130,11 +147,11 @@ Component({
       if (currScaleVal > 1 || !clicked) return;
 
       const timer = setTimeout(() => {
+        console.log(',', this.data.clicked);
+
         if (this.data.clicked) {
-          this.setData({
-            showPreview: false
-          });
-          this.triggerEvent('onClose');
+          this.hide();
+          this.triggerEvent('close');
         }
       }, 300);
 

@@ -11,7 +11,7 @@ Page({
   data: {
     imgs: [
       {
-        url: 'https://data.yueluo.club/yueluo.png'
+        url: 'https://data.yueluo.club/git.jpg'
       },
       {
         url: 'https://data.yueluo.club/leetcode.png'
@@ -52,14 +52,15 @@ Page({
    * @returns {void}
    */
   handleClosePreview() {
-    console.log('close');
+    this.previewRef.hide();
   },
 
   /**
    * @description 预览组件下标改变
    * @returns {void}
    */
-  handlePreviewChange({ current }) {
+  handlePreviewChange(e) {
+    const { current } = e.detail;
     console.log(current);
   }
 });

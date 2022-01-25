@@ -6,14 +6,20 @@
 
     <swiper
       class="swiper-wrap"
+      :vertical="{{ false }}"
+      current="{{ current }}"
+      catch:change="onChange"
     >
       <swiper-item
         class="swiper-board"
         wx:for="{{ urls }}"
         wx:key="index"
         catch:touchmove="{{ moveable ? '' : 'disabled' }}"
+        catch:tap="onClose"
       >
-        <movable-area class="img-wrap">
+        <movable-area
+          class="img-wrap"
+        >
           <movable-view
             class="img-board"
             direction="all"
