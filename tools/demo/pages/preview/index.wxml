@@ -19,6 +19,7 @@
 
   <!-- 图片预览组件 start -->
   <picture-preview
+    id="J-preview"
     catch:close="handleClosePreview"  
     catch:change="handlePreviewChange"
   />
