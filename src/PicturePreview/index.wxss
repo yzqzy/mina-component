@@ -1,0 +1,59 @@
+.indicators {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100001;
+  width: 100%;
+  height: 168rpx;
+  line-height: 44rpx;
+  padding-top: 46rpx;
+  text-align: center;
+  background: rgba(0, 0, 0, 0);
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.indicators .back-board {
+  position: absolute;
+  top: 37rpx;
+  left: 10rpx;
+  width: 100rpx;
+  height: 168rpx;
+}
+
+.indicators .back-board .iconfont {
+  font-size: 34rpx;
+  color: #fff;
+}
+
+.swiper-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  z-index: 100000;
+}
+
+.swiper-wrap .swiper-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.swiper-wrap .swiper-board .img-wrap,
+.swiper-wrap .swiper-board .img-board {
+  width: 100vw;
+  height: 100vh;
+}
+
+.swiper-wrap .swiper-board .img {
+  width: 100vw;
+  height: 100vh;
+}

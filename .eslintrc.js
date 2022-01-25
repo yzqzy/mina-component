@@ -4,7 +4,6 @@ module.exports = {
     'plugin:promise/recommended'
   ],
   'parser': '@typescript-eslint/parser',
-  'plugins': ['@typescript-eslint'],
   'parserOptions': {
     'ecmaVersion': 9,
     'ecmaFeatures': {
@@ -18,6 +17,7 @@ module.exports = {
     'jest': true
   },
   'plugins': [
+    '@typescript-eslint',
     'import',
     'node',
     'promise'
@@ -59,6 +59,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'object-curly-spacing': 'off',
     'no-console': 'off',
+    'no-unused-expressions': 'off',
     'operator-linebreak': [
       'error',
       'after',
