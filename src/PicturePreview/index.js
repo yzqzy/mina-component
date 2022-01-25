@@ -131,6 +131,7 @@ Component({
       } = this.data;
       const { timeStamp } = e;
 
+      // 判断双击事件
       if (timeStamp - lastSt < 300) {
         delayTimer && clearTimeout(delayTimer);
 
@@ -144,11 +145,10 @@ Component({
         lastSt: timeStamp
       });
 
+      // 限制点击
       if (currScaleVal > 1 || !clicked) return;
 
       const timer = setTimeout(() => {
-        console.log(',', this.data.clicked);
-
         if (this.data.clicked) {
           this.hide();
           this.triggerEvent('close');

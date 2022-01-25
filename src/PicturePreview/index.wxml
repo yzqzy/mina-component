@@ -8,7 +8,7 @@
       class="swiper-wrap"
       :vertical="{{ false }}"
       current="{{ current }}"
-      catch:change="onChange"
+      bind:change="onChange"
     >
       <swiper-item
         class="swiper-board"
@@ -29,8 +29,8 @@
             scale-max="{{ scaleMax }}"
             out-of-bounds
             scale-value="{{ scaleVal }}"
-            catch:scale="onScaleChange"
-            catch:touchend="onTouchEnd"
+            bind:scale="onScaleChange"
+            bind:touchend="onTouchEnd"
           >
             <image
               mode="aspectFit"
