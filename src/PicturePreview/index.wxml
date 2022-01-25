@@ -1,5 +1,5 @@
 <view>
-  <view wx:if="{{showPreview}}" class="perview-wrap">
+  <view wx:if="{{ showPreview }}" class="perview-wrap">
     <view class="indicators">
       {{ current + 1 }}/{{ urls.length }}
     </view>
@@ -9,6 +9,9 @@
     >
       <swiper-item
         class="swiper-board"
+        wx:for="{{ urls }}"
+        wx:key="index"
+        catch:touchmove="{{ moveable ? '' : 'disabled' }}"
       >
         <movable-area class="img-wrap">
           <movable-view
@@ -19,15 +22,14 @@
             scale-min="{{ scaleMin }}"
             scale-max="{{ scaleMax }}"
             out-of-bounds
-            scale-value="{{ scaleValue }}"
+            scale-value="{{ scaleVal }}"
             catch:scale="onScaleChange"
             catch:touchend="onTouchEnd"
           >
             <image
               mode="aspectFit"
               class="img"
-              :src="item"
-              :catch:mouseleave="onMouseLeave"
+              src="{{ item }}"
             />
           </movable-view>
         </movable-area>

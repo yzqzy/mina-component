@@ -30,6 +30,7 @@ Page({
   },
 
   async init() {
+    this.previewRef = this.selectComponent('#J-preview');
   },
 
   /**
@@ -38,8 +39,12 @@ Page({
    */
   handlePreviewSingle(e) {
     const { index } = e.currentTarget.dataset;
-
-    console.log(index);
+    const urls = this.data.imgs.map(item => item.url);
+    
+    this.previewRef.show({
+      current: index,
+      urls
+    });
   },
 
   /**

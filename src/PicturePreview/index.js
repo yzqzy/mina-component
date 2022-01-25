@@ -62,9 +62,12 @@ Component({
      * @returns {void}
      */
     show({ current, urls }) {
+      console.log(current, urls);
+
       this.setData({
         current,
-        urls
+        urls,
+        showPreview: true
       });
     },
     /**
@@ -148,7 +151,7 @@ Component({
       const { currScaleVal } = this.data;
 
       this.setData({
-        scaleValue: currScaleVal,
+        scaleVal: currScaleVal,
         clicked: false
       });
 
