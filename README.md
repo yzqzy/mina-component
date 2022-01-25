@@ -20,6 +20,7 @@
 
 ## 已支持组件
 
+### 图片预览组件（PicturePreview）
 ### 表格组件（ProTable）
 
 ...
