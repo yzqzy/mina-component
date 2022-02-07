@@ -1,3 +1,5 @@
 <view>
-    
+  <text class="iconfont icon-one"></text>
+  <text class="iconfont icon-two"></text>
+  <text class="iconfont icon-three"></text>
 </view>

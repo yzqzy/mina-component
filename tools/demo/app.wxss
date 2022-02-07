@@ -1,2 +1,3 @@
 @import "./assets/styles/reset.wxss";
 @import "./assets/styles/common.wxss";
+@import "./assets/fonts/iconfont.wxss";
