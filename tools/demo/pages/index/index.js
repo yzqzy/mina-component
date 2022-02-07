@@ -11,5 +11,11 @@ Page({
    */
   data: {
     navbars: NAV_BARS
-  }
+  },
+
+  /**
+   * @description 支持页面分享
+   * @returns {void}
+   */
+  onShareAppMessage() {}
 });
