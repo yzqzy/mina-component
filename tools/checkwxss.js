@@ -67,13 +67,10 @@ module.exports = {
 
           file.contents = Buffer.from(wxss, 'utf8')
           this.push(file)
-          // eslint-disable-next-line promise/no-callback-in-promise
           cb()
         }).catch(err => {
-          // eslint-disable-next-line no-console
           console.warn(`deal with ${file.path} failed: ${err.stack}`)
           this.push(file)
-          // eslint-disable-next-line promise/no-callback-in-promise
           cb()
         })
       } else {

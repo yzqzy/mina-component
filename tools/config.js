@@ -1,33 +1,21 @@
 const path = require('path')
-const fs = require('fs')
-
 const webpack = require('webpack')
 const nodeExternals = require('webpack-node-externals')
 
-const isDev = process.argv.indexOf('--develop') >= 0
-const isWatch = process.argv.indexOf('--watch') >= 0
-const demoSrc = path.resolve(__dirname, './demo')
-const demoDist = path.resolve(__dirname, '../miniprogram_dev')
-const src = path.resolve(__dirname, '../src')
-const dev = path.join(demoDist, 'components')
-const dist = path.resolve(__dirname, '../miniprogram_dist')
+const { getComponentsFiles } = require('./utils');
+ 
+const isDev = process.argv.indexOf('--develop') >= 0;
+const isWatch = process.argv.indexOf('--watch') >= 0;
+const demoSrc = path.resolve(__dirname, './demo');
+const demoDist = path.resolve(__dirname, '../miniprogram_dev');
+const src = path.resolve(__dirname, '../src');
+const dev = path.join(demoDist, 'components');
+const dist = path.resolve(__dirname, '../miniprogram_dist');
 
-const files = fs.readFileSync(src);
-const ans = files.reduce((prev, dir) => {
-  const filename = `${dir}/index`;
-  const fileStat = fs.statSync(`${src}/${dir}`);
-
-  if (fileStat.isFile()) {
-
-  }
-
-  prev.push(filename);
-
-  return prev;
-}, []);
+const files = getComponentsFiles(src);
 
 module.exports = {
-  entry: ans,
+  entry: files,
 
   isDev,
   isWatch,

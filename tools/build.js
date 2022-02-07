@@ -45,7 +45,6 @@ function js(jsFileMap, scope) {
   const webpackConfig = config.webpack
   const webpackCallback = (err, stats) => {
     if (!err) {
-      // eslint-disable-next-line no-console
       console.log(stats.toString({
         assets: true,
         cached: false,
@@ -58,7 +57,6 @@ function js(jsFileMap, scope) {
         publicPath: true,
       }))
     } else {
-      // eslint-disable-next-line no-console
       console.log(err)
     }
   }
@@ -248,7 +246,6 @@ class BuildTask {
             return copyFilePath
           }
         } catch (err) {
-          // eslint-disable-next-line no-console
           console.error(err)
           return null
         }
@@ -269,7 +266,6 @@ class BuildTask {
             return null
           }
         } catch (err) {
-          // eslint-disable-next-line no-console
           console.error(err)
           return null
         }
@@ -325,7 +321,6 @@ class BuildTask {
             return copyFilePath
           }
         } catch (err) {
-          // eslint-disable-next-line no-console
           console.error(err)
           return null
         }
