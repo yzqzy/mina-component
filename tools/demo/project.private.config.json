@@ -1,0 +1,24 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "debug PicturePreview",
+          "pathName": "pages/preview/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

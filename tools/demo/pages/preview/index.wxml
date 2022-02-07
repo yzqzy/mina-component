@@ -15,6 +15,7 @@
         class="img"
         src="{{ item.url }}"
         data-index="{{ index }}"
+        data-field="base"
         catch:tap="handlePreviewSingle"
       />
     </view>
@@ -37,6 +38,7 @@
         class="img"
         src="{{ item.url }}"
         data-index="{{ index }}"
+        data-field="slot"
         catch:tap="handlePreviewSingle"
       />
     </view>
@@ -48,6 +50,22 @@
     id="J-preview"
     catch:close="handleClosePreview"  
     catch:change="handlePreviewChange"
-  />
+  >
+    <view
+      wx:if="{{ selected === 'slot' }}"
+      class="btns-board"
+    >
+      <view
+        class="btn"
+        data-current="{{ current }}"
+        catch:tap="hanleSwitchFocusStatus"
+      >
+        <block
+          wx:if="{{ imgsHelper[current] && imgsHelper[current].focus }}"
+        >取消收藏</block>
+        <block wx:else>收藏</block>
+      </view>
+    </view>
+  </picture-preview>
   <!-- 图片预览组件 end -->
 </view>
