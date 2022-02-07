@@ -12,10 +12,22 @@ const src = path.resolve(__dirname, '../src')
 const dev = path.join(demoDist, 'components')
 const dist = path.resolve(__dirname, '../miniprogram_dist')
 
-const files = fs.readdirSync(src).map(dir => `${dir}/index`)
+const files = fs.readFileSync(src);
+const ans = files.reduce((prev, dir) => {
+  const filename = `${dir}/index`;
+  const fileStat = fs.statSync(`${src}/${dir}`);
+
+  if (fileStat.isFile()) {
+
+  }
+
+  prev.push(filename);
+
+  return prev;
+}, []);
 
 module.exports = {
-  entry: files,
+  entry: ans,
 
   isDev,
   isWatch,

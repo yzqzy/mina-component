@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/preview/index",
-    "pages/table/index"
+    "pages/table/index",
+    "pages/tableLandScape/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

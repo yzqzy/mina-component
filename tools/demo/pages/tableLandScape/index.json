@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "ProTable",
   "usingComponents": {
-    "pro-table": "../../components/ProTable/protrait/index"
+    "pro-table": "../../components/ProTable/landscape/index"
   }
 }
