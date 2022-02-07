@@ -17,6 +17,12 @@
           "pathName": "pages/preview/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "debug ProTable",
+          "pathName": "pages/table/index",
+          "query": "",
+          "scene": null
         }
       ]
     }
