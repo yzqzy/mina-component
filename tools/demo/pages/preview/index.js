@@ -1,7 +1,6 @@
 /**
- * @file 预览组件使用
+ * @file 预览组件
  * @module pages/preview/index
- * @author 月落 <yueluo.yang@qq.com>
  */
 
 Page({
