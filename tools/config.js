@@ -1,9 +1,9 @@
-const path = require('path')
-const webpack = require('webpack')
-const nodeExternals = require('webpack-node-externals')
+const path = require('path');
+const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
 
 const { getComponentsFiles } = require('./utils');
- 
+
 const isDev = process.argv.indexOf('--develop') >= 0;
 const isWatch = process.argv.indexOf('--watch') >= 0;
 const demoSrc = path.resolve(__dirname, './demo');
@@ -13,6 +13,8 @@ const dev = path.join(demoDist, 'components');
 const dist = path.resolve(__dirname, '../miniprogram_dist');
 
 const files = getComponentsFiles(src);
+
+console.log(files);
 
 module.exports = {
   entry: files,
@@ -96,4 +98,4 @@ module.exports = {
   },
 
   // copy: ['./assets']
-}
+};

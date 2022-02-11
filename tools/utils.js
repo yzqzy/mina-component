@@ -19,11 +19,11 @@ function wrap(func, scope) {
       args.push(function (err, data) {
         if (err) reject(err);
         else resolve(data);
-      })
+      });
 
       func.apply((scope || null), args);
-    })
-  }
+    });
+  };
 }
 
 const accessSync = wrap(fs.access);
@@ -134,7 +134,7 @@ function logger(action = 'copy') {
 
     this.push(file);
     cb();
-  })
+  });
 }
 
 // 比较数组是否相等
@@ -165,20 +165,24 @@ function merge(obj1, obj2) {
 }
 
 // 获取 id
-let seed = +new Date()
+let seed = +new Date();
 function getId() {
-  return ++seed
+  return ++seed;
 }
 
-// 获取指定组件路径
+// 获取组件路径
 const getComponentsFiles = (root, parent = '') => {
   let files = [];
 
   const rootFiles = fs.readdirSync(root);
 
+  console.log(rootFiles);
+
   rootFiles.forEach(dir => {
     const rootPath = `${root}/${dir}`;
     const filePath = `${rootPath}/index.js`;
+
+    console.log('1', filePath);
 
     try {
       fs.accessSync(filePath, fs.constants.F_OK);
@@ -187,12 +191,12 @@ const getComponentsFiles = (root, parent = '') => {
         path.join(parent, `${dir}/index`)
       );
     } catch (error) {
-      files = files.concat(getComponentsFiles(rootPath, dir))
+      files = files.concat(getComponentsFiles(rootPath, dir));
     }
   });
 
   return files;
-}
+};
 
 
 module.exports = {
@@ -211,4 +215,4 @@ module.exports = {
   getId,
 
   getComponentsFiles
-}
+};

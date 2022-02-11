@@ -60,6 +60,7 @@ module.exports = {
     'object-curly-spacing': 'off',
     'no-console': 'off',
     'no-unused-expressions': 'off',
+    'import/no-dynamic-require': 'off',
     'operator-linebreak': [
       'error',
       'after',

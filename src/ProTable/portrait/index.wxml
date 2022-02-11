@@ -1,1 +1,84 @@
-<view></view>
+<view>
+  <block>
+    <!-- 表格区域 start -->
+    <scroll-view
+      class="table-wrap"
+      style="{{ mr }}rpx; height: {{ height }}rpx"
+      scroll-x
+      enable-flex
+      enhanced
+      bounces="{{ false }}"
+      show-scrollbar="{{ false }}"
+    >
+      <view class="table-container">
+
+        <!-- 左侧定位区域 start -->
+        <view class="left-board">
+          <view class="table-row-title">
+            <view
+              wx:for="{{ leftColumns }}"
+              wx:for-index="index"
+              class="title"
+              style="width: {{ item.width || 120 }}rpx; justify-content: {{ item.align || 'center' }}"
+            >
+              {{ item.title }}
+            </view>
+          </view>
+          <view
+            class="table-board {{ filter.getStyle(order.enabled, 'order-enabled') }} {{ filter.getStyle(order.styleEnabled, 'order-style-enabled') }}"
+          >
+            <view
+              wx:for="{{ list }}"
+              wx:for-item="colItem"
+              wx:for-index="colIndex"
+              wx:key="colIndex"
+              class="row"
+            >
+              <view
+                wx:for="{{ leftColumns }}"
+                wx:for-item="rowItem"
+                wx:for-index="rowIndex"
+                wx:key="rowIndex"
+                class="row-item"
+                style="width: {{ rowItem.width || 120 }}rpx; justify-content: {{ rowItem.align || 'center' }}; height: {{ colItem._custom_height }}rpx"
+              >
+                <view class="title-board">
+                  <view class="title">
+                    <text>{{ colItem[rowItem.dataIndex] }}</text>
+                    <block
+                      wx:if="{{ rowItem.sub }}"
+                    >
+                      <text class="sub-title">{{ colItem[rowItem.sub.dataIndex] }}</text>
+                    </block>
+                  </view>
+                  <block wx:if="{{ order.enabled && order.next }}">
+                    <text class="iconfont icon-right-arrow"></text>
+                  </block>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- 左侧定位区域 end -->
+
+      </view>
+    </scroll-view>
+    <!-- 表格区域 end -->
+  </block>
+</view>
+
+<wxs module="filter">
+/**
+ * @file 字符串过滤
+ * @module Protable/shared/filter
+ */
+
+var getStyle = function (exp, taget) {
+  if (exp) return target;
+  return '';
+}
+
+module.exports = {
+  getStyle: getStyle
+}
+</wxs>
