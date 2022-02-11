@@ -3,11 +3,17 @@
  * @module ProTable/portrait
  */
 
+import { normalizeColumns, normalizeDataSource } from '../shared';
+
 Component({
+  options: {
+    addGlobalClass: true
+  },
   properties: {
     /**
      * @property {Number} mt - margin top
      * @property {Number} mr - margin right
+     * @property {Number} rowH - row height
      */
     mt: {
       type: Number,
@@ -16,6 +22,10 @@ Component({
     mr: {
       type: Number,
       value: 0
+    },
+    rowH: {
+      type: Number,
+      value: 45
     },
 
     /**
@@ -68,6 +78,11 @@ Component({
       text: ''
     }
   },
+  observers: {
+    dataSource() {
+      this.init();
+    }
+  },
   lifetimes: {
     attached() {
       this.init();
@@ -77,6 +92,23 @@ Component({
     init() {
       this.initData();
     },
-    initData() { }
+    initData() {
+      const { columns, dataSource, rowH } = this.data;
+      const { leftColumns, middleColumns } = normalizeColumns(columns);
+
+      const { height, list } = normalizeDataSource({
+        leftColumns,
+        middleColumns,
+        dataSource,
+        rowH
+      });
+
+      this.setData({
+        leftColumns,
+        middleColumns,
+        height,
+        list
+      });
+    }
   }
 });

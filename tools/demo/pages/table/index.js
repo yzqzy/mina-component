@@ -9,18 +9,23 @@ import { STUDENT_COLUMNS } from '../../config/table';
 Page({
   /**
    * @property {array} columns - 表格列
-   * @property {array} list - 表格数据
+   * @property {array} dataSource - 表格数据源
    */
   data: {
     columns: STUDENT_COLUMNS,
-    list: []
+    dataSource: [],
+
+    orderOptions: {
+      enabled: true,
+      next: true
+    }
   },
   onLoad() {
     this.init();
   },
   init() {
     this.setData({
-      list: STUDENTS.map(item => {
+      dataSource: STUDENTS.map(item => {
         item.hobbiesStr = item.hobbies.join('、');
         return item;
       })

@@ -17,7 +17,7 @@
           <view class="table-row-title">
             <view
               wx:for="{{ leftColumns }}"
-              wx:for-index="index"
+              wx:key="index"
               class="title"
               style="width: {{ item.width || 120 }}rpx; justify-content: {{ item.align || 'center' }}"
             >
@@ -40,21 +40,19 @@
                 wx:for-index="rowIndex"
                 wx:key="rowIndex"
                 class="row-item"
-                style="width: {{ rowItem.width || 120 }}rpx; justify-content: {{ rowItem.align || 'center' }}; height: {{ colItem._custom_height }}rpx"
+                style="width: {{ rowItem.width || 120 }}rpx; height: {{ colItem._custom_height }}rpx; justify-content: {{ rowItem.align || 'center' }};"
               >
                 <view class="title-board">
-                  <view class="title">
-                    <text>{{ colItem[rowItem.dataIndex] }}</text>
-                    <block
-                      wx:if="{{ rowItem.sub }}"
-                    >
-                      <text class="sub-title">{{ colItem[rowItem.sub.dataIndex] }}</text>
-                    </block>
-                  </view>
-                  <block wx:if="{{ order.enabled && order.next }}">
-                    <text class="iconfont icon-right-arrow"></text>
+                  <text>{{ colItem[rowItem.dataIndex] }}</text>
+                  <block
+                    wx:if="{{ rowItem.sub }}"
+                  >
+                    <text class="sub-title">{{ colItem[rowItem.sub.dataIndex] }}</text>
                   </block>
                 </view>
+                <block wx:if="{{ order.enabled && order.next }}">
+                  <text class="iconfont icon-right-arrow"></text>
+                </block>
               </view>
             </view>
           </view>
@@ -73,7 +71,7 @@
  * @module Protable/shared/filter
  */
 
-var getStyle = function (exp, taget) {
+var getStyle = function (exp, target) {
   if (exp) return target;
   return '';
 }

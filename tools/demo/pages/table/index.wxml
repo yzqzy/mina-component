@@ -1,2 +1,8 @@
 <view>
+  <pro-table
+    rowH="90"
+    columns="{{ columns }}"
+    dataSource="{{ dataSource }}"
+    order="{{ orderOptions }}"
+  />
 </view>
