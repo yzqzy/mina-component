@@ -176,13 +176,9 @@ const getComponentsFiles = (root, parent = '') => {
 
   const rootFiles = fs.readdirSync(root);
 
-  console.log(rootFiles);
-
   rootFiles.forEach(dir => {
     const rootPath = `${root}/${dir}`;
     const filePath = `${rootPath}/index.js`;
-
-    console.log('1', filePath);
 
     try {
       fs.accessSync(filePath, fs.constants.F_OK);
