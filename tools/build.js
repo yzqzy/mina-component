@@ -163,7 +163,7 @@ class BuildTask {
       const mergeComponentListMap = {};
       for (let i = 0, len = entries.length; i < len; i++) {
         let entry = entries[i];
-        entry = path.join(srcPath, `${entry}.json`);
+        entry = path.join(srcPath, `${entry}/index.json`);
         const newComponentListMap = await checkComponents(entry);
 
         _.merge(mergeComponentListMap, newComponentListMap);

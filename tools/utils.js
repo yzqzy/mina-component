@@ -184,7 +184,7 @@ const getComponentsFiles = (root, parent = '') => {
       fs.accessSync(filePath, fs.constants.F_OK);
 
       files.push(
-        path.join(parent, `${dir}/index`)
+        path.join(parent, `${dir}`)
       );
     } catch (error) {
       files = files.concat(getComponentsFiles(rootPath, dir));
