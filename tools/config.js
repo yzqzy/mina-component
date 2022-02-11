@@ -14,8 +14,6 @@ const dist = path.resolve(__dirname, '../miniprogram_dist');
 
 const files = getComponentsFiles(src);
 
-console.log(files);
-
 module.exports = {
   entry: files,
 
