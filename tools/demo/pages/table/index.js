@@ -11,6 +11,7 @@ Page({
   /**
    * @property {array} columns - 表格列
    * @property {array} dataSource - 表格数据源
+   * @property {object} orderOptions - 表格排序相关配置
    */
   data: {
     columns: STUDENT_COLUMNS,
