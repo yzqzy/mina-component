@@ -1,4 +1,9 @@
-<view>
+<view class="wrap">
+  <!-- 功能名称 start -->
+  <func-title title="基础用法" />
+  <!-- 功能名称 end -->
+
+  <!-- 表格区域 start -->
   <pro-table
     rowH="90"
     columns="{{ columns }}"
@@ -7,4 +12,5 @@
     dataSource="{{ dataSource }}"
     order="{{ orderOptions }}"
   />
+  <!-- 表格区域 end -->
 </view>

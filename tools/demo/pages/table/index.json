@@ -2,6 +2,7 @@
   "navigationBarTitleText": "ProTable",
   "disableScroll": true,
   "usingComponents": {
+    "func-title": "../../components/FuncTitle/index",
     "pro-table": "../../components/ProTable/portrait/index"
   }
 }

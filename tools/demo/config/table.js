@@ -34,7 +34,7 @@ export const STUDENT_COLUMNS = [
     title: '爱好',
     align: 'flex-end',
     dataIndex: 'hobbiesStr',
-    width: 280,
+    width: 240,
     tooltip: {
       show: true,
       limit: 6
