@@ -21,21 +21,20 @@ export const STUDENT_COLUMNS = [
     title: '性别',
     align: 'flex-end',
     dataIndex: 'sex',
-    width: 200,
-    sortable: true
+    width: 180,
   },
   {
     title: '年龄',
     align: 'flex-end',
     dataIndex: 'age',
-    width: 200,
+    width: 180,
     sortable: true
   },
   {
     title: '爱好',
     align: 'flex-end',
     dataIndex: 'hobbiesStr',
-    width: 200,
+    width: 280,
     tooltip: {
       show: true,
       limit: 6

@@ -42,6 +42,19 @@ Component({
     },
 
     /**
+     * @property {String} sortField - 排序字段
+     * @property {String} sortType - 排序类型 desc、asc
+     */
+    sortField: {
+      type: String,
+      value: ''
+    },
+    sortType: {
+      type: String,
+      value: 'desc'
+    },
+
+    /**
      * @property {Object} order - 排序相关配置
      * @property {Boolean} order.enabled - 启用排序
      * @property {Boolean} order.styleEnabled - 启用排序样式

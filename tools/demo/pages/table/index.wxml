@@ -2,6 +2,8 @@
   <pro-table
     rowH="90"
     columns="{{ columns }}"
+    sortField="{{ sortField }}"
+    sortType="{{ sortType }}"
     dataSource="{{ dataSource }}"
     order="{{ orderOptions }}"
   />

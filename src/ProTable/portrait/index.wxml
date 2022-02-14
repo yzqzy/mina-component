@@ -79,9 +79,9 @@
             >
               {{ item.title }}
 
-              <view wx:if="{{ item.sortable }}" class="sortable-btns">
-                <text class="ascend {{ sortField === item.dataIndex && sortType === 'asc' }}"></text>
-                <text class="descend {{ sortField === item.dataIndex && sortType === 'desc' }}"></text>
+              <view wx:if="{{ item.sortable }}" class="sortable-btn">
+                <text class="ascend {{ filter.getStyle(sortField === item.dataIndex && sortType === 'asc', 'active') }}"></text>
+                <text class="descend {{ filter.getStyle(sortField === item.dataIndex && sortType === 'desc', 'active') }}"></text>
               </view>
             </view>
           </view>
@@ -107,16 +107,18 @@
                 catch:tap="handleShowToolTip"
               >
                 <view class="title-board">
-                  <text>{{ colItem[rowItem.dataIndex] }}</text>
-                  <text
-                    class="tooltip"
-                    wx:if="{{ rowItem.tooltip && colItem[rowItem.dataIndex + '_tooltip'] }}"
-                    wx:key="rowIndex"
-                    data-index="{{ colIndex }}"
-                    data-field="{{ rowItem.dataIndex }}"
-                    data-tooltip="{{ rowItem.tooltip }}"
-                    catch:tap="handleShowToolTip"
-                  >更多</text>
+                  <view class="title">
+                    <text>{{ colItem[rowItem.dataIndex] }}</text>
+                    <text
+                      class="tooltip"
+                      wx:if="{{ rowItem.tooltip && colItem[rowItem.dataIndex + '_tooltip'] }}"
+                      wx:key="rowIndex"
+                      data-index="{{ colIndex }}"
+                      data-field="{{ rowItem.dataIndex }}"
+                      data-tooltip="{{ rowItem.tooltip }}"
+                      catch:tap="handleShowToolTip"
+                    >更多</text>
+                  </view>
                 </view>
               </view>
             </view>
@@ -136,8 +138,6 @@
  */
 
 var getStyle = function (exp, target) {
-  console.log(exp, '222')
-
   if (exp) return target;
   return '';
 }

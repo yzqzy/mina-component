@@ -21,7 +21,10 @@ Page({
       enabled: true,
       // styleEnabled: true,
       // next: true
-    }
+    },
+
+    sortField: 'age',
+    sortType: 'desc'
   },
   onLoad() {
     this.init();
