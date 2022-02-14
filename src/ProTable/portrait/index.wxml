@@ -12,7 +12,7 @@
     >
       <view class="table-container">
 
-        <!-- 左侧定位区域 start -->
+        <!-- 左侧固定列区域 start -->
         <view class="left-board">
           <view class="table-row-title">
             <view
@@ -66,8 +66,63 @@
             </view>
           </view>
         </view>
-        <!-- 左侧定位区域 end -->
+        <!-- 左侧固定列区域 end -->
 
+        <!-- 右侧正常列区域 start -->
+        <view class="right-board">
+          <view class="table-row-title">
+            <view
+              wx:for="{{ middleColumns }}"
+              wx:key="index"
+              class="title"
+              style="width: {{ item.width || 120 }}rpx; justify-content: {{ item.align || 'center' }}"
+            >
+              {{ item.title }}
+
+              <view wx:if="{{ item.sortable }}" class="sortable-btns">
+                <text class="ascend {{ sortField === item.dataIndex && sortType === 'asc' }}"></text>
+                <text class="descend {{ sortField === item.dataIndex && sortType === 'desc' }}"></text>
+              </view>
+            </view>
+          </view>
+          <view
+            class="table-board {{ filter.getStyle(order.enabled && order.styleEnabled, 'order-style-enabled') }}"
+          >
+            <view
+              wx:for="{{ list }}"
+              wx:for-item="colItem"
+              wx:for-index="colIndex"
+              wx:key="colIndex"
+              class="row"
+            >
+              <view
+                wx:for="{{ middleColumns }}"
+                wx:for-item="rowItem"
+                wx:for-index="rowIndex"
+                wx:key="rowIndex"
+                class="row-item"
+                style="width: {{ rowItem.width || 120 }}rpx; height: {{ colItem._custom_height }}rpx; justify-content: {{ rowItem.align || 'center' }};"
+                data-field="{{ rowItem.dataIndex }}"
+                data-tooltip="{{ rowItem.tooltip }}"
+                catch:tap="handleShowToolTip"
+              >
+                <view class="title-board">
+                  <text>{{ colItem[rowItem.dataIndex] }}</text>
+                  <text
+                    class="tooltip"
+                    wx:if="{{ rowItem.tooltip && colItem[rowItem.dataIndex + '_tooltip'] }}"
+                    wx:key="rowIndex"
+                    data-index="{{ colIndex }}"
+                    data-field="{{ rowItem.dataIndex }}"
+                    data-tooltip="{{ rowItem.tooltip }}"
+                    catch:tap="handleShowToolTip"
+                  >更多</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- 右侧正常列区域 end -->
       </view>
     </scroll-view>
     <!-- 表格区域 end -->

@@ -109,6 +109,13 @@ Component({
         height,
         list
       });
+    },
+    /**
+     * @description 显示 tooltip
+     * @returns {void}
+     */
+    handleShowToolTip(e) {
+      console.log(e);
     }
   }
 });

@@ -20,11 +20,25 @@ export const STUDENT_COLUMNS = [
   {
     title: '性别',
     align: 'flex-end',
+    dataIndex: 'sex',
+    width: 200,
+    sortable: true
+  },
+  {
+    title: '年龄',
+    align: 'flex-end',
     dataIndex: 'age',
+    width: 200,
+    sortable: true
   },
   {
     title: '爱好',
     align: 'flex-end',
     dataIndex: 'hobbiesStr',
+    width: 200,
+    tooltip: {
+      show: true,
+      limit: 6
+    }
   }
 ];
