@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "ProTable",
+  "disableScroll": true,
   "usingComponents": {
     "pro-table": "../../components/ProTable/portrait/index"
   }

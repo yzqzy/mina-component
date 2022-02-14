@@ -25,7 +25,7 @@
             </view>
           </view>
           <view
-            class="table-board {{ filter.getStyle(order.enabled, 'order-enabled') }} {{ filter.getStyle(order.styleEnabled, 'order-style-enabled') }}"
+            class="table-board {{ filter.getStyle(order.enabled && order.styleEnabled, 'order-style-enabled') }}"
           >
             <view
               wx:for="{{ list }}"
@@ -42,6 +42,15 @@
                 class="row-item"
                 style="width: {{ rowItem.width || 120 }}rpx; height: {{ colItem._custom_height }}rpx; justify-content: {{ rowItem.align || 'center' }};"
               >
+                <block
+                  wx:if="{{ order.enabled }}"
+                >
+                  <view class="order-board">
+                    <text wx:if="{{ colIndex <= 2 }}" class="order iconfont icon-{{ colIndex + 1 }}"></text>
+                    <view wx:else class="circle-area">{{ colIndex + 1 }}</view>
+                  </view>
+                </block>
+
                 <view class="title-board">
                   <text>{{ colItem[rowItem.dataIndex] }}</text>
                   <block
@@ -72,6 +81,8 @@
  */
 
 var getStyle = function (exp, target) {
+  console.log(exp, '222')
+
   if (exp) return target;
   return '';
 }

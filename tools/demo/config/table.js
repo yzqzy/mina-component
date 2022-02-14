@@ -11,7 +11,7 @@ export const STUDENT_COLUMNS = [
     title: '姓名',
     fixed: 'left',
     align: 'left',
-    width: 260,
+    width: 280,
     dataIndex: 'name',
     sub: {
       dataIndex: 'mobile',

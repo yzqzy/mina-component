@@ -17,15 +17,15 @@
   content: "\e629";
 }
 
-.icon-one:before {
+.icon-1:before {
   content: "\e63e";
 }
 
-.icon-three:before {
+.icon-3:before {
   content: "\e63f";
 }
 
-.icon-two:before {
+.icon-2:before {
   content: "\e640";
 }
 

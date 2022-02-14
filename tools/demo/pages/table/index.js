@@ -5,6 +5,7 @@
 
 import { STUDENTS } from '../../config/mock';
 import { STUDENT_COLUMNS } from '../../config/table';
+import { mobileSlice } from '../../shared/tools';
 
 Page({
   /**
@@ -17,7 +18,8 @@ Page({
 
     orderOptions: {
       enabled: true,
-      next: true
+      // styleEnabled: true,
+      // next: true
     }
   },
   onLoad() {
@@ -27,6 +29,7 @@ Page({
     this.setData({
       dataSource: STUDENTS.map(item => {
         item.hobbiesStr = item.hobbies.join('、');
+        item.mobile = mobileSlice(item.mobile);
         return item;
       })
     });
