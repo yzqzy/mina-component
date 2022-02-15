@@ -23,6 +23,12 @@
           "pathName": "pages/table/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "debug ProTable LandScape",
+          "pathName": "pages/tableLandScape/index",
+          "query": "",
+          "scene": null
         }
       ]
     }
