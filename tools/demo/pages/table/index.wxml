@@ -1,4 +1,11 @@
-<view class="wrap">
+<scroll-view
+  class="wrap"
+  scroll-y
+  enable-flex
+  enhanced
+  :bounces="false"
+  :show-scrollbar="false"
+>
   <!-- 功能名称 start -->
   <view class="title-board">
     <func-title title="基础用法" />
@@ -7,12 +14,30 @@
 
   <!-- 表格区域 start -->
   <pro-table
-    rowH="90"
+    rowH="80"
     columns="{{ columns1 }}"
-    dataSource="{{ dataSource }}"
+    dataSource="{{ dataSource1 }}"
+    catch:onNext="handleToNext"
+    catch:onChangeSort="handleChangeSort"
+  />
+  <!-- 表格区域 end -->
+
+  <!-- 功能名称 start -->
+  <view class="title-board">
+    <func-title title="进阶用法" />
+  </view>
+  <!-- 功能名称 end -->
+
+  <!-- 表格区域 start -->
+  <pro-table
+    rowH="100"
+    columns="{{ columns2 }}"
+    dataSource="{{ dataSource2 }}"
+    sortField="{{ sortField }}"
+    sortType="{{ sortType }}"
     order="{{ orderOptions }}"
     catch:onNext="handleToNext"
     catch:onChangeSort="handleChangeSort"
   />
   <!-- 表格区域 end -->
-</view>
+</scroll-view>

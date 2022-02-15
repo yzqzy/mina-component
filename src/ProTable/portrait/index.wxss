@@ -26,6 +26,7 @@
   font-family: PingFangSC-Semibold, PingFang SC;
   border-top: 1rpx solid rgba(238, 238, 238, 1);
   border-bottom: 1rpx solid rgba(238, 238, 238, 1);
+  box-sizing: border-box;
 }
 
 .table-container {
@@ -51,6 +52,7 @@
   display: flex;
   border-right: 1rpx solid rgba(238, 238, 238, 1);
   border-bottom: 1rpx solid rgba(238, 238, 238, 1);
+  box-sizing: border-box;
 }
 
 .left-board .table-row-title .title,
@@ -134,6 +136,12 @@
   flex-direction: row;
   border-right: 1rpx solid rgba(238, 238, 238, 1);
   border-bottom: 1rpx solid rgba(238, 238, 238, 1);
+  box-sizing: border-box;
+}
+
+.left-board .table-board .row:last-child,
+.right-board .table-board .row:last-child {
+  border-bottom: none;
 }
 
 .left-board .table-board .row-item,
