@@ -8,7 +8,24 @@
   <!-- 表格区域 start -->
   <pro-table
     rowH="90"
-    columns="{{ columns }}"
+    columns="{{ columns1 }}"
+    dataSource="{{ dataSource }}"
+    order="{{ orderOptions }}"
+    catch:onNext="handleToNext"
+    catch:onChangeSort="handleChangeSort"
+  />
+  <!-- 表格区域 end -->
+
+  <!-- 功能名称 start -->
+  <view class="title-board">
+    <func-title title="表格排序" />
+  </view>
+  <!-- 功能名称 end -->
+
+  <!-- 表格区域 start -->
+  <pro-table
+    rowH="90"
+    columns="{{ columns2 }}"
     sortField="{{ sortField }}"
     sortType="{{ sortType }}"
     dataSource="{{ dataSource }}"

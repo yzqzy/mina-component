@@ -6,9 +6,6 @@
 import { normalizeColumns, normalizeDataSource } from '../shared';
 
 Component({
-  options: {
-    addGlobalClass: true
-  },
   properties: {
     /**
      * @property {Number} mt - margin top

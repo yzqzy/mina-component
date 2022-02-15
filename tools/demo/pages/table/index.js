@@ -4,17 +4,19 @@
  */
 
 import { STUDENTS } from '../../config/mock';
-import { STUDENT_COLUMNS } from '../../config/table';
+import { STUDENT_COLUMNS1, STUDENT_COLUMNS2 } from '../../config/table';
 import { mobileSlice } from '../../shared/tools';
 
 Page({
   data: {
     /**
-     * @property {array} columns - 表格列
+     * @property {array} columns1 - 表格列配置
+     * @property {array} columns2 - 表格列配置
      * @property {array} dataSource - 表格数据源
      * @property {object} orderOptions - 表格排序相关配置
      */
-    columns: STUDENT_COLUMNS,
+    columns1: STUDENT_COLUMNS1,
+    columns2: STUDENT_COLUMNS2,
     dataSource: [],
 
     /**

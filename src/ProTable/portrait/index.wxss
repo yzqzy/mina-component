@@ -231,7 +231,7 @@
   opacity: .7;
   overflow-y: auto;
   color: #fff;
-  font-size: 28rpx;
+  font-size: 26rpx;
   border-radius: 8rpx;
 }
 /* 弹窗区域 end */
