@@ -117,7 +117,7 @@ Component({
       const { current } = e.detail;
 
       this.setData({ current });
-      this.triggerEvent('change', { current });
+      this.triggerEvent('onChange', { current });
     },
     /**
      * @description 关闭预览弹窗
@@ -149,7 +149,7 @@ Component({
       const timer = setTimeout(() => {
         if (this.data.clicked) {
           this.hide();
-          this.triggerEvent('close');
+          this.triggerEvent('onClose');
         }
       }, 300);
 

@@ -33,6 +33,8 @@
               wx:for-index="colIndex"
               wx:key="colIndex"
               class="row"
+              data-index="{{ colIndex }}"
+              catch:tap="handleToNext"
             >
               <view
                 wx:for="{{ leftColumns }}"
@@ -76,6 +78,9 @@
               wx:key="index"
               class="title"
               style="width: {{ item.width || 120 }}rpx; justify-content: {{ item.align || 'center' }}"
+              data-sortable="{{ item.sortable }}"
+              data-field="{{ item.dataIndex }}"
+              catch:tap="handleChangeSort"
             >
               {{ item.title }}
 
@@ -94,6 +99,8 @@
               wx:for-index="colIndex"
               wx:key="colIndex"
               class="row"
+              data-index="{{ colIndex }}"
+              catch:tap="handleToNext"
             >
               <view
                 wx:for="{{ middleColumns }}"

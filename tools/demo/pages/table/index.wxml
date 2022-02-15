@@ -13,6 +13,8 @@
     sortType="{{ sortType }}"
     dataSource="{{ dataSource }}"
     order="{{ orderOptions }}"
+    catch:onNext="handleToNext"
+    catch:onChangeSort="handleChangeSort"
   />
   <!-- 表格区域 end -->
 </view>

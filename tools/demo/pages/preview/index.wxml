@@ -48,8 +48,8 @@
   <!-- 图片预览组件 start -->
   <picture-preview
     id="J-preview"
-    catch:close="handleClosePreview"  
-    catch:change="handlePreviewChange"
+    catch:onClose="handleClosePreview"  
+    catch:onChange="handlePreviewChange"
   >
     <view
       wx:if="{{ selected === 'slot' }}"

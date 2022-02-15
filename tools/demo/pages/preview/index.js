@@ -102,11 +102,11 @@ Page({
     const content = focus ? '您确认取消收藏该图片吗？' : '您确认收藏该图片吗？';
 
     wx.showModal({
-      content: content,
-      confirmColor: "#457EFC",
-      confirmText: "确定",
-      cancelColor: "#999999",
-      cancelText: "取消",
+      content,
+      confirmColor: '#457EFC',
+      confirmText: '确定',
+      cancelColor: '#999999',
+      cancelText: '取消',
       success: (res) => {
         if (res.confirm) {
           this.setData({
@@ -117,6 +117,5 @@ Page({
         }
       }
     });
-
   }
 });

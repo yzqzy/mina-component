@@ -125,6 +125,28 @@ Component({
     },
 
     /**
+     * @description 点击表格项
+     * @returns {void}
+     */
+    handleToNext(e) {
+      const { index } = e.currentTarget.dataset;
+
+      this.triggerEvent('onNext', { index });
+    },
+
+    /**
+     * @description 表格排序
+     * @returns {void}
+     */
+    handleChangeSort(e) {
+      const { sortable, field } = e.currentTarget.dataset;
+
+      if (sortable) {
+        this.triggerEvent('onChangeSort', { field, type: this.data.sortType });
+      }
+    },
+
+    /**
      * @description 显示提示弹窗
      * @returns {void}
      */
@@ -147,7 +169,6 @@ Component({
         }
       }
     },
-
     /**
      * @description 隐藏提示弹窗
      * @returns {void}
