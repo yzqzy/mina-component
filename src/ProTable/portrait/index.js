@@ -123,12 +123,44 @@ Component({
         list
       });
     },
+
     /**
-     * @description 显示 tooltip
+     * @description 显示提示弹窗
      * @returns {void}
      */
     handleShowToolTip(e) {
-      console.log(e);
-    }
+      const { field, index, tooltip } = e.currentTarget.dataset;
+      const { show } = tooltip || {};
+
+      if (show) {
+        const item = this.data.dataSource[index];
+
+        const text = item[field + '_tooltip'];
+
+        if (text) {
+          this.setData({
+            tooltip: {
+              text,
+              show: true
+            }
+          });
+        }
+      }
+    },
+
+    /**
+     * @description 隐藏提示弹窗
+     * @returns {void}
+     */
+    handleHideTooltip() {
+      this.setData({
+        tooltip: {
+          show: false,
+          text: ''
+        }
+      });
+    },
+
+    noop() {}
   }
 });
