@@ -95,5 +95,5 @@ module.exports = {
     }
   },
 
-  // copy: ['./assets']
+  copy: ['./assets']
 };

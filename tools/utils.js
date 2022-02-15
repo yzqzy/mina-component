@@ -174,26 +174,44 @@ function getId() {
 const getComponentsFiles = (root, parent = '') => {
   let files = [];
 
-  const rootFiles = fs.readdirSync(root);
+  try {
+    const rootFiles = fs.readdirSync(root);
 
-  rootFiles.forEach(dir => {
-    const rootPath = `${root}/${dir}`;
-    const filePath = `${rootPath}/index.js`;
+    rootFiles.forEach(dir => {
+      const rootPath = `${root}/${dir}`;
+      const filePath = `${rootPath}/index.js`;
 
-    try {
-      fs.accessSync(filePath, fs.constants.F_OK);
+      try {
+        fs.accessSync(filePath, fs.constants.F_OK);
 
-      files.push(
-        path.join(parent, `${dir}`)
-      );
-    } catch (error) {
-      files = files.concat(getComponentsFiles(rootPath, dir));
-    }
-  });
+        files.push(
+          path.join(parent, `${dir}`)
+        );
+      } catch (error) {
+        files = files.concat(getComponentsFiles(rootPath, dir));
+      }
+    });
+  } catch (error) {
+    console.log('no dir');
+  }
 
   return files;
 };
 
+// 过滤组件路径
+const filterComponentsFiles = (files, excludeKeys) => {
+  const ans = [];
+
+  excludeKeys.forEach(key => {
+    for (let i = 0; i < files.length; i++) {
+      if (!files[i].includes(key)) {
+        ans.push(files[i]);
+      }
+    }
+  });
+
+  return ans;
+};
 
 module.exports = {
   wrap,
@@ -210,5 +228,6 @@ module.exports = {
   merge,
   getId,
 
-  getComponentsFiles
+  getComponentsFiles,
+  filterComponentsFiles
 };
