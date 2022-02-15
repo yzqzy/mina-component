@@ -109,10 +109,6 @@
                 wx:key="rowIndex"
                 class="row-item"
                 style="width: {{ rowItem.width || 120 }}rpx; height: {{ colItem._custom_height }}rpx; justify-content: {{ rowItem.align || 'center' }};"
-                data-index="{{ colIndex }}"
-                data-field="{{ rowItem.dataIndex }}"
-                data-tooltip="{{ rowItem.tooltip }}"
-                catch:tap="handleShowToolTip"
               >
                 <view class="title-board">
                   <view class="title">
