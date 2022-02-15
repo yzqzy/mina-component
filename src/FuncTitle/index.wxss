@@ -1,5 +1,5 @@
 .func-title-wrap {
-  padding: 64rpx 0 16rpx;
+  padding: 32rpx 0;
 }
 
 .func-title-wrap .title {

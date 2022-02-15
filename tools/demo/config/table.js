@@ -37,7 +37,7 @@ export const STUDENT_COLUMNS = [
     width: 240,
     tooltip: {
       show: true,
-      limit: 6
+      limit: 5
     }
   }
 ];

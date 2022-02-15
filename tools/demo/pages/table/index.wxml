@@ -1,6 +1,8 @@
 <view class="wrap">
   <!-- 功能名称 start -->
-  <func-title title="基础用法" />
+  <view class="title-board">
+    <func-title title="基础用法" />
+  </view>
   <!-- 功能名称 end -->
 
   <!-- 表格区域 start -->
