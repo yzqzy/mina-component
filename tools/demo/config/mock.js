@@ -18,7 +18,8 @@ export const STUDENTS = [
     sex: '男',
     age: 23,
     mobile: '15233110528',
-    hobbies: ['CSS3', 'JavaScript']
+    hobbies: ['CSS3', 'JavaScript'],
+    address: '中国北京'
   },
   {
     id: 2,
@@ -26,7 +27,8 @@ export const STUDENTS = [
     sex: '男',
     age: 27,
     mobile: '15233110528',
-    hobbies: ['JavaScript', 'Python', 'HTML5']
+    hobbies: ['JavaScript', 'Python', 'HTML5'],
+    address: '中国北京'
   },
   {
     id: 3,
@@ -34,7 +36,8 @@ export const STUDENTS = [
     sex: '女',
     age: 18,
     mobile: '15233110528',
-    hobbies: ['JavaScript', 'Vue', 'HTML5']
+    hobbies: ['JavaScript', 'Vue', 'HTML5'],
+    address: '中国台湾'
   },
   {
     id: 4,
@@ -42,7 +45,8 @@ export const STUDENTS = [
     sex: '男',
     age: 20,
     mobile: '15233110528',
-    hobbies: ['React', 'Vue', 'HTML5']
+    hobbies: ['React', 'Vue', 'HTML5'],
+    address: '中国天津'
   },
   {
     id: 5,
@@ -50,7 +54,8 @@ export const STUDENTS = [
     sex: '男',
     age: 23,
     mobile: '15233110528',
-    hobbies: ['React', 'Vue', 'Webpack']
+    hobbies: ['React', 'Vue', 'Webpack'],
+    address: '中国天津'
   },
   {
     id: 6,
@@ -58,7 +63,8 @@ export const STUDENTS = [
     sex: '女',
     age: 24,
     mobile: '15233110528',
-    hobbies: ['LeetCode', 'Vue']
+    hobbies: ['LeetCode', 'Vue'],
+    address: '中国济南'
   },
   {
     id: 7,
@@ -66,7 +72,8 @@ export const STUDENTS = [
     sex: '男',
     age: 32,
     mobile: '15233110528',
-    hobbies: ['Webpack', 'Vue']
+    hobbies: ['Webpack', 'Vue'],
+    address: '中国天津'
   },
   {
     id: 8,
@@ -74,7 +81,8 @@ export const STUDENTS = [
     sex: '男',
     age: 28,
     mobile: '15233110528',
-    hobbies: ['React', 'LeetCode']
+    hobbies: ['React', 'LeetCode'],
+    address: '中国河南'
   },
   {
     id: 9,
@@ -82,6 +90,7 @@ export const STUDENTS = [
     sex: '女',
     age: 26,
     mobile: '15233110528',
-    hobbies: ['NodeJs', 'Webpack']
+    hobbies: ['NodeJs', 'Webpack'],
+    address: '中国天津'
   }
 ];

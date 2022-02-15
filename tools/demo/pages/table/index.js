@@ -4,7 +4,7 @@
  */
 
 import { STUDENTS } from '../../config/mock';
-import { STUDENT_COLUMNS1, STUDENT_COLUMNS2 } from '../../config/table';
+import { STUDENT_COLUMNS1 } from '../../config/table';
 import { mobileSlice } from '../../shared/tools';
 
 Page({
@@ -16,7 +16,6 @@ Page({
      * @property {object} orderOptions - 表格排序相关配置
      */
     columns1: STUDENT_COLUMNS1,
-    columns2: STUDENT_COLUMNS2,
     dataSource: [],
 
     /**
