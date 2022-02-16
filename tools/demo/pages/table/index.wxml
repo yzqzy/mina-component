@@ -28,6 +28,12 @@
   </view>
   <!-- 功能名称 end -->
 
+  <!-- 横屏按钮区域 start -->
+  <view class="landscape-board">
+    <text class="iconfont icon-landscape"></text>
+  </view>
+  <!-- 横屏按钮区域 end -->
+
   <!-- 表格区域 start -->
   <pro-table
     rowH="100"

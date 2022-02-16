@@ -12,3 +12,17 @@
 .title-board:first-child {
   margin-top: 0;
 }
+
+.landscape-board {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 60rpx;
+  padding: 0 24rpx;
+}
+
+.landscape-board .iconfont {
+  color: #F56145;
+  font-size: 26rpx;
+}
