@@ -11,7 +11,7 @@ export const STUDENT_COLUMNS = [
     title: '姓名',
     fixed: 'left',
     align: 'left',
-    width: 280,
+    width: 220,
     dataIndex: 'name'
   },
   {
