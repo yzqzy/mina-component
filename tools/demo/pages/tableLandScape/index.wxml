@@ -9,6 +9,7 @@
     order="{{ orderOptions }}"
     catch:onNext="handleToNext"
     catch:onChangeSort="handleChangeSort"
+    catch:onLoadMore="handleLoadMoreData"
   />
   <!-- 表格区域 end -->
 </view>

@@ -136,6 +136,18 @@ Component({
       }
     },
 
+    /**
+     * @description 页面触底
+     * @returns {void}
+     */
+    handleLoadMore(e) {
+      const { direction } = e.detail;
+
+      if (direction === 'bottom') {
+        this.triggerEvent('onLoadMore');
+      }
+    },
+
     noop() {}
   }
 });

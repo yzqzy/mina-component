@@ -39,7 +39,7 @@ Page({
   },
 
   init() {
-    const originStudents = STUDENTS.concat(STUDENTS);
+    const originStudents = STUDENTS.concat(STUDENTS).concat(STUDENTS);
     const students = originStudents.map(item => {
       item.hobbiesStr = item.hobbies.join('、');
       item.mobile = mobileSlice(item.mobile);
@@ -82,5 +82,13 @@ Page({
       dataSource,
       sortType
     });
+  },
+
+  /**
+   * @description 加载更多数据
+   * @returns {void}
+   */
+  handleLoadMoreData() {
+    console.log('load more data');
   }
 });

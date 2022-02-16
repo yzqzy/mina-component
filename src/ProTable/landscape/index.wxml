@@ -3,14 +3,14 @@
     <!-- 表格区域 start -->
     <scroll-view
       class="table-wrap"
-      style="margin-right: {{ mr }}rpx; margin-left: {{ safeAreaLeft }}px;"
+      style="margin-right: {{ mr }}rpx; margin-top: {{ mt }}rpx; margin-left: {{ safeAreaLeft }}px; height: calc(100vh - {{ mt }}rpx)"
       scroll-x
       scroll-y
       enable-flex
       enhanced
       bounces="{{ false }}"
       show-scrollbar="{{ false }}"
-      catch:scrolltolower="loadMore"
+      bind:scrolltolower="handleLoadMore"
     >
       <view class="table-container">
         <!-- 左侧固定列区域 start -->
@@ -91,48 +91,50 @@
         <!-- 左侧固定列区域 end -->
 
         <!-- 右侧正常列区域 start -->
-        <view class="right-board">
-          <view class="table-row-title">
-            <view
-              wx:for="{{ middleColumns }}"
-              wx:key="index"
-              class="title"
-              style="width: {{ item.width || 120 }}rpx; justify-content: {{ item.align || 'center' }}"
-              data-sortable="{{ item.sortable }}"
-              data-field="{{ item.dataIndex }}"
-              catch:tap="handleChangeSort"
-            >
-              {{ item.title }}
-
-              <view wx:if="{{ item.sortable }}" class="sortable-btn">
-                <text class="ascend {{ filter.getStyle(sortField === item.dataIndex && sortType === 'asc', 'active') }}"></text>
-                <text class="descend {{ filter.getStyle(sortField === item.dataIndex && sortType === 'desc', 'active') }}"></text>
-              </view>
-            </view>
-          </view>
-          <view
-            class="table-board {{ filter.getStyle(order.enabled && order.styleEnabled, 'order-style-enabled') }}"
-          >
-            <view
-              wx:for="{{ list }}"
-              wx:for-item="colItem"
-              wx:for-index="colIndex"
-              wx:key="colIndex"
-              class="row"
-              data-index="{{ colIndex }}"
-              catch:tap="handleToNext"
-            >
+        <view class="blank">
+          <view class="right-board">
+            <view class="table-row-title">
               <view
                 wx:for="{{ middleColumns }}"
-                wx:for-item="rowItem"
-                wx:for-index="rowIndex"
-                wx:key="rowIndex"
-                class="row-item"
-                style="width: {{ rowItem.width || 120 }}rpx; height: {{ colItem._custom_height }}rpx; justify-content: {{ rowItem.align || 'center' }};"
+                wx:key="index"
+                class="title"
+                style="width: {{ item.width || 120 }}rpx; justify-content: {{ item.align || 'center' }}"
+                data-sortable="{{ item.sortable }}"
+                data-field="{{ item.dataIndex }}"
+                catch:tap="handleChangeSort"
               >
-                <view class="title-board">
-                  <view class="title">
-                    <text>{{ colItem[rowItem.dataIndex] }}</text>
+                {{ item.title }}
+
+                <view wx:if="{{ item.sortable }}" class="sortable-btn">
+                  <text class="ascend {{ filter.getStyle(sortField === item.dataIndex && sortType === 'asc', 'active') }}"></text>
+                  <text class="descend {{ filter.getStyle(sortField === item.dataIndex && sortType === 'desc', 'active') }}"></text>
+                </view>
+              </view>
+            </view>
+            <view
+              class="table-board {{ filter.getStyle(order.enabled && order.styleEnabled, 'order-style-enabled') }}"
+            >
+              <view
+                wx:for="{{ list }}"
+                wx:for-item="colItem"
+                wx:for-index="colIndex"
+                wx:key="colIndex"
+                class="row"
+                data-index="{{ colIndex }}"
+                catch:tap="handleToNext"
+              >
+                <view
+                  wx:for="{{ middleColumns }}"
+                  wx:for-item="rowItem"
+                  wx:for-index="rowIndex"
+                  wx:key="rowIndex"
+                  class="row-item"
+                  style="width: {{ rowItem.width || 120 }}rpx; height: {{ colItem._custom_height }}rpx; justify-content: {{ rowItem.align || 'center' }};"
+                >
+                  <view class="title-board">
+                    <view class="title">
+                      <text>{{ colItem[rowItem.dataIndex] }}</text>
+                    </view>
                   </view>
                 </view>
               </view>
