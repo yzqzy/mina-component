@@ -3,7 +3,7 @@
     <!-- 表格区域 start -->
     <scroll-view
       class="table-wrap"
-      style="{{ mr }}rpx; height: {{ height }}rpx"
+      style="margin-right: {{ mr }}rpx; height: {{ height }}rpx"
       scroll-x
       enable-flex
       enhanced

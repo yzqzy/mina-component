@@ -3,18 +3,25 @@
     <!-- 表格区域 start -->
     <scroll-view
       class="table-wrap"
-      style="{{ mr }}rpx; height: {{ height }}rpx"
+      style="margin-right: {{ mr }}rpx; margin-left: {{ safeAreaLeft }}px;"
       scroll-x
+      scroll-y
       enable-flex
       enhanced
       bounces="{{ false }}"
       show-scrollbar="{{ false }}"
+      catch:scrolltolower="loadMore"
     >
       <view class="table-container">
-
         <!-- 左侧固定列区域 start -->
         <view class="left-board">
-          <view class="table-row-title">
+
+          <!-- 解决 IOS 抖动问题 -->
+          <!-- 固定定位单元格 start -->
+          <view
+            class="table-row-title fixed"
+            style="top: {{ mt }}rpx; left: {{ safeAreaLeft }}px;"
+          >
             <view
               wx:for="{{ leftColumns }}"
               wx:key="index"
@@ -24,6 +31,24 @@
               {{ item.title }}
             </view>
           </view>
+          <!-- 固定定位单元格 start -->
+
+          <!-- 撑开高度 -->
+          <!-- 正常单元格 start -->
+          <view
+            class="table-row-title hidden"
+          >
+            <view
+              wx:for="{{ leftColumns }}"
+              wx:key="index"
+              class="title"
+              style="width: {{ item.width || 120 }}rpx; justify-content: {{ item.align || 'center' }}"
+            >
+              {{ item.title }}
+            </view>
+          </view>
+          <!-- 正常单元格 start -->
+
           <view
             class="table-board {{ filter.getStyle(order.enabled && order.styleEnabled, 'order-style-enabled') }}"
           >
@@ -55,11 +80,6 @@
 
                 <view class="title-board">
                   <text>{{ colItem[rowItem.dataIndex] }}</text>
-                  <block
-                    wx:if="{{ rowItem.sub }}"
-                  >
-                    <text class="sub-title">{{ colItem[rowItem.sub.dataIndex] }}</text>
-                  </block>
                 </view>
                 <block wx:if="{{ order.enabled && order.next }}">
                   <text class="iconfont icon-right-arrow"></text>
@@ -113,15 +133,6 @@
                 <view class="title-board">
                   <view class="title">
                     <text>{{ colItem[rowItem.dataIndex] }}</text>
-                    <text
-                      class="tooltip"
-                      wx:if="{{ rowItem.tooltip && colItem[rowItem.dataIndex + '_tooltip'] }}"
-                      wx:key="rowIndex"
-                      data-index="{{ colIndex }}"
-                      data-field="{{ rowItem.dataIndex }}"
-                      data-tooltip="{{ rowItem.tooltip }}"
-                      catch:tap="handleShowToolTip"
-                    >更多</text>
                   </view>
                 </view>
               </view>
@@ -132,27 +143,6 @@
       </view>
     </scroll-view>
     <!-- 表格区域 end -->
-
-    <!-- 提示弹窗区域 start -->
-    <view
-      class="tooltip-wrap"
-      wx:if="{{ tooltip.show }}"
-      catch:tap="handleHideTooltip"
-      catch:touchmove="handleHideTooltip"
-    >
-      <scoll-view
-        catch:tap="noop"
-        catch:touchmove="noop"
-        scroll-y
-        enhanced
-        :bounces="false"
-        :show-scrollbar="false"
-        class="tooltip-board"
-      >
-        {{ tooltip.text }}
-      </scoll-view>
-    </view>
-    <!-- 提示弹窗区域 end -->
   </block>
 </view>
 

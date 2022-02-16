@@ -20,7 +20,6 @@
 
 .table-wrap {
   display: flex;
-  flex-direction: row;
   height: auto;
   background-color: #fff;
   font-family: PingFangSC-Semibold, PingFang SC;

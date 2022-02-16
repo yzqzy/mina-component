@@ -4,7 +4,7 @@
  */
 
 import { STUDENTS } from '../../config/mock';
-import { STUDENT_COLUMNS1, STUDENT_COLUMNS2 } from '../../config/table';
+import { STUDENT_COLUMNS1, STUDENT_COLUMNS2 } from './config/table';
 import { mobileSlice } from '../../shared/tools';
 
 Page({

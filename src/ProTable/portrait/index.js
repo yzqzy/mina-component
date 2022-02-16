@@ -8,14 +8,9 @@ import { normalizeColumns, normalizeDataSource } from '../shared';
 Component({
   properties: {
     /**
-     * @property {Number} mt - margin top
      * @property {Number} mr - margin right
      * @property {Number} rowH - row height
      */
-    mt: {
-      type: Number,
-      value: 0
-    },
     mr: {
       type: Number,
       value: 0

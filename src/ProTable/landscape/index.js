@@ -5,6 +5,8 @@
 
 import { normalizeColumns, normalizeDataSource } from '../shared';
 
+const { safeArea: { left } } = wx.getSystemInfoSync();
+
 Component({
   properties: {
     /**
@@ -64,9 +66,9 @@ Component({
   },
   data: {
     /**
-    * @property {Number} height - 表格高度
-    */
-    height: 0,
+     * @property {Number} safeAreaLeft - 左侧安全边距
+     */
+    safeAreaLeft: left,
 
     /**
     * @property {Array} leftColumns - 左侧固定列
@@ -98,7 +100,7 @@ Component({
       const { columns, dataSource, rowH } = this.data;
       const { leftColumns, middleColumns } = normalizeColumns(columns);
 
-      const { height, list } = normalizeDataSource({
+      const { list } = normalizeDataSource({
         leftColumns,
         middleColumns,
         dataSource,
@@ -108,7 +110,6 @@ Component({
       this.setData({
         leftColumns,
         middleColumns,
-        height,
         list
       });
     },

@@ -1,3 +1,14 @@
-<view>
-    
+<view class="wrap">
+  <!-- 表格区域 start -->
+  <pro-table
+    rowH="45"
+    columns="{{ columns }}"
+    dataSource="{{ dataSource }}"
+    sortField="{{ sortField }}"
+    sortType="{{ sortType }}"
+    order="{{ orderOptions }}"
+    catch:onNext="handleToNext"
+    catch:onChangeSort="handleChangeSort"
+  />
+  <!-- 表格区域 end -->
 </view>

@@ -1,0 +1,7 @@
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  padding-bottom: 40rpx;
+  overflow: scroll;
+  box-sizing: border-box;
+}
