@@ -93,7 +93,7 @@ Page({
    * @returns {void}
    */
   handleToLandScapePage() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/tableLandScape/index'
     });
   }

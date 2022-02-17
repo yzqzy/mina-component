@@ -102,7 +102,7 @@ Page({
    * @returns {void}
    */
   handleGoBack() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/table/index'
     });
   }
