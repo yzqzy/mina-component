@@ -33,7 +33,7 @@
   height: 60rpx;
   padding: 0 24rpx;
   box-sizing: border-box;
-  color: #d81e06;
+  color: darkgrey;
 }
 
 .landscape-board .landscape-btn .iconfont {

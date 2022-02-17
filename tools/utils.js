@@ -180,15 +180,14 @@ const getComponentsFiles = (root, parent = '') => {
     rootFiles.forEach(dir => {
       const rootPath = `${root}/${dir}`;
       const filePath = `${rootPath}/index.js`;
+      const distPath = path.join(parent, `${dir}`);
 
       try {
         fs.accessSync(filePath, fs.constants.F_OK);
 
-        files.push(
-          path.join(parent, `${dir}`)
-        );
+        files.push(distPath);
       } catch (error) {
-        files = files.concat(getComponentsFiles(rootPath, dir));
+        files = files.concat(getComponentsFiles(rootPath, distPath));
       }
     });
   } catch (error) {

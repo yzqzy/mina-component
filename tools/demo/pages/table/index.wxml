@@ -34,7 +34,7 @@
       class="landscape-btn"
       catch:tap="handleToLandScapePage"
     >
-      <text class="iconfont icon-landscape"></text>
+      <text class="iconfont icon-landscape" />
       <text class="text">横屏查看</text>
     </view>
   </view>

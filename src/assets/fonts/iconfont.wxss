@@ -16,7 +16,6 @@
 .icon-landscape:before {
   content: "\e809";
 }
-
 .icon-right-arrow:before {
   content: "\e629";
 }
@@ -32,4 +31,3 @@
 .icon-2:before {
   content: "\e640";
 }
-

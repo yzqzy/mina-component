@@ -21,11 +21,11 @@
     "testEnvironment": "jsdom",
     "testURL": "https://jest.test",
     "collectCoverageFrom": [
-      "miniprogram_dist/**/*.js"
+      "mina_dist/**/*.js"
     ],
     "moduleDirectories": [
       "node_modules",
-      "miniprogram_dist"
+      "mina_dist"
     ]
   },
   "repository": {

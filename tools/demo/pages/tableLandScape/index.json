@@ -4,6 +4,7 @@
   "pageOrientation": "landscape",
   "disableScroll": true,
   "usingComponents": {
-    "pro-table": "../../components/ProTable/landscape/index"
+    "pro-table": "../../components/ProTable/landscape/index",
+    "nav-panel": "../../components/ProTable/components/NavPanel/index"
   }
 }

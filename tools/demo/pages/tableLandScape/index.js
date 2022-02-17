@@ -39,7 +39,7 @@ Page({
   },
 
   init() {
-    const originStudents = STUDENTS.concat(STUDENTS).concat(STUDENTS);
+    const originStudents = STUDENTS.concat(STUDENTS).concat(STUDENTS).concat(STUDENTS);
     const students = originStudents.map(item => {
       item.hobbiesStr = item.hobbies.join('、');
       item.mobile = mobileSlice(item.mobile);
@@ -90,5 +90,20 @@ Page({
    */
   handleLoadMoreData() {
     console.log('load more data');
+
+    wx.showToast({
+      icon: 'none',
+      title: '没有更多数据了'
+    });
+  },
+
+  /**
+   * @description 回退页面
+   * @returns {void}
+   */
+  handleGoBack() {
+    wx.navigateTo({
+      url: '/pages/table/index'
+    });
   }
 });
