@@ -2,26 +2,16 @@
 
 微信小程序自定义组件。
 
-## 目录结构
-
-```
-|--mina_dev // 开发环境构建目录
-|--mina_dist // 生产环境构建目录
-|--src // 源码
-|   |--components // 通用自定义组件
-|
-|--test // 测试用例
-|--tools // 构建相关代码
-|   |--demo // demo 小程序目录，开发环境下会被拷贝生成到 mina_dev 目录中
-|   |--config.js // 构建相关配置文件
-|
-|--gulpfile.js
-```
-
 ## 已支持组件
 
 ### 图片预览组件（PicturePreview）
 ### 表格组件（ProTable）
+
+## 预览
+
+扫描下方小程序二维码，体验组件库示例：
+
+<img src="https://data.yueluo.club/mina/mina_icon.jpg" style="zoom: 80%" />
 
 ...
 
