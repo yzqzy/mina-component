@@ -86,5 +86,15 @@ Page({
       dataSource2,
       sortType
     });
+  },
+
+  /**
+   * @description 跳转至横屏页面
+   * @returns {void}
+   */
+  handleToLandScapePage() {
+    wx.navigateTo({
+      url: '/pages/tableLandScape/index'
+    });
   }
 });

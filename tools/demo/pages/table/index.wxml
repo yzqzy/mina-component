@@ -30,7 +30,13 @@
 
   <!-- 横屏按钮区域 start -->
   <view class="landscape-board">
-    <text class="iconfont icon-landscape"></text>
+    <view
+      class="landscape-btn"
+      catch:tap="handleToLandScapePage"
+    >
+      <text class="iconfont icon-landscape"></text>
+      <text class="text">横屏查看</text>
+    </view>
   </view>
   <!-- 横屏按钮区域 end -->
 

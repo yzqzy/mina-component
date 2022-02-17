@@ -16,7 +16,6 @@
 .icon-landscape:before {
   content: "\e809";
 }
-
 .icon-right-arrow:before {
   content: "\e629";
 }
