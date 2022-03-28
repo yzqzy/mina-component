@@ -7,10 +7,10 @@ const { getComponentsFiles } = require('./utils');
 const isDev = process.argv.indexOf('--develop') >= 0;
 const isWatch = process.argv.indexOf('--watch') >= 0;
 const demoSrc = path.resolve(__dirname, './demo');
-const demoDist = path.resolve(__dirname, '../mina_dev');
+const demoDist = path.resolve(__dirname, '../dist_dev');
 const src = path.resolve(__dirname, '../src');
 const dev = path.join(demoDist, 'components');
-const dist = path.resolve(__dirname, '../mina_dist');
+const dist = path.resolve(__dirname, '../dist');
 
 const files = getComponentsFiles(src);
 
