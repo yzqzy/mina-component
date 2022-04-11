@@ -1,6 +1,5 @@
 <div class="van-doc-card">
   <div class="van-doc-intro">
-    <img class="van-doc-intro__logo" style="width: 120px; height: 120px; box-shadow: none;" src="https://data.yueluo.club/mina/mina.png">
     <h2 style="margin: 0; font-size: 32px; line-height: 60px;">Mina Components</h2>
     <p>小程序组件库</p>
   </div>
