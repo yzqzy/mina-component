@@ -1,9 +1,9 @@
 /**
  * @file ProTable 组件 - 竖屏
- * @module pages/table/index
+ * @module pages/table
  */
 
-import { STUDENTS } from '../../config/mock';
+import { STUDENTS } from '../../config/student';
 import { STUDENT_COLUMNS1, STUDENT_COLUMNS2 } from './config/table';
 import { mobileSlice } from '../../shared/tools';
 

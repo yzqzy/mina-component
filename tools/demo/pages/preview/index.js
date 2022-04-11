@@ -1,6 +1,6 @@
 /**
  * @file 预览组件
- * @module pages/preview/index
+ * @module pages/preview
  */
 
 Page({

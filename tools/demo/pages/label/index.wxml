@@ -1,0 +1,3 @@
+<view class="wrap">
+  <chart-analysis ref="chartAnalysisRef" colors="{{ rectColors }}" image="{{ image }}" labels="{{ labels }}" scaleMin="1" scaleMax="2" height="40vh" catch:tap="handleRectClick" />
+</view>

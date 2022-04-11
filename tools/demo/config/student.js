@@ -1,9 +1,4 @@
 /**
- * @file Mock 数据
- * @module config/mock
- */
-
-/**
  * @constant {Array<Object>} STUDENTS - 学员列表
  * @property {number} id - ID
  * @property {string} name - 名称

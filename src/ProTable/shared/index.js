@@ -1,6 +1,6 @@
 /**
  * @file 工具函数
- * @module ProTable/index
+ * @module ProTable/shared
  */
 
 /**
