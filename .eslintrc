@@ -1,0 +1,13 @@
+{
+  "root": true,
+  "globals": {
+    "getApp": false,
+    "getCurrentPages": false,
+    "Page": false,
+    "Component": false,
+    "App": false,
+    "wx": false,
+    "Behavior": false
+  },
+  "extends": ["@vant"]
+}

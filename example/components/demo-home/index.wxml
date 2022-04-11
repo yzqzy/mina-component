@@ -1,0 +1,9 @@
+<view class="demo-home">
+  <view class="demo-home__title">
+    <view class="demo-home__text">Mina Components</view>
+  </view>
+  <view class="demo-home__desc">小程序 UI 组件库</view>
+  <view wx:for="{{ list }}" wx:for-item="group" wx:key="index">
+    <demo-home-nav group="{{ group }}" />
+  </view>
+</view>

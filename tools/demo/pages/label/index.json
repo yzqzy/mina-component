@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "Label",
-  "usingComponents": {
-    "chart-analysise": "../../components/Label/analysis/index"
-  }
-}

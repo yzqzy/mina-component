@@ -1,3 +1,0 @@
-<view class="func-title-wrap">
-  <view class="title">{{ title }}</view>
-</view>
