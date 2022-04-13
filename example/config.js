@@ -1,17 +1,15 @@
 export default [
   {
     groupName: '基础组件',
-    icon: 'https://img.yzcdn.cn/vant/basic-0401.svg',
     list: [
       {
-        path: '/button',
-        title: 'Button 按钮',
+        path: '/image-preview',
+        title: 'ImagePreview 图片预览',
       }
     ],
   },
   {
     groupName: '标注组件',
-    icon: 'https://img.yzcdn.cn/vant/form-0401.svg',
     list: [
       {
         path: '/calendar',

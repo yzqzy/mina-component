@@ -10,7 +10,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "dev": "node build/dev.mjs --watch",
+    "dev": "node build/dev.mjs",
     "lint": "eslint ./packages --ext .js,.ts --fix && stylelint \"packages/**/*.less\" --fix",
     "prepare": "husky install",
     "release": "sh build/release.sh",

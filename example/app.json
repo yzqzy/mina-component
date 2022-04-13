@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/dashboard/index"
+    "pages/dashboard/index",
+    "pages/image-preview/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#f8f8f8",
@@ -10,7 +11,8 @@
     "backgroundColor": "#f8f8f8"
   },
   "usingComponents": {
-    "demo-block": "./components/demo-block/index"
+    "demo-block": "./components/demo-block/index",
+    "mina-image-preview-demo": "./dist/image-preview/demo/index"
   },
   "sitemapLocation": "sitemap.json"
 }

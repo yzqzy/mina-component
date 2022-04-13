@@ -1,0 +1,26 @@
+<demo-block title="基础用法" padding>
+  <van-row>
+    <view class="imgs-wrap">
+      <view class="imgs-board" wx:for="{{ imgs }}" wx:key="index">
+        <image mode="aspectFill" class="img" src="{{ item.url }}" data-index="{{ index }}" data-field="base" catch:tap="handlePreviewSingle" />
+      </view>
+    </view>
+  </van-row>
+</demo-block>
+<demo-block title="插槽使用" padding>
+  <view class="imgs-wrap">
+    <view class="imgs-board" wx:for="{{ imgs }}" wx:key="index">
+      <image mode="aspectFill" class="img" src="{{ item.url }}" data-index="{{ index }}" data-field="slot" catch:tap="handlePreviewSingle" />
+    </view>
+  </view>
+</demo-block>
+<!-- 图片预览组件 start -->
+<mina-image-preview id="J-preview" catch:onClose="handleClosePreview" catch:onChange="handlePreviewChange">
+  <view wx:if="{{ selected === 'slot' }}" class="btns-board">
+    <view class="btn" data-current="{{ current }}" catch:tap="hanleSwitchFocusStatus">
+      <block wx:if="{{ imgsHelper[current] && imgsHelper[current].focus }}">取消收藏</block>
+      <block wx:else>收藏</block>
+    </view>
+  </view>
+</mina-image-preview>
+<!-- 图片预览组件 end -->
