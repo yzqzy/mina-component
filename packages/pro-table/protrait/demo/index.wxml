@@ -1,9 +1,9 @@
-<demo-block title="基础用法" padding>
+<demo-block title="基础用法">
   <!-- 表格区域 start -->
   <mina-pro-table rowH="80" columns="{{ columns1 }}" dataSource="{{ dataSource1 }}" catch:onNext="handleToNext" catch:onChangeSort="handleChangeSort" />
   <!-- 表格区域 end -->
 </demo-block>
-<demo-block title="进阶用法" padding>
+<demo-block title="进阶用法">
   <view class="landscape-board">
     <view class="landscape-btn" catch:tap="handleToLandScapePage">
       <text class="iconfont icon-landscape" />
