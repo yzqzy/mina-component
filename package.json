@@ -4,7 +4,7 @@
   "author": "月落",
   "license": "MIT",
   "miniprogram": "lib",
-  "description": "小程序 UI 组件库",
+  "description": "小程序组件库",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
