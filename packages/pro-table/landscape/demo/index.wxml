@@ -1,0 +1,8 @@
+<view class="wrap">
+  <!-- 操作面板区域 start -->
+  <mina-nav-panel width="53" catch:onSwitch="handleGoBack" />
+  <!-- 操作面板区域 end -->
+  <!-- 表格区域 start -->
+  <mina-pro-table mr="53" rowH="45" columns="{{ columns }}" dataSource="{{ dataSource }}" sortField="{{ sortField }}" sortType="{{ sortType }}" order="{{ orderOptions }}" catch:onNext="handleToNext" catch:onChangeSort="handleChangeSort" catch:onLoadMore="handleLoadMoreData" />
+  <!-- 表格区域 end -->
+</view>

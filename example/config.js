@@ -5,7 +5,11 @@ export default [
       {
         path: '/image-preview',
         title: 'ImagePreview 图片预览',
-      }
+      },
+      {
+        path: '/protable-protrait',
+        title: 'ProTable 表格',
+      },
     ],
   },
   {

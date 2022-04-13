@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/dashboard/index",
-    "pages/image-preview/index"
+    "pages/image-preview/index",
+    "pages/protable-protrait/index",
+    "pages/protable-landscape/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#f8f8f8",
@@ -12,7 +14,9 @@
   },
   "usingComponents": {
     "demo-block": "./components/demo-block/index",
-    "mina-image-preview-demo": "./dist/image-preview/demo/index"
+    "mina-image-preview-demo": "./dist/image-preview/demo/index",
+    "mina-protable-protrait-demo": "./dist/pro-table/protrait/demo/index",
+    "mina-protable-landscape-demo": "./dist/pro-table/landscape/demo/index"
   },
   "sitemapLocation": "sitemap.json"
 }

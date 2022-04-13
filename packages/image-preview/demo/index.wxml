@@ -1,11 +1,9 @@
 <demo-block title="基础用法" padding>
-  <van-row>
-    <view class="imgs-wrap">
-      <view class="imgs-board" wx:for="{{ imgs }}" wx:key="index">
-        <image mode="aspectFill" class="img" src="{{ item.url }}" data-index="{{ index }}" data-field="base" catch:tap="handlePreviewSingle" />
-      </view>
+  <view class="imgs-wrap">
+    <view class="imgs-board" wx:for="{{ imgs }}" wx:key="index">
+      <image mode="aspectFill" class="img" src="{{ item.url }}" data-index="{{ index }}" data-field="base" catch:tap="handlePreviewSingle" />
     </view>
-  </van-row>
+  </view>
 </demo-block>
 <demo-block title="插槽使用" padding>
   <view class="imgs-wrap">

@@ -1,0 +1,16 @@
+<demo-block title="基础用法" padding>
+  <!-- 表格区域 start -->
+  <mina-pro-table rowH="80" columns="{{ columns1 }}" dataSource="{{ dataSource1 }}" catch:onNext="handleToNext" catch:onChangeSort="handleChangeSort" />
+  <!-- 表格区域 end -->
+</demo-block>
+<demo-block title="进阶用法" padding>
+  <view class="landscape-board">
+    <view class="landscape-btn" catch:tap="handleToLandScapePage">
+      <text class="iconfont icon-landscape" />
+      <text class="text">横屏查看</text>
+    </view>
+  </view>
+  <!-- 表格区域 start -->
+  <mina-pro-table rowH="100" columns="{{ columns2 }}" dataSource="{{ dataSource2 }}" sortField="{{ sortField }}" sortType="{{ sortType }}" order="{{ orderOptions }}" catch:onNext="handleToNext" catch:onChangeSort="handleChangeSort" />
+  <!-- 表格区域 end -->
+</demo-block>

@@ -3,11 +3,8 @@
  * @module Protable/shared/filter
  */
 
-const getStyle = function (exp, target) {
-  if (exp) return target;
-  return '';
+function getStyle (exp, target) {
+  return exp ? target : '';
 }
 
-module.exports = {
-  getStyle
-}
+module.exports.getStyle = getStyle;;

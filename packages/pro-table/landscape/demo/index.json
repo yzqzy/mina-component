@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mina-nav-panel": "../../../pro-table/components/nav-panel/index",
+    "mina-pro-table": "../../../pro-table/landscape/index"
+  }
+}

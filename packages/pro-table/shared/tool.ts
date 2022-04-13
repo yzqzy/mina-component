@@ -9,8 +9,8 @@
  * @returns {Object}
  */
 export const normalizeColumns = (originColumns) => {
-  const leftColumns = [];
-  const middleColumns = [];
+  const leftColumns = [] as any[];
+  const middleColumns = [] as any[];
 
   const columns = originColumns.slice(0);
 
@@ -50,9 +50,9 @@ const getMultiiple = (text) => (/^\d+$/.test(text) ? 2 : 1);
  */
 export const normalizeDataSource = (
   {
-    leftColumns = [],
-    middleColumns = [],
-    dataSource = [],
+    leftColumns = [] as any[],
+    middleColumns = [] as any[],
+    dataSource = [] as any[],
     hd = 64,
     wordLimit = 8,
     rowH = 0
