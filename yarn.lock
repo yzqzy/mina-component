@@ -9111,10 +9111,10 @@ miniprogram-api-typings@^3.1.6, miniprogram-api-typings@^3.2.2:
   resolved "https://registry.npmmirror.com/miniprogram-api-typings/-/miniprogram-api-typings-3.4.5.tgz#060e73b58ccc28db85ffb4ae60a838112866fb3e"
   integrity sha512-GWvMdmPhJ40PLq4/sOh+n2xGRKf2R3kcuOaSe7IRTdT+Os8lfNrJYehYdgH7IoUWqaHqV8mFEWQj5oPIGhVv4Q==
 
-miniprogram-ci@^1.6.1:
-  version "1.8.0"
-  resolved "https://registry.npmmirror.com/miniprogram-ci/-/miniprogram-ci-1.8.0.tgz#6d9bf1934ee81c129f49f0a752782a3ae59498cb"
-  integrity sha512-2E88gYUJBV6womjBOa2i7tbjUtv5xBQ86/P0VX6wKQDCPZX4LNdVGnDgioTr+cOoCa9RqkyYzSpFjNMb1aeo1g==
+miniprogram-ci@^1.8.12:
+  version "1.8.12"
+  resolved "https://registry.npmmirror.com/miniprogram-ci/-/miniprogram-ci-1.8.12.tgz#483c868dc2425a8ffab4442a2547682faade28fe"
+  integrity sha512-YpdwJ1NldWxl6wRe91iy5ph6Z2VlwSUxMcBPwPPO8RSF9BIFM9tGUfY/FlA3wdKKbASNDg9GFmDLlWosNibX4Q==
   dependencies:
     "@babel/core" "7.12.3"
     "@babel/helper-module-imports" "7.12.1"
