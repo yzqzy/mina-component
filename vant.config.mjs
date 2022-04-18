@@ -1,13 +1,13 @@
 export default {
-  name: 'vant-weapp',
+  name: 'mina-components',
   build: {
     srcDir: 'packages',
     site: {
-      publicPath: '/vant-weapp/',
+      publicPath: '/mina-components/',
     },
   },
   site: {
-    versions: [{ label: '0.x', link: '/vant-weapp/0.x' }],
+    versions: [{ label: '0.x', link: '/mina-components/0.x' }],
     title: 'Mina Components',
     description: '小程序组件库',
     logo: 'https://data.yueluo.club/mina/mina.png"',
@@ -29,7 +29,7 @@ export default {
       },
       {
         logo: 'https://b.yzcdn.cn/vant/logo/github.svg',
-        url: 'https://github.com/youzan/vant-weapp',
+        url: 'https://github.com/youzan/mina-components',
       },
     ],
     baiduAnalytics: {
