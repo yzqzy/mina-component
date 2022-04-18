@@ -9,7 +9,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
   # build
   npm run build:lib
-  if [[ `git status --porcelain` ]]; 
+  if [[ `git status --porcelain` ]];
   then
     git add -A
     git commit -am "build: compile $VERSION"
@@ -19,13 +19,13 @@ then
   npm version $VERSION --message "release: $VERSION"
 
   # publish
-  git push origin dev
+  git push origin develop
   git push origin refs/tags/v$VERSION
 
   if [[ $VERSION =~ [beta] ]]
   then
     npm publish --tag beta
-  else 
+  else
     npm publish
   fi
 
