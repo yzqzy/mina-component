@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/yw0525/mina-components#readme",
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
     "@babel/preset-typescript": "^7.16.0",
     "@types/jest": "^27.0.2",
     "@vant/cli": "^4.0.0",
