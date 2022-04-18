@@ -1,7 +1,7 @@
 {
   "projectname": "mina-component",
   "setting": {
-    "compileHotReLoad": true,
+    "compileHotReLoad": false,
     "urlCheck": true,
     "useIsolateContext": false
   },
