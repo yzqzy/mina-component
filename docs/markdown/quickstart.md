@@ -12,13 +12,13 @@
 
 ```bash
 # 通过 npm 安装
-npm i mina-components -S --production
+npm i mina-component -S --production
 
 # 通过 yarn 安装
-yarn add mina-components --production
+yarn add mina-component --production
 
 # 安装 0.x 版本
-npm i mina-components -S --production
+npm i mina-component -S --production
 ```
 
 ### 步骤二 构建 npm 包
@@ -43,7 +43,7 @@ yarn add -D miniprogram-api-typings
 
 #### 在 tsconfig.json 中增加如下配置，以防止 tsc 编译报错。
 
-请将`path/to/node_modules/mina-components`修改为项目的 `node_modules` 中 mina-components 所在的目录。
+请将`path/to/node_modules/mina-component`修改为项目的 `node_modules` 中 mina-component 所在的目录。
 
 ```json
 {
@@ -53,7 +53,7 @@ yarn add -D miniprogram-api-typings
     "baseUrl": ".",
     "types": ["miniprogram-api-typings"],
     "paths": {
-      "mina-components/*": ["path/to/node_modules/mina-components/dist/*"]
+      "mina-component/*": ["path/to/node_modules/mina-component/dist/*"]
     },
     "lib": ["ES6"]
   }
@@ -66,13 +66,13 @@ yarn add -D miniprogram-api-typings
 
 以 ImagePreview 组件为例，只需要在`app.json`或`index.json`中配置 ImagePreview 对应的路径即可。
 
-所有组件文档中的引入路径均以 npm 安装为例，如果你是通过下载源代码的方式使用 mina-components，请将路径修改为项目中 mina-components 所在的目录。
+所有组件文档中的引入路径均以 npm 安装为例，如果你是通过下载源代码的方式使用 mina-components，请将路径修改为项目中 mina-component 所在的目录。
 
 ```json
 // 通过 npm 安装
 // app.json
 "usingComponents": {
-  "mina-image-preview": "mina-components/image-preview/index"
+  "mina-image-preview": "mina-component/image-preview/index"
 }
 ```
 
@@ -80,7 +80,7 @@ yarn add -D miniprogram-api-typings
 // 通过下载源码使用 es6版本
 // app.json
 "usingComponents": {
-  "mina-image-preview": "path/to/mina-components/dist/image-preview/index"
+  "mina-image-preview": "path/to/mina-component/dist/image-preview/index"
 }
 ```
 
@@ -88,7 +88,7 @@ yarn add -D miniprogram-api-typings
 // 通过下载源码使用 es5版本
 // app.json
 "usingComponents": {
-  "mina-image-preview": "path/to/mina-components/lib/image-preview/index"
+  "mina-image-preview": "path/to/mina-component/lib/image-preview/index"
 }
 ```
 
@@ -111,10 +111,10 @@ yarn add -D miniprogram-api-typings
 ```bash
 
 # 将项目克隆到本地
-git clone git@github.com:iheora/mina-components.git
+git clone git@github.com:iheora/mina-component.git
 
 # 安装项目依赖
-cd mina-components && npm install
+cd mina-component && npm install
 
 # 执行组件编译
 npm run dev

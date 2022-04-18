@@ -1,5 +1,5 @@
 {
-  "name": "mina-components",
+  "name": "mina-component",
   "version": "1.0.2",
   "author": "月落",
   "license": "MIT",
@@ -27,7 +27,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:iheora/mina-components.git"
+    "url": "git@github.com:iheora/mina-component.git"
   },
   "lint-staged": {
     "*.{ts,js}": [
@@ -39,7 +39,7 @@
       "prettier --write"
     ]
   },
-  "homepage": "https://github.com/yw0525/mina-components#readme",
+  "homepage": "https://github.com/yw0525/mina-component#readme",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",

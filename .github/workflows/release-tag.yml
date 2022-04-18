@@ -20,4 +20,4 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           body: |
-            更新内容参见 [CHANGELOG](https://vant-contrib.gitee.io/mina-components/#/changelog)。
+            更新内容参见 [CHANGELOG](https://vant-contrib.gitee.io/mina-component/#/changelog)。

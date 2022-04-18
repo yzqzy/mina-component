@@ -46,7 +46,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.10.4",
   "appid": "wx949d0caaae57b810",
-  "projectname": "mina-components",
+  "projectname": "mina-component",
   "condition": {
     "miniprogram": {
       "list": [
