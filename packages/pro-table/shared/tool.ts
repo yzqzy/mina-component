@@ -113,7 +113,7 @@ export const normalizeDataSource = (
     });
 
     return h + maxH;
-  }, rowH - dataSource.length);
+  }, rowH);
 
   return {
     height,

@@ -99,7 +99,7 @@ VantComponent({
      */
     handleGoBack() {
       wx.redirectTo({
-        url: '/pages/protable-partrait/index'
+        url: '/pages/protable-protrait/index'
       });
     }
   }

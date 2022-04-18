@@ -11,3 +11,6 @@ example/dist
 changelog.generated.md
 package-lock.json
 build/private.wx1c01b35002d3ba14.key
+
+# Wakatime
+*.wakatime*

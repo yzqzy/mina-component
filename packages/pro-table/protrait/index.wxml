@@ -51,9 +51,9 @@
                 <view class="title-board">
                   <view class="title">
                     <text>{{ colItem[rowItem.dataIndex] }}</text>
-                    <text class="tooltip" wx:if="{{ rowItem.tooltip && colItem[rowItem.dataIndex + '_tooltip'] }}" wx:key="rowIndex" data-index="{{ colIndex }}" data-field="{{ rowItem.dataIndex }}" data-tooltip="{{ rowItem.tooltip }}" catch:tap="handleShowToolTip">
+                    <view class="tooltip" wx:if="{{ rowItem.tooltip && colItem[rowItem.dataIndex + '_tooltip'] }}" wx:key="rowIndex" data-index="{{ colIndex }}" data-field="{{ rowItem.dataIndex }}" data-tooltip="{{ rowItem.tooltip }}" catch:tap="handleShowToolTip">
                       更多
-                    </text>
+                    </view>
                   </view>
                 </view>
               </view>
