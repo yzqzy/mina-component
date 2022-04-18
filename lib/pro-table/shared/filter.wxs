@@ -1,0 +1,10 @@
+/**
+ * @file 字符串过滤
+ * @module Protable/shared/filter
+ */
+
+function getStyle (exp, target) {
+  return exp ? target : '';
+}
+
+module.exports.getStyle = getStyle;;

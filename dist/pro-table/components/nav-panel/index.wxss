@@ -1,0 +1,1 @@
+@import '../../../common/index.wxss';.nav-panel{align-items:center;background-color:#000;box-sizing:border-box;display:flex;flex-direction:column;height:100%;opacity:.55;position:fixed;right:0;top:0;z-index:1000}.nav-panel .landscape{display:flex;justify-content:center;width:100%}.nav-panel .landscape .iconfont{color:#a9a9a9;font-size:24rpx;margin-bottom:6rpx;margin-top:16rpx}
