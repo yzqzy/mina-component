@@ -64,7 +64,7 @@ yarn add -D miniprogram-api-typings
 
 ### 引入组件
 
-以 Button 组件为例，只需要在`app.json`或`index.json`中配置 Button 对应的路径即可。
+以 ImagePreview 组件为例，只需要在`app.json`或`index.json`中配置 ImagePreview 对应的路径即可。
 
 所有组件文档中的引入路径均以 npm 安装为例，如果你是通过下载源代码的方式使用 mina-components，请将路径修改为项目中 mina-components 所在的目录。
 
@@ -72,7 +72,7 @@ yarn add -D miniprogram-api-typings
 // 通过 npm 安装
 // app.json
 "usingComponents": {
-  "mina-button": "mina-components/button/index"
+  "mina-image-preview": "mina-components/image-preview/index"
 }
 ```
 
@@ -80,7 +80,7 @@ yarn add -D miniprogram-api-typings
 // 通过下载源码使用 es6版本
 // app.json
 "usingComponents": {
-  "mina-button": "path/to/mina-components/dist/button/index"
+  "mina-image-preview": "path/to/mina-components/dist/image-preview/index"
 }
 ```
 
@@ -88,7 +88,7 @@ yarn add -D miniprogram-api-typings
 // 通过下载源码使用 es5版本
 // app.json
 "usingComponents": {
-  "mina-button": "path/to/mina-components/lib/button/index"
+  "mina-image-preview": "path/to/mina-components/lib/image-preview/index"
 }
 ```
 
@@ -97,7 +97,11 @@ yarn add -D miniprogram-api-typings
 引入组件后，可以在 wxml 中直接使用组件
 
 ```xml
-<mina-button type="primary">按钮</mina-button>
+<mina-image-preview
+  id="J-preview"
+  catch:onClose="handleClosePreview"
+  catch:onChange="handlePreviewChange"
+/>
 ```
 
 ## 其他
