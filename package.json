@@ -57,7 +57,7 @@
     "miniprogram-api-typings": "^3.1.6",
     "miniprogram-ci": "^1.6.1",
     "miniprogram-simulate": "^1.4.2",
-    "ts-jest": "^27.0.7",
+    "ts-jest": "^27.1.4",
     "tscpaths": "^0.0.9",
     "typescript": "^4.4.4",
     "vue": "^3.2.30"
