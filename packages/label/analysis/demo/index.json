@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mina-label-analysis": "../../../label/analysis/index"
+  }
+}

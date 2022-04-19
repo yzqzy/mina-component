@@ -62,7 +62,12 @@
         },
         {
           "name": "protable landscape",
-          "pathName": "pages/protable-landscapeindex",
+          "pathName": "pages/protable-landscape/index",
+          "query": ""
+        },
+        {
+          "name": "label analysis",
+          "pathName": "pages/label-analysis/index",
           "query": ""
         }
       ]

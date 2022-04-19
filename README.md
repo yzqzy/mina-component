@@ -77,7 +77,7 @@ yarn add -D miniprogram-api-typings
 
 以 ImagePreview 组件为例，只需要在`app.json`或`index.json`中配置 ImagePreview 对应的路径即可。
 
-所有组件文档中的引入路径均以 npm 安装为例，如果你是通过下载源代码的方式使用 mina-components，请将路径修改为项目中 mina-component 所在的目录。
+所有组件文档中的引入路径均以 npm 安装为例，如果你是通过下载源代码的方式使用 mina-component，请将路径修改为项目中 mina-component 所在的目录。
 
 ```json
 // 通过 npm 安装

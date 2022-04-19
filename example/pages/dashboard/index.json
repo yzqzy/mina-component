@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "Mina Components",
+  "navigationBarTitleText": "Mina Component",
   "usingComponents": {
     "demo-home": "../../components/demo-home/index"
   }

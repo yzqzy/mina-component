@@ -1,6 +1,6 @@
 <view class="demo-home">
   <view class="demo-home__title">
-    <view class="demo-home__text">Mina Components</view>
+    <view class="demo-home__text">Mina Component</view>
   </view>
   <view class="demo-home__desc">小程序组件库</view>
   <view wx:for="{{ list }}" wx:for-item="group" wx:key="index">

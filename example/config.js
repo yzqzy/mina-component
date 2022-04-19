@@ -12,4 +12,13 @@ export default [
       },
     ],
   },
+  {
+    groupName: '标注组件',
+    list: [
+      {
+        path: '/label-analysis',
+        title: 'Label 图片标注',
+      },
+    ],
+  },
 ];

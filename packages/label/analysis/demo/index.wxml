@@ -1,0 +1,23 @@
+<view class="wrap">
+  <!-- 标注分析组件 start -->
+  <mina-label-analysis id="J-chart-analysis" colors="{{ rectColors }}" image="{{ image }}" labels="{{ labels }}" scaleMin="1" scaleMax="2" height="50vh" catch:click="handleRectClick" />
+  <!-- 标注分析组件 end -->
+  <!-- 筛选区域 start -->
+  <div class="filter-wrap">
+    <div class="label-board">
+      <div wx:for="{{ labelColors }}" wx:key="index" class="label">
+        <div class="circle" style="background: {{ item.color }}" />
+        <span class="text">{{ item.label }}</span>
+      </div>
+    </div>
+    <div class="filter-board">
+      <div wx:for="{{ layers }}" wx:key="index" class="filter-item {{ layer == item.key ? 'active' : '' }}" data-field="{{ item.key }}" catch:tap="handleLayerFilter">
+        {{ item.label }}
+      </div>
+    </div>
+  </div>
+  <!-- 筛选区域 end -->
+  <!-- 内容区域 start -->
+  <view class="content">{{ content }}</view>
+  <!-- 内容区域 end -->
+</view>
