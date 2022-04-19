@@ -8,7 +8,7 @@ export default {
   },
   site: {
     versions: [{ label: '0.x', link: '/mina-component/0.x' }],
-    title: 'Mina Components',
+    title: 'Mina Component',
     description: '小程序组件库',
     logo: 'https://data.yueluo.club/mina/mina.png"',
     simulator: {

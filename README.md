@@ -1,13 +1,13 @@
 <div class="van-doc-card">
   <div class="van-doc-intro">
-    <h2 style="margin: 0; font-size: 32px; line-height: 60px;">Mina Components</h2>
+    <h2 style="margin: 0; font-size: 32px; line-height: 60px;">Mina Component</h2>
     <p>小程序组件库</p>
   </div>
 </div>
 
 ### 介绍
 
-Mina Components 是一个微信 **小程序组件库**。
+Mina Component 是一个微信 **小程序组件库**。
 
 ## 预览
 
