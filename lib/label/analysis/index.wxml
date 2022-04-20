@@ -1,0 +1,7 @@
+<movable-area id="J-analysis-wrap" class="analysis-wrap" style="margin-top: {{ mt }}; marginBottom: {{ mb }}; width: {{ width }}; height: {{ height }}; background-color: {{ bgColor }};">
+  <movable-view direction="all" scale out-of-bounds damping="100" scale-min="{{ scaleMin }}" scale-max="{{ scaleMax }}" animation="{{false}}" x="{{ initialMovableArea.left }}" y="{{ initialMovableArea.top }}" class="analysis-board" style="width: {{ canvasWidth }}px; height: {{ canvasHeight }}px;" catch:change="handleMoveableChange" catch:scale="handleMoveableScaheChange">
+    <canvas type="2d" id="J-image-canvas" class="image-canvas" style="width: {{ canvasWidth }}px; height: {{ canvasHeight }}px;" />
+    <canvas type="2d" id="J-rect-canvas" class="rect-canvas" catch:tap="handleRectLabelsClick" style="width: {{ canvasWidth }}px; height: {{ canvasHeight }}px;" />
+    <canvas type="2d" id="J-hljs-canvas" class="hljs-canvas" style="width: {{ canvasWidth }}px; height: {{ canvasHeight }}px;" />
+  </movable-view>
+</movable-area>
