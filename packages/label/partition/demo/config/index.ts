@@ -10,7 +10,7 @@ export const LABELS = {
     image_id: 766,
     create_time: '2022-04-06 15:11:40',
     submit_time: null,
-    image_url: 'https://data.yueluo.club/label_analysis.jpeg',
+    image_url: 'https://img.yueluo.club/blog/img/label_analysis.jpeg',
     width: 2448,
     height: 3264,
     category_no: '0322',
