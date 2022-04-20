@@ -1,0 +1,1 @@
+<mina-label-partition-demo label="{{ label }}" />
