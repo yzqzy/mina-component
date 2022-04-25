@@ -43,6 +43,9 @@ export const drawLayout = (
       const ans = await selectorQuery(selector, receiver);
 
       const { node: canvas } = ans;
+
+      if (!canvas) return;
+
       const canvasCtx = canvas.getContext('2d');
 
       canvas.width = width * dpr;

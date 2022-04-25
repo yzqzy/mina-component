@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render demo and match snapshot 1`] = `
+<main>
+  <wx-view
+    class="wrap"
+  >
+    <mina-label-analysis
+      id="J-chart-analysis"
+      catch:click="handleRectClick"
+    >
+      <movable-area
+        class="analysis-wrap"
+        id="J-analysis-wrap"
+        style="margin-top: 20rpx; marginBottom: 20rpx; width: 100vw; height: 50vh; background-color: #fff;"
+      >
+        <wx-movable-view
+          animation="{{false}}"
+          class="analysis-board"
+          damping="100"
+          direction="all"
+          outOfBounds="{{true}}"
+          scale="{{true}}"
+          scaleMax="{{2}}"
+          scaleMin="{{1}}"
+          style="width: 0px; height: 0px;"
+          x="{{0}}"
+          y="{{0}}"
+          catch:change="handleMoveableChange"
+          catch:scale="handleMoveableScaheChange"
+        >
+          <wx-canvas
+            class="image-canvas"
+            id="J-image-canvas"
+            style="width: 0px; height: 0px;"
+            type="2d"
+          />
+          <wx-canvas
+            class="rect-canvas"
+            id="J-rect-canvas"
+            style="width: 0px; height: 0px;"
+            type="2d"
+            catch:tap="handleRectLabelsClick"
+          />
+          <wx-canvas
+            class="hljs-canvas"
+            id="J-hljs-canvas"
+            style="width: 0px; height: 0px;"
+            type="2d"
+          />
+        </wx-movable-view>
+      </movable-area>
+    </mina-label-analysis>
+    <div
+      class="filter-wrap"
+    >
+      <div
+        class="label-board"
+      >
+        <div
+          class="label"
+        >
+          <div
+            class="circle"
+            style="background: #1BA709"
+          />
+          <span
+            class="text"
+          >
+            A级
+          </span>
+        </div>
+        <div
+          class="label"
+        >
+          <div
+            class="circle"
+            style="background: #FFBD07"
+          />
+          <span
+            class="text"
+          >
+            B级
+          </span>
+        </div>
+        <div
+          class="label"
+        >
+          <div
+            class="circle"
+            style="background: #FA3434"
+          />
+          <span
+            class="text"
+          >
+            C级
+          </span>
+        </div>
+        <div
+          class="label"
+        >
+          <div
+            class="circle"
+            style="background: #CED4DA"
+          />
+          <span
+            class="text"
+          >
+            未识别
+          </span>
+        </div>
+        <div
+          class="label"
+        >
+          <div
+            class="circle"
+            style="background: #8AB4FF"
+          />
+          <span
+            class="text"
+          >
+            非本类目商品
+          </span>
+        </div>
+      </div>
+      <div
+        class="filter-board"
+      >
+        <div
+          class="filter-item active"
+          data-field="all"
+          catch:tap="handleLayerFilter"
+        >
+          
+        汇总
+      
+        </div>
+        <div
+          class="filter-item "
+          data-field="1"
+          catch:tap="handleLayerFilter"
+        >
+          
+        一层
+      
+        </div>
+        <div
+          class="filter-item "
+          data-field="2"
+          catch:tap="handleLayerFilter"
+        >
+          
+        二层
+      
+        </div>
+        <div
+          class="filter-item "
+          data-field="3"
+          catch:tap="handleLayerFilter"
+        >
+          
+        三层
+      
+        </div>
+        <div
+          class="filter-item "
+          data-field="4"
+          catch:tap="handleLayerFilter"
+        >
+          
+        四层
+      
+        </div>
+        <div
+          class="filter-item "
+          data-field="5"
+          catch:tap="handleLayerFilter"
+        >
+          
+        五层
+      
+        </div>
+        <div
+          class="filter-item "
+          data-field="6"
+          catch:tap="handleLayerFilter"
+        >
+          
+        六层
+      
+        </div>
+      </div>
+    </div>
+    <wx-view
+      class="content"
+    >
+      
+    </wx-view>
+  </wx-view>
+</main>
+`;

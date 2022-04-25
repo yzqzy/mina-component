@@ -3,100 +3,100 @@
  * @module ProTable/landscape
  */
 
-import { VantComponent} from '../../common/component';
+import { VantComponent } from '../../common/component';
 import { normalizeColumns, normalizeDataSource } from '../shared/tool';
 
 VantComponent({
   props: {
     /**
-    * @property {Number} mt - margin top
-    * @property {Number} mr - margin right
-    * @property {Number} rowH - row height
-    */
+     * @property {Number} mt - margin top
+     * @property {Number} mr - margin right
+     * @property {Number} rowH - row height
+     */
     mt: {
       type: Number,
-      value: 0
+      value: 0,
     },
     mr: {
       type: Number,
-      value: 0
+      value: 0,
     },
     rowH: {
       type: Number,
-      value: 45
+      value: 45,
     },
 
     /**
-    * @property {Array} columns - 列配置
-    * @property {Array} dataSource - 数据
-    */
+     * @property {Array} columns - 列配置
+     * @property {Array} dataSource - 数据
+     */
     columns: {
       type: Array,
-      value: [] as any[]
+      value: [] as any[],
     },
     dataSource: {
       type: Array,
       value: [] as any[],
-      observer () {
+      observer() {
         this.init();
-      }
+      },
     },
 
     /**
-    * @property {String} sortField - 排序字段
-    * @property {String} sortType - 排序类型 desc、asc
-    */
+     * @property {String} sortField - 排序字段
+     * @property {String} sortType - 排序类型 desc、asc
+     */
     sortField: {
       type: String,
-      value: ''
+      value: '',
     },
     sortType: {
       type: String,
-      value: 'desc'
+      value: 'desc',
     },
 
     /**
-    * @property {Object} order - 排序相关配置
-    * @property {Boolean} order.enabled - 启用排序
-    * @property {Boolean} order.styleEnabled - 启用排序样式
-    * @property {Boolean} order.next - 是否存在下一级
-    */
+     * @property {Object} order - 排序相关配置
+     * @property {Boolean} order.enabled - 启用排序
+     * @property {Boolean} order.styleEnabled - 启用排序样式
+     * @property {Boolean} order.next - 是否存在下一级
+     */
     order: {
       type: Object,
-      value: {}
-    }
+      value: {},
+    },
   },
 
   data: {
-   /**
+    /**
      * @property {Number} safeAreaLeft - 左侧安全边距
      */
     safeAreaLeft: 0,
 
     /**
-    * @property {Array} leftColumns - 左侧固定列
-    * @property {Array} middleColumns - 正常列
-    */
+     * @property {Array} leftColumns - 左侧固定列
+     * @property {Array} middleColumns - 正常列
+     */
     leftColumns: [] as any[],
     middleColumns: [] as any[],
 
     /**
-    * @property {Array} list - 表格数据
-    */
-    list: [] as any[]
+     * @property {Array} list - 表格数据
+     */
+    list: [] as any[],
   },
 
-  mounted () {
+  mounted() {
     this.init();
   },
 
   methods: {
     init() {
-      const { left } = wx.getSystemInfoSync().safeArea;
+      const { left } = wx.getSystemInfoSync().safeArea || {};
 
       this.setData({
-        safeAreaLeft: left
-      })
+        safeAreaLeft: left,
+      });
       this.initData();
     },
 
@@ -108,20 +108,20 @@ VantComponent({
         leftColumns,
         middleColumns,
         dataSource,
-        rowH
+        rowH,
       });
 
       this.setData({
         leftColumns,
         middleColumns,
-        list
+        list,
       });
     },
 
     /**
-    * @description 点击表格项
-    * @returns {void}
-    */
+     * @description 点击表格项
+     * @returns {void}
+     */
     handleToNext(e) {
       const { index } = e.currentTarget.dataset;
 
@@ -129,9 +129,9 @@ VantComponent({
     },
 
     /**
-    * @description 表格排序
-    * @returns {void}
-    */
+     * @description 表格排序
+     * @returns {void}
+     */
     handleChangeSort(e) {
       const { sortable, field } = e.currentTarget.dataset;
 
@@ -152,6 +152,6 @@ VantComponent({
       }
     },
 
-    noop() {}
-  }
+    noop() {},
+  },
 });
