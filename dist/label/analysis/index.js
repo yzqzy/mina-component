@@ -12,7 +12,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { VantComponent } from '../../common/component';
-import { selectorQuery, drawLayout, computeLayout } from '../shared/tool';
+import { selectorQuery, drawLayout, computeLayout, getRealPath, } from '../shared/tool';
 let __forceUpdate__ = false;
 const callbacks = [];
 const mountedCallbacks = [];
@@ -65,11 +65,11 @@ VantComponent({
         },
         width: {
             type: String,
-            value: '100vw',
+            value: '750rpx',
         },
         height: {
             type: String,
-            value: '750rpx',
+            value: '100vh',
         },
         bgColor: {
             type: String,
@@ -225,7 +225,7 @@ VantComponent({
                         'canvasNodes.image': { canvas, ctx },
                     });
                     const img = canvas.createImage();
-                    img.src = image.image_url;
+                    img.src = yield getRealPath(image.image_url);
                     img.onload = () => {
                         wx.hideLoading();
                         moutedExecute();
@@ -292,6 +292,8 @@ VantComponent({
             const { labels, canvasNode, beforeDraw, drawing } = options;
             const { ctx } = canvasNode;
             const { width, height } = this.data.basicLayout;
+            if (!ctx)
+                return;
             ctx.clearRect(0, 0, width, height);
             beforeDraw && beforeDraw.call(this, ctx);
             const drawingItem = (label) => {
@@ -370,8 +372,8 @@ VantComponent({
                             ctx.fillRect(0, 0, width, height);
                         },
                         drawing(ctx, { _left, _top, _width, _height }) {
-                            ctx.clearRect(_left, _top, _width, _height);
-                            ctx.strokeRect(_left, _top, _width, _height);
+                            ctx && ctx.clearRect(_left, _top, _width, _height);
+                            ctx && ctx.strokeRect(_left, _top, _width, _height);
                         },
                     };
                 }

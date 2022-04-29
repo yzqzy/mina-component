@@ -32,6 +32,8 @@ new Promise((resolve, reject) => __awaiter(void 0, void 0, void 0, function* () 
     try {
         const ans = yield selectorQuery(selector, receiver);
         const { node: canvas } = ans;
+        if (!canvas)
+            return;
         const canvasCtx = canvas.getContext('2d');
         canvas.width = width * dpr;
         canvas.height = height * dpr;
@@ -67,3 +69,35 @@ export const computeLayout = (maxWidth, maxHeight, width, height) => {
         },
     };
 };
+const platforms = {
+    android: true,
+    ios: true,
+    windows: false,
+    mac: false,
+};
+const checkisMobile = () => new Promise((resolve, reject) => {
+    wx.getSystemInfo({
+        success: (result) => {
+            resolve(platforms[result.platform] || false);
+        },
+        // eslint-disable-next-line prefer-promise-reject-errors
+        fail: () => reject(false),
+    });
+});
+const getTempFilePath = (path) => new Promise((resolve, reject) => {
+    wx.downloadFile({
+        url: path,
+        success: (result) => {
+            resolve(result.tempFilePath);
+        },
+        // eslint-disable-next-line prefer-promise-reject-errors
+        fail: () => reject(''),
+    });
+});
+export const getRealPath = (path) => __awaiter(void 0, void 0, void 0, function* () {
+    const isMobile = yield checkisMobile();
+    if (isMobile)
+        return path;
+    const dest = yield getTempFilePath(path);
+    return dest;
+});

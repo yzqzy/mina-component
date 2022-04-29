@@ -12,7 +12,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { VantComponent } from '../../common/component';
-import { selectorQuery, computeLayout, drawLayout } from '../shared/tool';
+import { selectorQuery, computeLayout, drawLayout, getRealPath, } from '../shared/tool';
 VantComponent({
     props: {
         width: {
@@ -78,7 +78,7 @@ VantComponent({
                     selector: '#J-image-canvas',
                 }, this);
                 const img = canvas.createImage();
-                img.src = url;
+                img.src = yield getRealPath(url);
                 img.onload = () => {
                     wx.hideLoading();
                     ctx.drawImage(img, left, top, width, height, 0, 0, canvasWidth, canvasHeight);

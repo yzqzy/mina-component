@@ -1,5 +1,4 @@
 import { VantComponent } from '../../../common/component';
-const { bottom } = wx.getMenuButtonBoundingClientRect();
 VantComponent({
     props: {
         /**
@@ -7,14 +6,20 @@ VantComponent({
          */
         width: {
             type: Number,
-            value: 53
+            value: 53,
+        },
+    },
+    mounted() {
+        if (wx.getMenuButtonBoundingClientRect) {
+            this.safeAreaTop =
+                (wx.getMenuButtonBoundingClientRect() || { bottom: 0 }).bottom + 10;
         }
     },
     data: {
         /**
          * @property {Number} safeAreaTop - 顶部安全边距
          */
-        safeAreaTop: bottom + 10
+        safeAreaTop: 0,
     },
     methods: {
         /**
@@ -22,6 +27,6 @@ VantComponent({
          */
         handleSwitch() {
             this.triggerEvent('onSwitch');
-        }
-    }
+        },
+    },
 });

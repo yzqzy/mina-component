@@ -30,4 +30,5 @@ declare type ComputeLayout = {
     scale: Scale;
 };
 export declare const computeLayout: (maxWidth: any, maxHeight: any, width: any, height: any) => ComputeLayout;
+export declare const getRealPath: (path: any) => Promise<any>;
 export {};
