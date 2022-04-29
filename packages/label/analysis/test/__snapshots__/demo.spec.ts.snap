@@ -12,7 +12,7 @@ exports[`should render demo and match snapshot 1`] = `
       <movable-area
         class="analysis-wrap"
         id="J-analysis-wrap"
-        style="margin-top: 20rpx; marginBottom: 20rpx; width: 100vw; height: 50vh; background-color: #fff;"
+        style="margin-top: 20rpx; margin-bottom: 20rpx; width: 750rpx; height: 50vh; background-color: #fff;"
       >
         <wx-movable-view
           animation="{{false}}"
