@@ -101,3 +101,43 @@ export const computeLayout = (
     },
   };
 };
+
+const platforms = {
+  android: true,
+  ios: true,
+  windows: false,
+  mac: false,
+};
+
+const checkisMobile = () =>
+  new Promise((resolve, reject) => {
+    wx.getSystemInfo({
+      success: (result) => {
+        resolve(platforms[result.platform] || false);
+      },
+      // eslint-disable-next-line prefer-promise-reject-errors
+      fail: () => reject(false),
+    });
+  });
+
+const getTempFilePath = (path) =>
+  new Promise((resolve, reject) => {
+    wx.downloadFile({
+      url: path,
+      success: (result) => {
+        resolve(result.tempFilePath);
+      },
+      // eslint-disable-next-line prefer-promise-reject-errors
+      fail: () => reject(''),
+    });
+  });
+
+export const getRealPath = async (path) => {
+  const isMobile = await checkisMobile();
+
+  if (isMobile) return path;
+
+  const dest = await getTempFilePath(path);
+
+  return dest;
+};

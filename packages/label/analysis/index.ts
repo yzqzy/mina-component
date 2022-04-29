@@ -4,7 +4,12 @@
  */
 
 import { VantComponent } from '../../common/component';
-import { selectorQuery, drawLayout, computeLayout } from '../shared/tool';
+import {
+  selectorQuery,
+  drawLayout,
+  computeLayout,
+  getRealPath,
+} from '../shared/tool';
 
 let __forceUpdate__ = false;
 
@@ -65,11 +70,11 @@ VantComponent({
     },
     width: {
       type: String,
-      value: '100vw',
+      value: '750rpx',
     },
     height: {
       type: String,
-      value: '750rpx',
+      value: '100vh',
     },
     bgColor: {
       type: String,
@@ -264,7 +269,7 @@ VantComponent({
 
         const img = canvas.createImage();
 
-        img.src = image.image_url;
+        img.src = await getRealPath(image.image_url);
 
         img.onload = () => {
           wx.hideLoading();

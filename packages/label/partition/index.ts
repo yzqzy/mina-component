@@ -5,7 +5,12 @@
 
 import { VantComponent } from '../../common/component';
 
-import { selectorQuery, computeLayout, drawLayout } from '../shared/tool';
+import {
+  selectorQuery,
+  computeLayout,
+  drawLayout,
+  getRealPath,
+} from '../shared/tool';
 
 VantComponent({
   props: {
@@ -88,7 +93,7 @@ VantComponent({
 
       const img = canvas.createImage();
 
-      img.src = url;
+      img.src = await getRealPath(url);
 
       img.onload = () => {
         wx.hideLoading();
