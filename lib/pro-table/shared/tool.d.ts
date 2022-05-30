@@ -22,7 +22,7 @@ export declare const normalizeColumns: (originColumns: any) => {
  * @property {Number} params.rowH - 行高
  * @returns {Object}
  */
-export declare const normalizeDataSource: ({ leftColumns, middleColumns, dataSource, hd, wordLimit, rowH }: {
+export declare const normalizeDataSource: ({ leftColumns, middleColumns, dataSource, hd, wordLimit, rowH, }: {
     leftColumns?: any[] | undefined;
     middleColumns?: any[] | undefined;
     dataSource?: any[] | undefined;
