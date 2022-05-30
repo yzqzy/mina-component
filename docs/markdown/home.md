@@ -13,7 +13,7 @@ Mina Component 是一个微信 **小程序组件库**。
 
 扫描下方小程序二维码，体验组件库示例：
 
-<img src="https://data.yueluo.club/mina/mina_icon.jpg" style="width: 200px; height: 200px; margin-top: 15px; box-shadow: none" >
+<img src="https://img.yueluo.club/personal/mina_icon.jpg" style="width: 200px; height: 200px; margin-top: 15px; box-shadow: none" >
 
 ### 快速上手
 

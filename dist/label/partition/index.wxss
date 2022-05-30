@@ -1,0 +1,1 @@
+@import '../../common/index.wxss';.partition-wrap{align-items:center;display:flex;justify-content:center}

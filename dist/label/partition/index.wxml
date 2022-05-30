@@ -1,0 +1,3 @@
+<view id="J-partition-wrap" class="partition-wrap" style="width: {{ width }};height: {{ height }}">
+  <canvas type="2d" id="J-image-canvas" class="image-canvas" style="width: {{ canvasWidth }}px; height: {{ canvasHeight }}px;" />
+</view>

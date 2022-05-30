@@ -356,6 +356,8 @@ VantComponent({
       const { ctx } = canvasNode;
       const { width, height } = this.data.basicLayout;
 
+      if (!ctx) return;
+
       ctx.clearRect(0, 0, width, height);
 
       beforeDraw && beforeDraw.call(this, ctx);
@@ -462,8 +464,8 @@ VantComponent({
               ctx.fillRect(0, 0, width, height);
             },
             drawing(ctx, { _left, _top, _width, _height }) {
-              ctx.clearRect(_left, _top, _width, _height);
-              ctx.strokeRect(_left, _top, _width, _height);
+              ctx && ctx.clearRect(_left, _top, _width, _height);
+              ctx && ctx.strokeRect(_left, _top, _width, _height);
             },
           };
         } else {

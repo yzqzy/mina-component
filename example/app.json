@@ -4,7 +4,8 @@
     "pages/image-preview/index",
     "pages/protable-protrait/index",
     "pages/protable-landscape/index",
-    "pages/label-analysis/index"
+    "pages/label-analysis/index",
+    "pages/label-partition/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#f8f8f8",
@@ -18,7 +19,8 @@
     "mina-image-preview-demo": "./dist/image-preview/demo/index",
     "mina-protable-protrait-demo": "./dist/pro-table/protrait/demo/index",
     "mina-protable-landscape-demo": "./dist/pro-table/landscape/demo/index",
-    "mina-label-analysis-demo": "./dist/label/analysis/demo/index"
+    "mina-label-analysis-demo": "./dist/label/analysis/demo/index",
+    "mina-label-partition-demo": "./dist/label/partition/demo/index"
   },
   "sitemapLocation": "sitemap.json"
 }

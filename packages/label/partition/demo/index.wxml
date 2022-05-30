@@ -1,0 +1,3 @@
+<view class="preview-wrap">
+  <mina-label-partition height="60vh" image="{{ image }}" label="{{ label }}" />
+</view>

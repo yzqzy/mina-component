@@ -2,7 +2,7 @@ name: Deploy Site
 
 on:
   push:
-    branches: [dev]
+    branches: [develop]
     paths:
       - 'docs/**'
 
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
         with:
-          ref: 'dev'
+          ref: 'develop'
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1

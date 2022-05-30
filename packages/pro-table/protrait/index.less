@@ -16,7 +16,6 @@
   display: flex;
   height: auto;
   background-color: #fff;
-  font-family: PingFangSC-Semibold, PingFang SC;
   border-top: 1rpx solid rgba(238, 238, 238, 1);
   border-bottom: 1rpx solid rgba(238, 238, 238, 1);
   box-sizing: border-box;
@@ -32,7 +31,7 @@
   position: sticky;
   left: 0;
   z-index: 999;
-  box-shadow: 0px 4px 8px 0px rgba(17,25,42,0.16);
+  box-shadow: 0 4px 8px 0 rgba(17, 25, 42, 0.16);
   background-color: #fff;
 }
 
@@ -41,7 +40,7 @@
   width: auto;
   height: 64rpx;
   font-size: 24rpx;
-  color: #999999;
+  color: #999;
   display: flex;
   border-right: 1rpx solid rgba(238, 238, 238, 1);
   border-bottom: 1rpx solid rgba(238, 238, 238, 1);
@@ -95,32 +94,31 @@
 }
 
 .left-board .order-style-enabled .row:nth-child(1),
-.left-board .order-style-enabled .row:nth-child(1) {
-  background:#F3F7FF !important;
+.right-board .order-style-enabled .row:nth-child(1) {
+  background: #f3f7ff !important;
   border-bottom: 1px solid rgba(54, 121, 255, 0.08) !important;
-  color: #3679FF !important;
+  color: #3679ff !important;
 }
 
 .left-board .order-style-enabled .row:nth-child(2),
 .right-board .order-style-enabled .row:nth-child(2) {
-  background:#F1FAFC !important;
+  background: #f1fafc !important;
   border-bottom: 1px solid rgba(12, 173, 206, 0.08) !important;
-  color: #0CADCE !important;
+  color: #0cadce !important;
 }
 
 .left-board .order-style-enabled .row:nth-child(3),
 .right-board .order-style-enabled .row:nth-child(3) {
-  background:#FFFCF7 !important;
+  background: #fffcf7 !important;
   border-bottom: 1px solid rgba(255, 171, 56, 0.1) !important;
-  color: #FFAB38 !important;
+  color: #ffab38 !important;
 }
 
 .left-board .table-board,
 .right-board .table-board {
   font-size: 28rpx;
   font-weight: 500;
-  font-family: AlibabaPuHuiTiR;
-  color: #333333;
+  color: #333;
 }
 
 .left-board .table-board .row,
@@ -178,7 +176,7 @@
 }
 
 .left-board .table-board .row-item .title-board,
-.right-board .table-board .row-item .title-board  {
+.right-board .table-board .row-item .title-board {
   display: flex;
   flex-direction: column;
 }
@@ -192,16 +190,14 @@
 .right-board .table-board .row-item .title-board .title .tooltip {
   margin-left: 6rpx;
   font-size: 20rpx;
-  font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
-  color: #3680FE;
+  color: #3680fe;
 }
 
 .left-board .table-board .row-item .title-board .sub-title {
   font-size: 24rpx;
-  font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
-  color: #666666;
+  color: #666;
   line-height: 40rpx;
 }
 
@@ -210,6 +206,7 @@
   font-size: 28rpx;
   padding: 0 0 0 10rpx;
 }
+
 /* 表格区域 end */
 
 /* 弹窗区域 start */
@@ -231,10 +228,11 @@
   max-height: 500rpx;
   padding: 25rpx 20rpx;
   background: #333;
-  opacity: .7;
+  opacity: 0.7;
   overflow-y: auto;
   color: #fff;
   font-size: 26rpx;
   border-radius: 8rpx;
 }
+
 /* 弹窗区域 end */

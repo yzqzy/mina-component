@@ -6,6 +6,7 @@ import {
   RECT_COLORS,
   LAYER_MAPPING,
 } from './config/index';
+import { formatParams } from './shared/tool';
 
 let labelAnalysisRef;
 
@@ -63,7 +64,8 @@ VantComponent({
 
     // 矩形框点击
     handleRectClick(e) {
-      const { product, layer, index, status } = e.detail;
+      const label = e.detail;
+      const { product, layer, index, status } = label;
 
       const __update__ = () => {
         labelAnalysisRef.update({
@@ -74,9 +76,16 @@ VantComponent({
       if (status === 'unknown') {
         __update__();
 
-        this.setData({
-          content: '未识别商品',
+        wx.showToast({
+          icon: 'none',
+          title: '即将跳转页面',
         });
+
+        setTimeout(() => {
+          wx.navigateTo({
+            url: `/pages/label-partition/index?${formatParams(label)}`,
+          });
+        }, 1000);
         return;
       }
 

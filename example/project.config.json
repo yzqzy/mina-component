@@ -69,6 +69,11 @@
           "name": "label analysis",
           "pathName": "pages/label-analysis/index",
           "query": ""
+        },
+        {
+          "name": "label partition",
+          "pathName": "pages/label-partition/index",
+          "query": ""
         }
       ]
     }

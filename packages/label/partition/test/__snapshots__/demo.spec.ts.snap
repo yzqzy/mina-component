@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render demo and match snapshot 1`] = `
+<main>
+  <wx-view
+    class="preview-wrap"
+  >
+    <mina-label-partition>
+      <wx-view
+        class="partition-wrap"
+        id="J-partition-wrap"
+        style="width: ;height: 60vh"
+      >
+        <wx-canvas
+          class="image-canvas"
+          id="J-image-canvas"
+          style="width: 0px; height: 0px;"
+          type="2d"
+        />
+      </wx-view>
+    </mina-label-partition>
+  </wx-view>
+</main>
+`;

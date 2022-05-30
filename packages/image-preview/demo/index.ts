@@ -7,16 +7,16 @@ VantComponent({
     imgs: [
       {
         id: 1,
-        url: 'https://data.yueluo.club/git.jpg'
+        url: 'https://img.yueluo.club/blog/git.jpg',
       },
       {
         id: 2,
-        url: 'https://data.yueluo.club/leetcode.png'
+        url: 'https://img.yueluo.club/blog/leetcode.png',
       },
       {
         id: 3,
-        url: 'https://data.yueluo.club/es6.jpg'
-      }
+        url: 'https://img.yueluo.club/blog/es6.jpg',
+      },
     ],
 
     current: 0,
@@ -25,9 +25,9 @@ VantComponent({
 
     imgsHelper: {
       1: {
-        focus: true
-      }
-    }
+        focus: true,
+      },
+    },
   },
 
   mounted() {
@@ -45,15 +45,15 @@ VantComponent({
      */
     handlePreviewSingle(e) {
       const { index, field } = e.currentTarget.dataset;
-      const urls = this.data.imgs.map(item => item.url);
+      const urls = this.data.imgs.map((item) => item.url);
 
       previewRef.show({
         current: index,
-        urls
+        urls,
       });
       this.setData({
         current: index,
-        selected: field
+        selected: field,
       });
     },
 
@@ -73,7 +73,7 @@ VantComponent({
       const { current } = e.detail;
 
       this.setData({
-        current
+        current,
       });
     },
 
@@ -90,7 +90,9 @@ VantComponent({
       }
 
       const { focus } = imgsHelper[current];
-      const content = focus ? '您确认取消收藏该图片吗？' : '您确认收藏该图片吗？';
+      const content = focus
+        ? '您确认取消收藏该图片吗？'
+        : '您确认收藏该图片吗？';
 
       wx.showModal({
         content,
@@ -102,12 +104,12 @@ VantComponent({
           if (res.confirm) {
             this.setData({
               [`imgsHelper[${current}]`]: {
-                focus: !focus
-              }
+                focus: !focus,
+              },
             });
           }
-        }
+        },
       });
-    }
+    },
   },
 });

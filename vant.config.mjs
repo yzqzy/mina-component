@@ -10,7 +10,7 @@ export default {
     versions: [{ label: '0.x', link: '/mina-component/0.x' }],
     title: 'Mina Component',
     description: '小程序组件库',
-    logo: 'https://data.yueluo.club/mina/mina.png"',
+    logo: 'https://img.yueluo.club/personal/mina.png',
     simulator: {
       url: 'https://vant-contrib.gitee.io/vant/mobile.html?weapp=1',
       routeMapper: (path) => {
