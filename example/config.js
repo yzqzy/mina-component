@@ -13,6 +13,15 @@ export default [
     ],
   },
   {
+    groupName: '表单组件',
+    list: [
+      {
+        path: '/number-keyboard',
+        title: 'NumberKeyboard 数字键盘',
+      },
+    ],
+  },
+  {
     groupName: '标注组件',
     list: [
       {

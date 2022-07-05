@@ -1,0 +1,25 @@
+<view class="keyboard-wrap">
+  <view class="keyboard-keys">
+    <view
+      wx:for="{{keys}}"
+      wx:key="index"
+      class="keyboard-key {{ item.wider ? 'wider' : '' }}"
+    >
+      <view class="button">
+        {{ item.text }}
+      </view>
+    </view>
+  </view>
+  <view class="keyboard-sidebar">
+    <view class="keyboard-key">
+      <view class="button large">
+        删除
+      </view>
+    </view>
+    <view class="keyboard-key higher">
+      <view class="button large {{ color }}">
+        确认
+      </view>
+    </view>
+  </view>
+</view>

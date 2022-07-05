@@ -1,0 +1,10 @@
+<demo-block title="基础用法" padding>
+  <view class="input">20</view>
+</demo-block>
+
+<!-- 数字键盘组件 start -->
+<mina-number-keyboard
+  :show="{{show}}"
+  :color="{{color}}"
+/>
+<!-- 数字键盘组件 end -->

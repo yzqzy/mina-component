@@ -1,0 +1,63 @@
+.keyboard-wrap {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 12rpx 0 0 12rpx;
+  background-color: #f2f3f5;
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: border-box;
+
+  .keyboard-key {
+    position: relative;
+    flex: 1;
+    flex-basis: 33%;
+    padding: 0 12rpx 12rpx 0;
+    background-color: #f2f3f5;
+    box-sizing: border-box;
+
+    &.wider {
+      flex-basis: 66%;
+    }
+    &.higher {
+      flex-basis: 100%;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100rpx;
+      border-radius: 18rpx;
+      background-color: #fff;
+
+      &.blue {
+        color: #fff;
+        background-color: #1989fa;
+      }
+
+      &.large {
+        position: absolute;
+        top: 0;
+        right: 6px;
+        bottom: 6px;
+        left: 0;
+        height: auto;
+      }
+    }
+  }
+
+  .keyboard-keys {
+    display: flex;
+    flex: 3;
+    flex-wrap: wrap;
+  }
+
+  .keyboard-sidebar {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+}

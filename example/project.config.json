@@ -51,28 +51,33 @@
     "miniprogram": {
       "list": [
         {
-          "name": "image-preview",
+          "name": "debug image-preview",
           "pathName": "pages/image-preview/index",
           "query": ""
         },
         {
-          "name": "protable protrait",
+          "name": "debug protable protrait",
           "pathName": "pages/protable-protrait/index",
           "query": ""
         },
         {
-          "name": "protable landscape",
+          "name": "debug protable landscape",
           "pathName": "pages/protable-landscape/index",
           "query": ""
         },
         {
-          "name": "label analysis",
+          "name": "debug label analysis",
           "pathName": "pages/label-analysis/index",
           "query": ""
         },
         {
-          "name": "label partition",
+          "name": "debug label partition",
           "pathName": "pages/label-partition/index",
+          "query": ""
+        },
+        {
+          "name": "debug number keyboard",
+          "pathName": "pages/number-keyboard/index",
           "query": ""
         }
       ]

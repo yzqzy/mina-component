@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mina-number-keyboard": "../../number-keyboard/index"
+  }
+}
