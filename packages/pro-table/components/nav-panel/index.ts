@@ -15,7 +15,7 @@ MinaComponent({
     /**
      * @property {Number} safeAreaTop - 顶部安全边距
      */
-    safeAreaTop: wx.getMenuButtonBoundingClientRect().bottom,
+    safeAreaTop: (wx.getMenuButtonBoundingClientRect && wx.getMenuButtonBoundingClientRect() || { bottom: 0 }).bottom,
   },
 
   methods: {
