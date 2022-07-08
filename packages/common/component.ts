@@ -1,5 +1,5 @@
 import { basic } from '../mixins/basic';
-import { VantComponentOptions } from 'definitions/index';
+import { MinaComponentOptions } from 'definitions/index';
 
 function mapKeys(
   source: Record<string, any>,
@@ -13,11 +13,11 @@ function mapKeys(
   });
 }
 
-function VantComponent<
+function MinaComponent<
   Data extends WechatMiniprogram.Component.DataOption,
   Props extends WechatMiniprogram.Component.PropertyOption,
   Methods extends WechatMiniprogram.Component.MethodOption
->(vantOptions: VantComponentOptions<Data, Props, Methods>): void {
+>(vantOptions: MinaComponentOptions<Data, Props, Methods>): void {
   const options: WechatMiniprogram.Component.Options<Data, Props, Methods> = {};
 
   mapKeys(vantOptions, options, {
@@ -61,4 +61,4 @@ function VantComponent<
   Component(options);
 }
 
-export { VantComponent };
+export { MinaComponent };

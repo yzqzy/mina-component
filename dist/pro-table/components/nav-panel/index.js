@@ -1,5 +1,5 @@
-import { VantComponent } from '../../../common/component';
-VantComponent({
+import { MinaComponent } from '../../../common/component';
+MinaComponent({
     props: {
         /**
          * @property {Number} width - 面板宽度

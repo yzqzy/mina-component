@@ -1,8 +1,8 @@
-import { VantComponent} from '../../../common/component';
+import { MinaComponent} from '../../../common/component';
 import { STUDENTS, Student } from './config/student';
 import { STUDENT_COLUMNS, mobileSlice } from './config/index';
 
-VantComponent({
+MinaComponent({
  data: {
     /**
     * @property {array} columns - 表格列配置

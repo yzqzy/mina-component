@@ -1,6 +1,6 @@
 <view class="nav-panel" style="padding-top: {{ safeAreaTop }}px; width: {{ width }}rpx;">
   <view class="landscape" catch:tap="handleSwitch">
-    <text class="iconfont icon-landscape" />
+    <text class="mina-icon mina-mina-icon-landscape" />
   </view>
   <slot />
 </view>

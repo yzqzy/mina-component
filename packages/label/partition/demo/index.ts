@@ -1,8 +1,8 @@
-import { VantComponent } from '../../../common/component';
+import { MinaComponent } from '../../../common/component';
 
 import { LABELS } from './config/index';
 
-VantComponent({
+MinaComponent({
   props: {
     label: {
       type: Object,

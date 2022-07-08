@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { VantComponent } from '../../common/component';
+import { MinaComponent } from '../../common/component';
 import { selectorQuery, drawLayout, computeLayout, getRealPath, } from '../shared/tool';
 let __forceUpdate__ = false;
 const callbacks = [];
@@ -44,7 +44,7 @@ const flushCallbacks = (type) => {
 };
 const execute = () => Promise.resolve().then(() => flushCallbacks('rendered'));
 const moutedExecute = () => Promise.resolve().then(() => flushCallbacks('mounted'));
-VantComponent({
+MinaComponent({
     props: {
         /**
          * @property {String} mt - margin top

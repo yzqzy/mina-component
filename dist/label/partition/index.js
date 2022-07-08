@@ -11,9 +11,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { VantComponent } from '../../common/component';
+import { MinaComponent } from '../../common/component';
 import { selectorQuery, computeLayout, drawLayout, getRealPath, } from '../shared/tool';
-VantComponent({
+MinaComponent({
     props: {
         width: {
             type: String,

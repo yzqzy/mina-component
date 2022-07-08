@@ -16,7 +16,7 @@
               <view wx:for="{{ leftColumns }}" wx:for-item="rowItem" wx:for-index="rowIndex" wx:key="rowIndex" class="row-item" style="width: {{ rowItem.width || 120 }}rpx; height: {{ colItem._custom_height }}rpx; justify-content: {{ rowItem.align || 'center' }};">
                 <block wx:if="{{ order.enabled }}">
                   <view class="order-board">
-                    <text wx:if="{{ colIndex <= 2 }}" class="order iconfont icon-{{ colIndex + 1 }}"></text>
+                    <text wx:if="{{ colIndex <= 2 }}" class="order mina-icon mina-icon-{{ colIndex + 1 }}"></text>
                     <view wx:else class="circle-area">{{ colIndex + 1 }}</view>
                   </view>
                 </block>
@@ -27,7 +27,7 @@
                   </block>
                 </view>
                 <block wx:if="{{ order.enabled && order.next }}">
-                  <text class="iconfont icon-right-arrow"></text>
+                  <text class="mina-icon mina-icon-right-arrow"></text>
                 </block>
               </view>
             </view>

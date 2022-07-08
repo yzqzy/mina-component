@@ -6,7 +6,7 @@ function mapKeys(source, target, map) {
         }
     });
 }
-function VantComponent(vantOptions) {
+function MinaComponent(vantOptions) {
     const options = {};
     mapKeys(vantOptions, options, {
         data: 'data',
@@ -42,4 +42,4 @@ function VantComponent(vantOptions) {
     };
     Component(options);
 }
-export { VantComponent };
+export { MinaComponent };

@@ -1,6 +1,6 @@
-import { VantComponent } from '../common/component';
+import { MinaComponent } from '../common/component';
 
-VantComponent({
+MinaComponent({
   props: {
     dot: Boolean,
     info: null,

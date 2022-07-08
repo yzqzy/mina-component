@@ -4,7 +4,7 @@ exports[`should render demo and match snapshot 1`] = `
 <main>
   <demo-block>
     <wx-view
-      class="custom-class demo-block van-clearfix demo-block--padding"
+      class="custom-class demo-block mina-clearfix demo-block--padding"
     >
       <wx-view
         class="demo-block__title"
@@ -55,7 +55,7 @@ exports[`should render demo and match snapshot 1`] = `
   </demo-block>
   <demo-block>
     <wx-view
-      class="custom-class demo-block van-clearfix demo-block--padding"
+      class="custom-class demo-block mina-clearfix demo-block--padding"
     >
       <wx-view
         class="demo-block__title"

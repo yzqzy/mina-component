@@ -2,9 +2,9 @@
  * @file ProTable - 竖屏
  * @module ProTable/portrait
  */
-import { VantComponent } from '../../common/component';
+import { MinaComponent } from '../../common/component';
 import { normalizeColumns, normalizeDataSource } from '../shared/tool';
-VantComponent({
+MinaComponent({
     props: {
         /**
          * @property {Number} mr - margin right

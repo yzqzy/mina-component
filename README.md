@@ -1,8 +1,6 @@
-<div class="van-doc-card">
-  <div class="van-doc-intro">
-    <h2 style="margin: 0; font-size: 32px; line-height: 60px;">Mina Component</h2>
-    <p>小程序组件库</p>
-  </div>
+<div>
+  <h2 style="margin: 0; font-size: 32px; line-height: 60px;">Mina Component</h2>
+  <p>小程序组件库</p>
 </div>
 
 ### 介绍

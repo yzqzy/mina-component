@@ -1,8 +1,8 @@
-import { VantComponent } from '../../common/component';
+import { MinaComponent } from '../../common/component';
 
 let previewRef;
 
-VantComponent({
+MinaComponent({
   data: {
     imgs: [
       {

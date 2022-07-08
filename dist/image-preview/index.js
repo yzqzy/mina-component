@@ -3,8 +3,8 @@
  * @module ImagePreview
  * @author 月落 <yueluo.yang@qq.com>
  */
-import { VantComponent } from '../common/component';
-VantComponent({
+import { MinaComponent } from '../common/component';
+MinaComponent({
     /**
      * @property {number} scaleMin - 缩放倍数最小值
      * @property {number} scaleMax - 缩放倍数最大值

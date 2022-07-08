@@ -3,7 +3,7 @@
  * @module Label/partition
  */
 
-import { VantComponent } from '../../common/component';
+import { MinaComponent } from '../../common/component';
 
 import {
   selectorQuery,
@@ -12,7 +12,7 @@ import {
   getRealPath,
 } from '../shared/tool';
 
-VantComponent({
+MinaComponent({
   props: {
     width: {
       type: String,

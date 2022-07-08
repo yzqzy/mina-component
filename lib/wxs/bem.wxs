@@ -1,7 +1,7 @@
 /* eslint-disable */
 var array = require('./array.wxs');
 var object = require('./object.wxs');
-var PREFIX = 'van-';
+var PREFIX = 'mina-';
 
 function join(name, mods) {
   name = PREFIX + name;

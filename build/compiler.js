@@ -11,7 +11,6 @@ const merge2 = require('merge2');
 const exec = util.promisify(require('child_process').exec);
 
 const src = path.resolve(__dirname, '../packages');
-const icons = path.resolve(__dirname, '../node_modules/@vant/icons');
 
 const libConfig = path.resolve(__dirname, '../tsconfig.lib.json');
 const esConfig = path.resolve(__dirname, '../tsconfig.json');
@@ -62,21 +61,6 @@ const tsCompiler = (dist, config) =>
 
     return merge2(
       tsResult.js
-        .pipe(
-          insert.transform((contents, file) => {
-            if (dist === exampleDistDir && file.path.includes(`${path.sep}demo${path.sep}`)) {
-              const iconConfig = '@vant/icons/src/config';
-              contents = contents.replace(
-                iconConfig,
-                path.relative(
-                  path.dirname(file.path),
-                  `${exampleDistDir}/${iconConfig}`
-                ).replace(/\\/g, '/')
-              );
-            }
-            return contents;
-          })
-        )
         .pipe(gulp.dest(dist)),
       tsResult.dts.pipe(gulp.dest(dist))
     );
@@ -134,10 +118,6 @@ tasks.buildExample = gulp.series(
     tsCompiler(exampleDistDir, exampleConfig),
     lessCompiler(exampleDistDir),
     staticCopier(exampleDistDir),
-    () =>
-      gulp
-        .src(`${icons}/**/*`)
-        .pipe(gulp.dest(`${exampleDistDir}/@vant/icons`)),
     () => {
       const appJson = JSON.parse(fs.readFileSync(exampleAppJsonPath));
       const excludePages = ['pages/dashboard/index'];
@@ -152,7 +132,7 @@ tasks.buildExample = gulp.series(
             },
             {
               path: `${examplePagesDir}/${component}/index.wxml`,
-              contents: `<van-${component}-demo />`,
+              contents: `<mina-${component}-demo />`,
             },
           ];
           writeFiles.forEach((writeFile) => {
