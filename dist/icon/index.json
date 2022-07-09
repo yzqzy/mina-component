@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "van-info": "../info/index"
+    "mina-info": "../info/index"
   }
 }

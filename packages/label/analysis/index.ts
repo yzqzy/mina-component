@@ -3,7 +3,7 @@
  * @module Label/analysis
  */
 
-import { VantComponent } from '../../common/component';
+import { MinaComponent } from '../../common/component';
 import {
   selectorQuery,
   drawLayout,
@@ -49,7 +49,7 @@ const execute = () => Promise.resolve().then(() => flushCallbacks('rendered'));
 const moutedExecute = () =>
   Promise.resolve().then(() => flushCallbacks('mounted'));
 
-VantComponent({
+MinaComponent({
   props: {
     /**
      * @property {String} mt - margin top

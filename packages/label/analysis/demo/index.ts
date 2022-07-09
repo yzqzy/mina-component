@@ -1,4 +1,4 @@
-import { VantComponent } from '../../../common/component';
+import { MinaComponent } from '../../../common/component';
 
 import {
   LABELS,
@@ -10,7 +10,7 @@ import { formatParams } from './shared/tool';
 
 let labelAnalysisRef;
 
-VantComponent({
+MinaComponent({
   data: {
     image: LABELS.image,
     labels: LABELS.labels,

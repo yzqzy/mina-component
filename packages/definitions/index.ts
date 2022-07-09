@@ -1,4 +1,4 @@
-interface VantComponentInstance {
+interface MinaComponentInstance {
   parent: WechatMiniprogram.Component.TrivialInstance;
   children: WechatMiniprogram.Component.TrivialInstance[];
   index: number;
@@ -9,7 +9,7 @@ interface VantComponentInstance {
   ) => void;
 }
 
-export type VantComponentOptions<
+export type MinaComponentOptions<
   Data extends WechatMiniprogram.Component.DataOption,
   Props extends WechatMiniprogram.Component.PropertyOption,
   Methods extends WechatMiniprogram.Component.MethodOption
@@ -32,7 +32,7 @@ export type VantComponentOptions<
   mounted?: () => void;
   destroyed?: () => void;
 } & ThisType<
-  VantComponentInstance &
+  MinaComponentInstance &
     WechatMiniprogram.Component.Instance<
       Data & {
         name: string;

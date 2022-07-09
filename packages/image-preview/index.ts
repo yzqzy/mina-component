@@ -4,9 +4,9 @@
  * @author 月落 <yueluo.yang@qq.com>
  */
 
-import { VantComponent } from '../common/component';
+import { MinaComponent } from '../common/component';
 
-VantComponent({
+MinaComponent({
   /**
    * @property {number} scaleMin - 缩放倍数最小值
    * @property {number} scaleMax - 缩放倍数最大值

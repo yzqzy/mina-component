@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "van-icon": "../../dist/icon/index"
+    "mina-icon": "../../dist/icon/index"
   }
 }

@@ -41,7 +41,8 @@
     "useStaticServer": true,
     "disableUseStrict": false,
     "useCompilerPlugins": false,
-    "minifyWXML": true
+    "minifyWXML": true,
+    "localPlugins": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.10.4",

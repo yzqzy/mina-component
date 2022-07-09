@@ -1,11 +1,11 @@
 /// <reference types="miniprogram-api-typings" />
-interface VantComponentInstance {
+interface MinaComponentInstance {
     parent: WechatMiniprogram.Component.TrivialInstance;
     children: WechatMiniprogram.Component.TrivialInstance[];
     index: number;
     $emit: (name: string, detail?: unknown, options?: WechatMiniprogram.Component.TriggerEventOption) => void;
 }
-export declare type VantComponentOptions<Data extends WechatMiniprogram.Component.DataOption, Props extends WechatMiniprogram.Component.PropertyOption, Methods extends WechatMiniprogram.Component.MethodOption> = {
+export declare type MinaComponentOptions<Data extends WechatMiniprogram.Component.DataOption, Props extends WechatMiniprogram.Component.PropertyOption, Methods extends WechatMiniprogram.Component.MethodOption> = {
     data?: Data;
     field?: boolean;
     classes?: string[];
@@ -20,7 +20,7 @@ export declare type VantComponentOptions<Data extends WechatMiniprogram.Componen
     created?: () => void;
     mounted?: () => void;
     destroyed?: () => void;
-} & ThisType<VantComponentInstance & WechatMiniprogram.Component.Instance<Data & {
+} & ThisType<MinaComponentInstance & WechatMiniprogram.Component.Instance<Data & {
     name: string;
     value: any;
 } & Record<string, any>, Props, Methods> & Record<string, any>>;

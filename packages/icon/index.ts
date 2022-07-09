@@ -1,6 +1,6 @@
-import { VantComponent } from '../common/component';
+import { MinaComponent } from '../common/component';
 
-VantComponent({
+MinaComponent({
   props: {
     dot: Boolean,
     info: null,
@@ -9,7 +9,7 @@ VantComponent({
     customStyle: String,
     classPrefix: {
       type: String,
-      value: 'van-icon',
+      value: 'mina-icon',
     },
     name: String,
   },
