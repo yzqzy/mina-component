@@ -25,123 +25,167 @@ exports[`should render demo and match snapshot 1`] = `
         <wx-view
           class="keyboard-key "
         >
-          <wx-view
+          <wx-button
+            :catch:tap="onPress"
             class="button"
+            data-text="{{1}}"
+            data-type=""
+            hoverClass="pressed"
           >
             
         1
       
-          </wx-view>
+          </wx-button>
         </wx-view>
         <wx-view
           class="keyboard-key "
         >
-          <wx-view
+          <wx-button
+            :catch:tap="onPress"
             class="button"
+            data-text="{{2}}"
+            data-type=""
+            hoverClass="pressed"
           >
             
         2
       
-          </wx-view>
+          </wx-button>
         </wx-view>
         <wx-view
           class="keyboard-key "
         >
-          <wx-view
+          <wx-button
+            :catch:tap="onPress"
             class="button"
+            data-text="{{3}}"
+            data-type=""
+            hoverClass="pressed"
           >
             
         3
       
-          </wx-view>
+          </wx-button>
         </wx-view>
         <wx-view
           class="keyboard-key "
         >
-          <wx-view
+          <wx-button
+            :catch:tap="onPress"
             class="button"
+            data-text="{{4}}"
+            data-type=""
+            hoverClass="pressed"
           >
             
         4
       
-          </wx-view>
+          </wx-button>
         </wx-view>
         <wx-view
           class="keyboard-key "
         >
-          <wx-view
+          <wx-button
+            :catch:tap="onPress"
             class="button"
+            data-text="{{5}}"
+            data-type=""
+            hoverClass="pressed"
           >
             
         5
       
-          </wx-view>
+          </wx-button>
         </wx-view>
         <wx-view
           class="keyboard-key "
         >
-          <wx-view
+          <wx-button
+            :catch:tap="onPress"
             class="button"
+            data-text="{{6}}"
+            data-type=""
+            hoverClass="pressed"
           >
             
         6
       
-          </wx-view>
+          </wx-button>
         </wx-view>
         <wx-view
           class="keyboard-key "
         >
-          <wx-view
+          <wx-button
+            :catch:tap="onPress"
             class="button"
+            data-text="{{7}}"
+            data-type=""
+            hoverClass="pressed"
           >
             
         7
       
-          </wx-view>
+          </wx-button>
         </wx-view>
         <wx-view
           class="keyboard-key "
         >
-          <wx-view
+          <wx-button
+            :catch:tap="onPress"
             class="button"
+            data-text="{{8}}"
+            data-type=""
+            hoverClass="pressed"
           >
             
         8
       
-          </wx-view>
+          </wx-button>
         </wx-view>
         <wx-view
           class="keyboard-key "
         >
-          <wx-view
+          <wx-button
+            :catch:tap="onPress"
             class="button"
+            data-text="{{9}}"
+            data-type=""
+            hoverClass="pressed"
           >
             
         9
       
-          </wx-view>
+          </wx-button>
         </wx-view>
         <wx-view
           class="keyboard-key wider"
         >
-          <wx-view
+          <wx-button
+            :catch:tap="onPress"
             class="button"
+            data-text="{{0}}"
+            data-type=""
+            hoverClass="pressed"
           >
             
         0
       
-          </wx-view>
+          </wx-button>
         </wx-view>
         <wx-view
           class="keyboard-key "
         >
-          <wx-view
+          <wx-button
+            :catch:tap="onPress"
             class="button"
+            data-text="."
+            data-type="extra"
+            hoverClass="pressed"
           >
             
         .
       
-          </wx-view>
+          </wx-button>
         </wx-view>
       </wx-view>
       <wx-view
@@ -150,24 +194,32 @@ exports[`should render demo and match snapshot 1`] = `
         <wx-view
           class="keyboard-key"
         >
-          <wx-view
-            class="button large"
+          <wx-button
+            :catch:tap="onPress"
+            class="button large delete"
+            data-text=""
+            data-type="delete"
+            hoverClass="pressed"
           >
-            
-        删除
-      
-          </wx-view>
+            <wx-text
+              class="mina-icon mina-icon-delete"
+            />
+          </wx-button>
         </wx-view>
         <wx-view
           class="keyboard-key higher"
         >
-          <wx-view
-            class="button large blue"
+          <wx-button
+            :catch:tap="onPress"
+            class="button large confirm blue "
+            data-text=""
+            data-type="close"
+            hoverClass="pressed"
           >
             
         确认
       
-          </wx-view>
+          </wx-button>
         </wx-view>
       </wx-view>
     </wx-view>
