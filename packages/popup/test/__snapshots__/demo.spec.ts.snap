@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render demo and match snapshot 1`] = `
+<main>
+  <demo-block
+    padding="{{true}}"
+    title="基础用法"
+  >
+    <wx-view
+      class="item"
+      data-value="top"
+      catch:tap="handlePress"
+    >
+      顶部弹出
+    </wx-view>
+    <wx-view
+      class="item"
+      data-value="bottom"
+      catch:tap="handlePress"
+    >
+      底部弹出
+    </wx-view>
+    <wx-view
+      class="item"
+      data-value="left"
+      catch:tap="handlePress"
+    >
+      左侧弹出
+    </wx-view>
+    <wx-view
+      class="item"
+      data-value="right"
+      catch:tap="handlePress"
+    >
+      右侧弹出
+    </wx-view>
+    <mina-popup
+      catch:close="handleClose"
+    >
+      <wx-view
+        class="popup-wrap "
+        style="z-index: 99"
+        catch:tap="handleClose"
+      >
+        <wx-view
+          class="popup-board  bottom"
+          style="z-index: 99; background: #fff; width: 100%; height: 400rpx"
+          catch:tap="noop"
+          catch:touchmove="noop"
+        >
+          <wx-view
+            class="container"
+          >
+            
+          </wx-view>
+        </wx-view>
+      </wx-view>
+    </mina-popup>
+  </demo-block>
+</main>
+`;

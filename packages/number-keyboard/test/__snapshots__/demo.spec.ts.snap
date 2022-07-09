@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render demo and match snapshot 1`] = `
+<main>
+  <demo-block
+    padding="{{true}}"
+    title="基础用法"
+  >
+    <wx-view
+      class="input"
+    >
+      20
+    </wx-view>
+  </demo-block>
+  <mina-number-keyboard
+    :color="blue"
+    :show="{{true}}"
+  >
+    <wx-view
+      class="keyboard-wrap"
+    >
+      <wx-view
+        class="keyboard-keys"
+      >
+        <wx-view
+          class="keyboard-key "
+        >
+          <wx-view
+            class="button"
+          >
+            
+        1
+      
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="keyboard-key "
+        >
+          <wx-view
+            class="button"
+          >
+            
+        2
+      
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="keyboard-key "
+        >
+          <wx-view
+            class="button"
+          >
+            
+        3
+      
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="keyboard-key "
+        >
+          <wx-view
+            class="button"
+          >
+            
+        4
+      
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="keyboard-key "
+        >
+          <wx-view
+            class="button"
+          >
+            
+        5
+      
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="keyboard-key "
+        >
+          <wx-view
+            class="button"
+          >
+            
+        6
+      
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="keyboard-key "
+        >
+          <wx-view
+            class="button"
+          >
+            
+        7
+      
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="keyboard-key "
+        >
+          <wx-view
+            class="button"
+          >
+            
+        8
+      
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="keyboard-key "
+        >
+          <wx-view
+            class="button"
+          >
+            
+        9
+      
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="keyboard-key wider"
+        >
+          <wx-view
+            class="button"
+          >
+            
+        0
+      
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="keyboard-key "
+        >
+          <wx-view
+            class="button"
+          >
+            
+        .
+      
+          </wx-view>
+        </wx-view>
+      </wx-view>
+      <wx-view
+        class="keyboard-sidebar"
+      >
+        <wx-view
+          class="keyboard-key"
+        >
+          <wx-view
+            class="button large"
+          >
+            
+        删除
+      
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="keyboard-key higher"
+        >
+          <wx-view
+            class="button large blue"
+          >
+            
+        确认
+      
+          </wx-view>
+        </wx-view>
+      </wx-view>
+    </wx-view>
+  </mina-number-keyboard>
+</main>
+`;
