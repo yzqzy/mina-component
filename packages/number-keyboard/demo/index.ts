@@ -1,6 +1,6 @@
-import { VantComponent } from '../../common/component';
+import { MinaComponent } from '../../common/component';
 
-VantComponent({
+MinaComponent({
   data: {
     show: true,
     color: 'blue',

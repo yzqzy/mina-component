@@ -3,6 +3,10 @@ export default [
     groupName: '基础组件',
     list: [
       {
+        path: '/popup',
+        title: 'Popup 弹窗',
+      },
+      {
         path: '/image-preview',
         title: 'ImagePreview 图片预览',
       },

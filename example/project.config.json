@@ -52,6 +52,11 @@
     "miniprogram": {
       "list": [
         {
+          "name": "debug popup",
+          "pathName": "pages/popup/index",
+          "query": ""
+        },
+        {
           "name": "debug image-preview",
           "pathName": "pages/image-preview/index",
           "query": ""

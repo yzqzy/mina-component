@@ -6,7 +6,8 @@
     "pages/protable-landscape/index",
     "pages/label-analysis/index",
     "pages/label-partition/index",
-    "pages/number-keyboard/index"
+    "pages/number-keyboard/index",
+    "pages/popup/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#f8f8f8",
@@ -17,6 +18,7 @@
   },
   "usingComponents": {
     "demo-block": "./components/demo-block/index",
+    "mina-popup-demo": "./dist/popup/demo/index",
     "mina-image-preview-demo": "./dist/image-preview/demo/index",
     "mina-protable-protrait-demo": "./dist/pro-table/protrait/demo/index",
     "mina-protable-landscape-demo": "./dist/pro-table/landscape/demo/index",

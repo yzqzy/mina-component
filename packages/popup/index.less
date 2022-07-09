@@ -1,0 +1,58 @@
+.popup-wrap {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, .7);
+
+  &.show {
+    display: flex;
+  }
+
+  .popup-board {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    transition: all .3s ease;
+    pointer-events: auto;
+
+    &.top {
+      left: 0;
+      top: -999rpx;
+    }
+    &.bottom {
+      left: 0;
+      bottom: -999rpx;
+    }
+    &.left {
+      top: 0;
+      left: -999rpx;
+    }
+    &.right {
+      top: 0;
+      right: -999rpx;
+    }
+
+    &.show {
+      &.top {
+        left: 0;
+        top: 0;
+      }
+      &.bottom {
+        left: 0;
+        bottom: 0;
+      }
+      &.left {
+        top: 0;
+        left: 0;
+      }
+      &.right {
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}

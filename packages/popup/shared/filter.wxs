@@ -1,0 +1,17 @@
+/**
+ * @file 字符串过滤
+ * @module Popup/shared/filter
+ */
+
+function getAreaStyle (width, height, direction) {
+  if (direction === 'left' || direction === 'right') {
+    height = '100%';
+    width += 'rpx';
+  } else {
+    width = '100%';
+    height += 'rpx';
+  }
+  return 'width: ' + width + '; height: ' + height;
+}
+
+module.exports.getAreaStyle = getAreaStyle;;
