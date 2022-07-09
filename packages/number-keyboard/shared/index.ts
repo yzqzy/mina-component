@@ -1,6 +1,6 @@
 type KeyType = '' | 'delete' | 'extra' | 'close';
 
-type KeyConfig = {
+export type KeyConfig = {
   text?: number;
   type?: KeyType;
   color?: string;

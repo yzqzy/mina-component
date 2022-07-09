@@ -5,21 +5,39 @@
       wx:key="index"
       class="keyboard-key {{ item.wider ? 'wider' : '' }}"
     >
-      <view class="button">
+      <button
+        class="button"
+        hover-class="pressed"
+        data-type="{{item.type}}"
+        data-text="{{item.text}}"
+        :catch:tap="onPress"
+      >
         {{ item.text }}
-      </view>
+      </button>
     </view>
   </view>
   <view class="keyboard-sidebar">
     <view class="keyboard-key">
-      <view class="button large">
-        删除
-      </view>
+      <button
+        class="button large delete"
+        hover-class="pressed"
+        data-type="delete"
+        data-text="{{item.text}}"
+        :catch:tap="onPress"
+      >
+        <text class="mina-icon mina-icon-delete" />
+      </button>
     </view>
     <view class="keyboard-key higher">
-      <view class="button large {{ color }}">
-        确认
-      </view>
+      <button
+        class="button large confirm {{ confirmColor }} {{ confirmDisabled ? 'disabled' : '' }}"
+        hover-class="pressed"
+        data-type="close"
+        data-text="{{item.text}}"
+        :catch:tap="onPress"
+      >
+        {{confirmText}}
+      </button>
     </view>
   </view>
 </view>

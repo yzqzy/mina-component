@@ -6,7 +6,7 @@
   width: 100%;
   z-index: 999;
   padding: 12rpx 0 0 12rpx;
-  background-color: #f2f3f5;
+  background-color: #F6F6F7;
   padding-bottom: env(safe-area-inset-bottom);
   box-sizing: border-box;
 
@@ -30,12 +30,50 @@
       justify-content: center;
       align-items: center;
       height: 100rpx;
-      border-radius: 18rpx;
+      padding: 0;
       background-color: #fff;
+      font-weight: 500;
+      font-size: 44rpx;
+      color: #333;
+      box-sizing: border-box;
 
-      &.blue {
-        color: #fff;
-        background-color: #1989fa;
+      &::after {
+        border: none;
+      }
+
+      &.pressed {
+        background-color: #DBDBDB;
+      }
+
+      &.confirm {
+        &.blue {
+          color: #fff;
+          background-color: #3B89F2;
+
+          &.pressed {
+            background-color: #0060E1;
+          }
+          &.disabled {
+            background-color: rgba(59, 137, 242, .64);
+          }
+        }
+        &.green {
+          color: #fff;
+          background-color: #1aad19;
+
+          &.pressed {
+            background-color: #1aad19;
+          }
+          &.disabled {
+            background-color: #1aad19;
+          }
+        }
+      }
+      &.delete {
+        .img {
+          width: 44rpx;
+          height: 34rpx;
+        }
       }
 
       &.large {

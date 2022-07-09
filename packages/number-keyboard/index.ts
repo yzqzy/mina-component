@@ -4,22 +4,33 @@
  */
 
 import { MinaComponent } from '../common/component';
-import { genCustomKeys } from './shared/index';
+import { KeyConfig, genCustomKeys } from './shared/index';
 
 MinaComponent({
   /**
-   * @property {boolean} show - 是否展示
-   * @property {string} color - 确认按钮颜色
+   * @property {string} confirmColor - 确认按钮颜色
+   * @property {boolean} confirmDisabled - 禁用确认按钮
    */
   props: {
-    show: {
-      type: Boolean,
-      value: false,
-    },
-    color: {
+    confirmColor: {
       type: String,
       value: 'blue',
     },
+    confirmText: {
+      type: String,
+      value: '确认'
+    },
+    confirmDisabled: {
+      type: Boolean,
+      value: false
+    },
+    extraKey: {
+      type: String,
+      value: '.',
+      observer(val) {
+        this.setKeys(val);
+      }
+    }
   },
 
   /**
@@ -28,8 +39,35 @@ MinaComponent({
   data: {
     keys: genCustomKeys({
       extraKey: '.',
-    }),
+    }) as KeyConfig[]
   },
 
-  methods: {},
+  methods: {
+    // 点击事件处理
+    onPress(e) {
+      const { type, text } = e.currentTarget.dataset;
+
+      switch (type) {
+        case 'delete':
+          this.triggerEvent('delete');
+          break;
+        case 'close':
+          if (!this.confirmDisabled) {
+            this.triggerEvent('close');
+          }
+          break;
+        default:
+          this.triggerEvent('input', text);
+          break;
+      }
+    },
+    // 设置按键集合
+    setKeys(value: string) {
+      this.setData({
+        keys: genCustomKeys({
+          extraKey: value,
+        }) as KeyConfig[]
+      })
+    }
+  },
 });
