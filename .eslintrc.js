@@ -8,7 +8,8 @@ module.exports = {
     Component: false,
     App: false,
     wx: false,
-    Behavior: false
+    Behavior: false,
+    getRegExp: false
   },
 
   extends: [

@@ -1,16 +1,16 @@
 <view class="keyboard-wrap">
   <view class="keyboard-keys">
     <view
-      wx:for="{{keys}}"
+      wx:for="{{ keys }}"
       wx:key="index"
       class="keyboard-key {{ item.wider ? 'wider' : '' }}"
     >
       <button
         class="button"
         hover-class="pressed"
-        data-type="{{item.type}}"
-        data-text="{{item.text}}"
-        :catch:tap="onPress"
+        data-type="{{ item.type }}"
+        data-text="{{ item.text }}"
+        catch:tap="onPress"
       >
         {{ item.text }}
       </button>
@@ -22,8 +22,8 @@
         class="button large delete"
         hover-class="pressed"
         data-type="delete"
-        data-text="{{item.text}}"
-        :catch:tap="onPress"
+        data-text="{{ item.text }}"
+        catch:tap="onPress"
       >
         <text class="mina-icon mina-icon-delete" />
       </button>
@@ -33,10 +33,10 @@
         class="button large confirm {{ confirmColor }} {{ confirmDisabled ? 'disabled' : '' }}"
         hover-class="pressed"
         data-type="close"
-        data-text="{{item.text}}"
-        :catch:tap="onPress"
+        data-text="{{ item.text }}"
+        catch:tap="onPress"
       >
-        {{confirmText}}
+        {{ confirmText }}
       </button>
     </view>
   </view>

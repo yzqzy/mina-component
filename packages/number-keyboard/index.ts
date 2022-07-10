@@ -9,7 +9,10 @@ import { KeyConfig, genCustomKeys } from './shared/index';
 MinaComponent({
   /**
    * @property {string} confirmColor - 确认按钮颜色
+   * @property {string} confirmText - 确认按钮文本
    * @property {boolean} confirmDisabled - 禁用确认按钮
+   * @property {string} extraKey - 扩展 Key
+   * @property {number} zIndex - 定位层级
    */
   props: {
     confirmColor: {
@@ -44,7 +47,7 @@ MinaComponent({
 
   methods: {
     // 点击事件处理
-    onPress(e) {
+    onPress(e: any) {
       const { type, text } = e.currentTarget.dataset;
 
       switch (type) {
@@ -52,7 +55,7 @@ MinaComponent({
           this.triggerEvent('delete');
           break;
         case 'close':
-          if (!this.confirmDisabled) {
+          if (!this.data.confirmDisabled) {
             this.triggerEvent('close');
           }
           break;

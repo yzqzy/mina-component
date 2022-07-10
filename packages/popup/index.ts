@@ -10,10 +10,11 @@ type Direction = 'top' | 'bottom' | 'left' | 'right';
 MinaComponent({
   /**
    * @property {boolean} show - 是否展示
-   * @property {number} width - 弹层宽度（direction 为 left、right 生效）
-   * @property {number} height - 弹层高度（direction 为 top、bottom 生效）
+   * @property {string} width - 弹层宽度（direction 为 left、right 生效）
+   * @property {string} height - 弹层高度（direction 为 top、bottom 生效）
    * @property {number} zIndex - 绝对定位
    * @property {string} direction - 弹出方向
+   * @property {string} bgColor - 背景颜色
    */
   props: {
     show: {
@@ -24,12 +25,12 @@ MinaComponent({
       }
     },
     width: {
-      type: Number,
-      value: 400
+      type: String,
+      value: "400"
     },
     height: {
-      type: Number,
-      value: 400
+      type: String,
+      value: "400"
     },
     zIndex: {
       type: Number,
@@ -41,7 +42,7 @@ MinaComponent({
     },
     bgColor: {
       type: String,
-      value: '#fff'
+      value: 'rgba(0, 0, 0, .7)'
     }
   },
 

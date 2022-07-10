@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "mina-number-keyboard": "../../number-keyboard/index"
+    "mina-number-keyboard": "../../number-keyboard/index",
+    "mina-popup": "../../popup/index"
   }
 }

@@ -1,10 +1,26 @@
 <demo-block title="基础用法" padding>
-  <view class="input">20</view>
+  <view
+    class="input"
+    catch:tap="handleOpen"
+  >
+    <text wx:if="{{ inputValue }}" class="text {{ show ? 'pointer' : '' }}">{{ inputValue }}</text>
+    <text wx:else class="text {{ show ? 'blank-pointer' : '' }}" />
+  </view>
 </demo-block>
 
-<!-- 数字键盘组件 start -->
-<mina-number-keyboard
-  :show="{{show}}"
-  :color="{{color}}"
-/>
-<!-- 数字键盘组件 end -->
+<mina-popup
+  show="{{ show }}"
+  height="auto"
+  bgColor="transparent"
+  catch:close="handleClose"
+>
+  <!-- 数字键盘组件 start -->
+  <mina-number-keyboard
+    confirmColor="blue"
+    confirmDisabled="{{ confirmDisabled }}"
+    catch:input="handleInput"
+    catch:delete="handleDelete"
+    catch:close="handleConfirm"
+  />
+  <!-- 数字键盘组件 end -->
+</mina-popup>

@@ -3,13 +3,21 @@
  * @module Popup/shared/filter
  */
 
-function getAreaStyle (width, height, direction) {
+function isNumber(value) {
+  return getRegExp('^[0-9]+.?[0-9]*$').test(value);
+}
+
+function getAreaStyle(width, height, direction) {
   if (direction === 'left' || direction === 'right') {
     height = '100%';
-    width += 'rpx';
+    if (isNumber(width)) {
+      width += 'rpx';
+    }
   } else {
     width = '100%';
-    height += 'rpx';
+    if (isNumber(height)) {
+      height += 'rpx';
+    }
   }
   return 'width: ' + width + '; height: ' + height;
 }
