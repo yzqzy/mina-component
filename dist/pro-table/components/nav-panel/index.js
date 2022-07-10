@@ -9,17 +9,11 @@ MinaComponent({
             value: 53,
         },
     },
-    mounted() {
-        if (wx.getMenuButtonBoundingClientRect) {
-            this.safeAreaTop =
-                (wx.getMenuButtonBoundingClientRect() || { bottom: 0 }).bottom + 10;
-        }
-    },
     data: {
         /**
          * @property {Number} safeAreaTop - 顶部安全边距
          */
-        safeAreaTop: 0,
+        safeAreaTop: (wx.getMenuButtonBoundingClientRect && wx.getMenuButtonBoundingClientRect() || { bottom: 0 }).bottom,
     },
     methods: {
         /**

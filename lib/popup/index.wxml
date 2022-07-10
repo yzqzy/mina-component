@@ -1,0 +1,15 @@
+<wxs module="filter" src="./shared/filter.wxs"></wxs>
+<view
+  class="popup-wrap {{ showWrap ? 'show' : '' }}"
+  style="z-index: {{ zIndex }}; background: {{ bgColor }}"
+  catch:tap="handleClose"
+>
+  <view
+    class="popup-board {{ showBoard ? 'show' : ''  }} {{ direction }}"
+    style="z-index: {{ zIndex }}; {{ filter.getAreaStyle(width, height, direction) }}"
+    catch:tap="noop"
+    catch:touchmove="noop"
+  >
+    <slot />
+  </view>
+</view>
