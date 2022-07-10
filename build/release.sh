@@ -16,7 +16,7 @@ then
   fi
 
   # commit
-  npm version $VERSION --message "release: $VERSION"
+  npm version $VERSION --message "build: release $VERSION"
 
   # publish
   git push origin develop
