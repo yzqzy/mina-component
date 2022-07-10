@@ -19,5 +19,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
-          body: |
-            更新内容参见 [CHANGELOG](https://vant-contrib.gitee.io/mina-component/#/changelog)。
+          # body: |
+          #   更新内容参见 [CHANGELOG](https://www.yueluo.club)。
