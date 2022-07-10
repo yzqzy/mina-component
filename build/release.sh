@@ -30,5 +30,4 @@ then
   fi
 
   # changelog
-  # vant-cli changelog
 fi
