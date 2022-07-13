@@ -11,22 +11,22 @@ then
   npm run build:lib
   if [[ `git status --porcelain` ]];
   then
-    git add -A
     git commit -am "build: compile $VERSION"
   fi
 
   # commit
   npm version $VERSION --message "build: release $VERSION"
 
-  # changelog
-  npm run build:changelog
-  git add -A
-  git commit -am "docs: revise changelog"
-
   # publish
   git push origin develop
   git push origin refs/tags/v$VERSION
 
+  # changelog
+  npm run build:changelog
+  git commit -am "docs: revise changelog"
+  git push origin develop
+
+  # npm publish
   if [[ $VERSION =~ [beta] ]]
   then
     npm publish --tag beta
