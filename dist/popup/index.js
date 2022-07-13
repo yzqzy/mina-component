@@ -8,7 +8,8 @@ MinaComponent({
      * @property {boolean} show - 是否展示
      * @property {string} width - 弹层宽度（direction 为 left、right 生效）
      * @property {string} height - 弹层高度（direction 为 top、bottom 生效）
-     * @property {number} zIndex - 绝对定位
+     * @property {number} zIndex - 定位层级
+     * @property {number} delay - 动画延迟时间
      * @property {string} direction - 弹出方向
      * @property {string} bgColor - 背景颜色
      */
@@ -22,15 +23,19 @@ MinaComponent({
         },
         width: {
             type: String,
-            value: "400"
+            value: '400'
         },
         height: {
             type: String,
-            value: "400"
+            value: '400'
         },
         zIndex: {
             type: Number,
             value: 99
+        },
+        delay: {
+            type: Number,
+            value: 30
         },
         direction: {
             type: String,
@@ -58,13 +63,13 @@ MinaComponent({
                     this.setData({
                         [key]: val
                     });
-                }, index * 30);
+                }, index * this.data.delay);
             });
         },
         // 关闭弹窗
         handleClose() {
             this.triggerEvent('close');
         },
-        noop() { },
+        noop() { }
     }
 });
