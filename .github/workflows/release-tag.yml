@@ -20,4 +20,4 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           body: |
-            更新内容参见 [CHANGELOG](https://www.yueluo.club)。
+            更新内容参见 [CHANGELOG](https://github.com/yw0525/mina-component/blob/master/changelog.generated.md)。
