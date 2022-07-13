@@ -1,3 +1,24 @@
+## [1.1.2](https://github.com/yw0525/mina-component/compare/v1.1.0...v1.1.2) (2022-07-13)
+
+
+### Features
+
+* generate changelog before release ([d02fd3d](https://github.com/yw0525/mina-component/commit/d02fd3d10c4b3e23e2a1e6cfa7521313ababd971))
+
+
+### Performance Improvements
+
+* number-keyboard extensions ([fffcd1c](https://github.com/yw0525/mina-component/commit/fffcd1c07e9963633cc95156db0a638d29a26058))
+* replace icon ([ac61d35](https://github.com/yw0525/mina-component/commit/ac61d350640878bdba2a22232fc7dcf9d200d9e1))
+* revise release.sh ([eff2a78](https://github.com/yw0525/mina-component/commit/eff2a788270f9c39641b04f55ed3fb952573a0f9))
+* revise release.sh ([b010e58](https://github.com/yw0525/mina-component/commit/b010e5870e5ccfd931ebf8f8a87cf33c831d1a41))
+* update ([8df122f](https://github.com/yw0525/mina-component/commit/8df122f1d6c67a173539b3b2f20daf08eef6b75a))
+* update release-tag.yml ([0acd56c](https://github.com/yw0525/mina-component/commit/0acd56cf15c2d1f298d3293e2533b07c6085a8d8))
+* update scripts ([1ed8e8e](https://github.com/yw0525/mina-component/commit/1ed8e8e049836f1429f99e7dd917ce8eacf7466b))
+* update test snap ([645c261](https://github.com/yw0525/mina-component/commit/645c26152453950e5caa56dd2d33e7e6a50ddb50))
+
+
+
 # [1.1.0](https://github.com/yw0525/mina-component/compare/v1.0.9...v1.1.0) (2022-07-11)
 
 
@@ -32,7 +53,11 @@
 
 
 
-## [1.0.7](https://github.com/yw0525/mina-component/compare/v1.0.5...v1.0.7) (2022-05-30)
+## [1.0.7](https://github.com/yw0525/mina-component/compare/v1.0.6...v1.0.7) (2022-05-30)
+
+
+
+## [1.0.6](https://github.com/yw0525/mina-component/compare/v1.0.5...v1.0.6) (2022-05-30)
 
 
 ### Bug Fixes

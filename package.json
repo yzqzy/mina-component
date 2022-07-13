@@ -15,7 +15,7 @@
     "prepare": "husky install",
     "release": "sh build/release.sh",
     "build:lib": "yarn && npx gulp -f build/compiler.js --series buildEs buildLib",
-    "build:changelog": "conventional-changelog -p angular -i changelog.generated.md -s",
+    "build:changelog": "conventional-changelog -p angular -i changelog.generated.md -s -r 0",
     "upload:weapp": "node build/upload.js",
     "test": "jest",
     "test:watch": "jest --watch"
