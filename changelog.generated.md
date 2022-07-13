@@ -1,3 +1,12 @@
+## [1.1.3](https://github.com/yw0525/mina-component/compare/v1.1.2...v1.1.3) (2022-07-13)
+
+
+### Bug Fixes
+
+* changelog generate problem ([0d75232](https://github.com/yw0525/mina-component/commit/0d752325814b332955265bafe20edc10bfb09235))
+
+
+
 ## [1.1.2](https://github.com/yw0525/mina-component/compare/v1.1.0...v1.1.2) (2022-07-13)
 
 
