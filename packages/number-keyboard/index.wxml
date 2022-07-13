@@ -6,7 +6,7 @@
           <text class="mina-icon mina-icon-delete" />
         </block>
         <block wx:if="{{ item.type === 'close' }}">
-          <text class="mina-icon mina-icon-keyboardhide" />
+          <text class="mina-icon mina-icon-hide-keyboard" />
         </block>
         <block wx:else>{{ item.text }}</block>
       </button>

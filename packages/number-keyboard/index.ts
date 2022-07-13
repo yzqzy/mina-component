@@ -8,7 +8,7 @@ import { KeyConfig, getKeys } from './shared/index';
 
 MinaComponent({
   /**
-   * @property {string} theme - 键盘主题（default/custom）
+   * @property {string} theme - 键盘主题（default、custom）
    * @property {string} extraKey - 键盘按键扩展
    * @property {boolean} randomKey - 键盘按键乱序
    * @property {string} confirmColor - 确认按钮颜色
@@ -72,7 +72,7 @@ MinaComponent({
           this.triggerEvent('delete');
           break;
         case 'close':
-          if (!this.data.confirmDisabled) {
+          if (!this.data.confirmDisabled || this.data.theme !== 'custom') {
             this.triggerEvent('close');
           }
           break;

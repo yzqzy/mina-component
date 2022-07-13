@@ -187,7 +187,7 @@ exports[`should render demo and match snapshot 1`] = `
                   catch:tap="onPress"
                 >
                   <wx-text
-                    class="mina-icon mina-icon-keyboardhide"
+                    class="mina-icon mina-icon-hide-keyboard"
                   />
                 </wx-button>
               </wx-view>
