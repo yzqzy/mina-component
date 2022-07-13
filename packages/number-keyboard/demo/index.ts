@@ -1,19 +1,71 @@
 import { MinaComponent } from '../../common/component';
 
+const OPTIONS = [
+  {
+    value: 'normal',
+    label: '基础键盘'
+  },
+  {
+    value: 'random',
+    label: '随机数字键盘'
+  },
+  {
+    value: 'custom',
+    label: '带右侧栏键盘'
+  },
+  {
+    value: 'multi',
+    label: '多按键键盘'
+  }
+]
+
 MinaComponent({
   data: {
-    extraKey: '',
+    theme: 'default',
+    extraKey: '.',
+    randomKey: false,
+
     inputValue: '',
-    confirmDisabled: true
+    confirmDisabled: true,
+    options: OPTIONS
   },
 
   methods: {
+    handlePress(e) {
+      const { value } = e.detail
+
+      let key = '';
+      let random = false;
+      let theme = 'default';
+
+      switch (value) {
+        case 'normal':
+          key = '.';
+          break;
+        case 'random':
+          random = true;
+          break;
+        case 'custom':
+          key = '.';
+          theme = 'custom';
+          break;
+        case 'multi':
+          theme = 'custom';
+          key = '00,.';
+          break;
+        default:
+          break;
+      }
+
+      this.setData({
+        theme,
+        extraKey: key,
+        randomKey: random
+      }, this.handleOpen);
+    },
+
     // 打开弹窗
-    handleOpen(e) {
-      const { type } = e.currentTarget.dataset;
-
-      console.log(type);
-
+    handleOpen() {
       this.setData({
         show: true
       });

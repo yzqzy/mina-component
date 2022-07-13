@@ -1,8 +1,6 @@
-<demo-block title="基础用法" padding>
-  <demo-nav list="{{ options }}" catch:click="handlePress" />
-  <!-- 弹窗组件 start -->
-  <mina-popup show="{{ show }}" direction="{{ direction }}" catch:close="handleClose">
-    <view class="container">{{ text }}</view>
-  </mina-popup>
-  <!-- 弹窗组件 end -->
-</demo-block>
+<demo-nav padding list="{{ options }}" catch:click="handlePress" />
+<!-- 弹窗组件 start -->
+<mina-popup show="{{ show }}" direction="{{ direction }}" catch:close="handleClose">
+  <view class="container">{{ text }}</view>
+</mina-popup>
+<!-- 弹窗组件 end -->

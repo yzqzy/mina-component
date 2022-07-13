@@ -4,17 +4,39 @@
  */
 
 import { MinaComponent } from '../common/component';
-import { KeyConfig, genCustomKeys } from './shared/index';
+import { KeyConfig, getKeys } from './shared/index';
 
 MinaComponent({
   /**
+   * @property {string} theme - 键盘主题（default/custom）
+   * @property {string} extraKey - 键盘按键扩展
+   * @property {boolean} randomKey - 键盘按键乱序
    * @property {string} confirmColor - 确认按钮颜色
    * @property {string} confirmText - 确认按钮文本
    * @property {boolean} confirmDisabled - 禁用确认按钮
-   * @property {string} extraKey - 扩展 Key
-   * @property {number} zIndex - 定位层级
    */
   props: {
+    theme: {
+      type: String,
+      value: 'default',
+      observer() {
+        this.setKeys();
+      }
+    },
+    extraKey: {
+      type: String,
+      value: '.',
+      observer(val) {
+        this.setKeys(val);
+      }
+    },
+    randomKey: {
+      type: Boolean,
+      value: false,
+      observer() {
+        this.setKeys();
+      }
+    },
     confirmColor: {
       type: String,
       value: 'blue',
@@ -27,22 +49,17 @@ MinaComponent({
       type: Boolean,
       value: false
     },
-    extraKey: {
-      type: String,
-      value: '.',
-      observer(val) {
-        this.setKeys(val);
-      }
-    }
   },
 
   /**
    * @property {KeyConfig[]} keys - 按键数组
    */
   data: {
-    keys: genCustomKeys({
-      extraKey: '.',
-    }) as KeyConfig[]
+    keys: [] as KeyConfig[]
+  },
+
+  mounted() {
+    this.setKeys()
   },
 
   methods: {
@@ -65,12 +82,18 @@ MinaComponent({
       }
     },
     // 设置按键集合
-    setKeys(value: string) {
+    setKeys(value?: string) {
+      const { theme, extraKey, randomKey } = this.data;
+
+      const keys = getKeys({
+        theme,
+        extraKey: value || extraKey,
+        randomKey
+      }) as KeyConfig[];
+
       this.setData({
-        keys: genCustomKeys({
-          extraKey: value,
-        }) as KeyConfig[]
-      })
+        keys
+      });
     }
   },
 });

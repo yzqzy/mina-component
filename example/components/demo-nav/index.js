@@ -1,5 +1,6 @@
 Component({
   properties: {
+    padding: Boolean,
     list: Array
   },
 

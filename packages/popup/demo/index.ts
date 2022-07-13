@@ -38,7 +38,7 @@ MinaComponent({
 
       this.setData({
         direction: value,
-        text: value.toUpperCase()
+        text: value
       });
 
       setTimeout(() => {

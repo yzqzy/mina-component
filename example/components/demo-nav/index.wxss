@@ -1,3 +1,7 @@
+.demo-nav-padding {
+  padding: 20px 15px 15px;
+}
+
 .demo-nav__block {
   position: relative;
   display: flex;

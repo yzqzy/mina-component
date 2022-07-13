@@ -3,5 +3,5 @@
   <view class="demo-block__card" wx:if="{{ card }}">
     <slot />
   </view>
- <slot wx:else />
+  <slot wx:else />
 </view>

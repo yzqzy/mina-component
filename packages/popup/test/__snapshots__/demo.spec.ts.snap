@@ -2,55 +2,51 @@
 
 exports[`should render demo and match snapshot 1`] = `
 <main>
-  <demo-block
+  <demo-nav
+    list="{{
+      Array [
+        Object {
+          "label": "顶部弹出",
+          "value": "top",
+        },
+        Object {
+          "label": "底部弹出",
+          "value": "bottom",
+        },
+        Object {
+          "label": "左侧弹出",
+          "value": "left",
+        },
+        Object {
+          "label": "右侧弹出",
+          "value": "right",
+        },
+      ]
+    }}"
     padding="{{true}}"
-    title="基础用法"
+    catch:click="handlePress"
+  />
+  <mina-popup
+    catch:close="handleClose"
   >
-    <demo-nav
-      list="{{
-        Array [
-          Object {
-            "label": "顶部弹出",
-            "value": "top",
-          },
-          Object {
-            "label": "底部弹出",
-            "value": "bottom",
-          },
-          Object {
-            "label": "左侧弹出",
-            "value": "left",
-          },
-          Object {
-            "label": "右侧弹出",
-            "value": "right",
-          },
-        ]
-      }}"
-      catch:click="handlePress"
-    />
-    <mina-popup
-      catch:close="handleClose"
+    <wx-view
+      class="popup-wrap "
+      style="z-index: 99; background: rgba(0, 0, 0, .7)"
+      catch:tap="handleClose"
     >
       <wx-view
-        class="popup-wrap "
-        style="z-index: 99; background: rgba(0, 0, 0, .7)"
-        catch:tap="handleClose"
+        class="popup-board  bottom"
+        style="z-index: 99; width: 100%; height: 400rpx"
+        catch:tap="noop"
+        catch:touchmove="noop"
       >
         <wx-view
-          class="popup-board  bottom"
-          style="z-index: 99; width: 100%; height: 400rpx"
-          catch:tap="noop"
-          catch:touchmove="noop"
+          class="container"
         >
-          <wx-view
-            class="container"
-          >
-            
-          </wx-view>
+          
         </wx-view>
       </wx-view>
-    </mina-popup>
-  </demo-block>
+    </wx-view>
+  </mina-popup>
 </main>
 `;
