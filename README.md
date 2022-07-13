@@ -120,7 +120,7 @@ yarn add -D miniprogram-api-typings
 ```bash
 
 # 将项目克隆到本地
-git clone git@github.com:iheora/mina-component.git
+git clone git@github.com:yw0525/mina-component.git
 
 # 安装项目依赖
 cd mina-component && npm install

@@ -15,6 +15,7 @@
     "prepare": "husky install",
     "release": "sh build/release.sh",
     "build:lib": "yarn && npx gulp -f build/compiler.js --series buildEs buildLib",
+    "build:changlog": "conventional-changelog -p angular -i changelog.generated.md -s",
     "upload:weapp": "node build/upload.js",
     "test": "jest",
     "test:watch": "jest --watch"
@@ -25,7 +26,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:iheora/mina-component.git"
+    "url": "git@github.com:yw0525/mina-component.git"
   },
   "lint-staged": {
     "*.{ts,js}": [
