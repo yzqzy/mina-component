@@ -7,9 +7,6 @@ read -p "Releasing $VERSION - are you sure? (y/n)" -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  # changlog
-  npm run build:changelog
-
   # build
   npm run build:lib
   if [[ `git status --porcelain` ]];
@@ -20,6 +17,11 @@ then
 
   # commit
   npm version $VERSION --message "build: release $VERSION"
+
+  # changelog
+  npm run build:changelog
+  git add -A
+  git commit -am "docs: revise changelog"
 
   # publish
   git push origin develop
