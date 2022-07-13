@@ -1,26 +1,20 @@
-<demo-block title="基础用法" padding>
-  <view
-    class="input"
-    catch:tap="handleOpen"
-  >
+
+
+<demo-block title="基础键盘" padding>
+
+</demo-block>
+<demo-block title="随机数字键盘" padding>
+  <view class="input" data-type="random" catch:tap="handleOpen">
     <text wx:if="{{ inputValue }}" class="text {{ show ? 'pointer' : '' }}">{{ inputValue }}</text>
     <text wx:else class="text {{ show ? 'blank-pointer' : '' }}" />
   </view>
 </demo-block>
-
-<mina-popup
-  show="{{ show }}"
-  height="auto"
-  bgColor="transparent"
-  catch:close="handleClose"
->
-  <!-- 数字键盘组件 start -->
-  <mina-number-keyboard
-    confirmColor="blue"
-    confirmDisabled="{{ confirmDisabled }}"
-    catch:input="handleInput"
-    catch:delete="handleDelete"
-    catch:close="handleConfirm"
-  />
-  <!-- 数字键盘组件 end -->
+<demo-block title="多按键键盘" padding>
+  <view class="input" data-type="multi" catch:tap="handleOpen">
+    <text wx:if="{{ inputValue }}" class="text {{ show ? 'pointer' : '' }}">{{ inputValue }}</text>
+    <text wx:else class="text {{ show ? 'blank-pointer' : '' }}" />
+  </view>
+</demo-block>
+<mina-popup show="{{ show }}" height="auto" bgColor="transparent" catch:close="handleClose">
+  <mina-number-keyboard wx:if="{{ type === 'normal' }}" extraKey="{{  extraKey }}" confirmColor="blue" confirmDisabled="{{ confirmDisabled }}" catch:input="handleInput" catch:delete="handleDelete" catch:close="handleConfirm" />
 </mina-popup>

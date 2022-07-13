@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "Mina Component",
+  "navigationBarBackgroundColor": "#fff",
   "usingComponents": {
     "demo-home": "../../components/demo-home/index"
   }

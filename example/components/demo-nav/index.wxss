@@ -1,0 +1,32 @@
+.demo-nav__block {
+  position: relative;
+  display: flex;
+  margin: 0 0 12px;
+  padding-left: 20px;
+  color: #323233;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 40px;
+  background: #fff;
+  border-radius: 99px;
+  transition: all 0.3s;
+}
+
+.demo-nav__block:hover {
+  background: darken(#fff, 3%);
+}
+
+.demo-nav__block:active {
+  background: darken(#fff, 6%);
+}
+
+.demo-nav__icon {
+  position: absolute !important;
+  top: 50%;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  margin-top: -20px;
+  color: rgb(182, 195, 210);
+  font-weight: 900 !important;
+}

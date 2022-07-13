@@ -1,0 +1,4 @@
+<view wx:for="{{ list }}" wx:key="title" class="demo-nav__block" data-value="{{ item.value }}" bind:tap="onClick">
+  {{ item.label }}
+  <mina-icon name="right-arrow" custom-class="demo-nav__icon" />
+</view>

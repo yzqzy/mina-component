@@ -2,13 +2,18 @@ import { MinaComponent } from '../../common/component';
 
 MinaComponent({
   data: {
-    inputValue: "",
+    extraKey: '',
+    inputValue: '',
     confirmDisabled: true
   },
 
   methods: {
     // 打开弹窗
-    handleOpen() {
+    handleOpen(e) {
+      const { type } = e.currentTarget.dataset;
+
+      console.log(type);
+
       this.setData({
         show: true
       });
@@ -16,37 +21,41 @@ MinaComponent({
 
     // 关闭弹窗
     handleClose() {
-      if (this.inputValue >= this.min) {
-        this.setData({
-          show: false
-        });
-      }
+      this.setData({
+        show: false
+      });
     },
 
     // 输入操作
     handleInput(e) {
       const text = e.detail;
 
-      const _value = this.data.inputValue + "";
+      const _value = this.data.inputValue + '';
       const ans = _value + text;
 
       if (/^\./.test(ans)) return;
-      if (_value.length === 1 && _value === '0' && text !== ".") return;
-      if (_value.includes(".") && text === ".") return;
+      if (_value.length === 1 && _value === '0' && text !== '.') return;
+      if (_value.includes('.') && text === '.') return;
 
-      this.setData({
-        inputValue: ans
-      }, this.checkBtnStatus);
+      this.setData(
+        {
+          inputValue: ans
+        },
+        this.checkBtnStatus
+      );
     },
 
     // 删除操作
     handleDelete() {
-      const _value = this.data.inputValue + "";
+      const _value = this.data.inputValue + '';
       const ans = _value.slice(0, _value.length - 1);
 
-      this.setData({
-        inputValue: ans
-      }, this.checkBtnStatus);
+      this.setData(
+        {
+          inputValue: ans
+        },
+        this.checkBtnStatus
+      );
     },
 
     // 确认操作
@@ -64,5 +73,5 @@ MinaComponent({
         confirmDisabled: _value === '' || /\.$/.test(_value)
       });
     }
-  },
+  }
 });

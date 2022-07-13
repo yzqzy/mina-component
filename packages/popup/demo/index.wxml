@@ -1,18 +1,7 @@
 <demo-block title="基础用法" padding>
-  <view
-    class="item"
-    wx:for="{{options}}"
-    wx:key="index"
-    data-value="{{item.value}}"
-    catch:tap="handlePress"
-  >{{ item.label }}</view>
-
+  <demo-nav list="{{ options }}" catch:click="handlePress" />
   <!-- 弹窗组件 start -->
-  <mina-popup
-    show="{{ show }}"
-    direction="{{ direction }}"
-    catch:close="handleClose"
-  >
+  <mina-popup show="{{ show }}" direction="{{ direction }}" catch:close="handleClose">
     <view class="container">{{ text }}</view>
   </mina-popup>
   <!-- 弹窗组件 end -->

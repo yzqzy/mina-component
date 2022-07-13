@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "mina-popup": "../../popup/index"
+    "mina-popup": "../../popup/index",
+    "demo-nav": "../../../components/demo-nav"
   }
 }

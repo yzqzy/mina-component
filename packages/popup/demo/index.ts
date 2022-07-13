@@ -1,9 +1,9 @@
-import { MinaComponent } from "../../common/component";
+import { MinaComponent } from '../../common/component';
 
 type Item = {
   value: string;
   label: string;
-}
+};
 
 const OPTIONS: Item[] = [
   {
@@ -22,19 +22,19 @@ const OPTIONS: Item[] = [
     value: 'right',
     label: '右侧弹出'
   }
-]
+];
 
 MinaComponent({
   data: {
     show: false,
-    direction: "bottom",
-    text: "",
+    direction: 'bottom',
+    text: '',
     options: OPTIONS
   },
 
   methods: {
     handlePress(e) {
-      const { value } = e.currentTarget.dataset;
+      const { value } = e.detail;
 
       this.setData({
         direction: value,
@@ -45,7 +45,7 @@ MinaComponent({
         this.setData({
           show: true
         });
-      }, 300)
+      }, 300);
     },
     handleClose() {
       this.setData({
@@ -53,4 +53,4 @@ MinaComponent({
       });
     }
   }
-})
+});
