@@ -1,6 +1,6 @@
 {
   "name": "mina-component",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "月落",
   "license": "MIT",
   "miniprogram": "lib",
