@@ -65,7 +65,7 @@
     "miniprogram-ci": "^1.6.1",
     "miniprogram-simulate": "^1.4.2",
     "stylelint": "^13.0.0",
-    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^22.0.0",
     "ts-jest": "^27.0.7",
     "tscpaths": "^0.0.9",
