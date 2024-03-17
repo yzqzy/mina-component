@@ -1,9 +1,9 @@
+> 本项目已停止维护
+
 <div>
   <h2 style="margin: 0; font-size: 32px; line-height: 60px;">Mina Component</h2>
   <p>小程序组件库</p>
 </div>
-
-> 本项目已不再维护
 
 ### 介绍
 
