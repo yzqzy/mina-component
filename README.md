@@ -9,12 +9,6 @@
 
 Mina Component 是一个微信 **小程序组件库**。
 
-## 预览
-
-扫描下方小程序二维码，体验组件库示例：
-
-<img src="https://img.yueluo.club/personal/mina_icon.jpg" style="width: 200px; height: 200px; margin-top: 15px; box-shadow: none" >
-
 ## 安装
 
 ### 步骤一 通过 npm 安装
